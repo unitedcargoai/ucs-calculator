@@ -7,6 +7,7 @@ import {
   INLAND_RATES,
   OCEAN_RATES,
   UCS_PORTS,
+  WHOLESALE_STANDARD_RATES,
 } from "./ucsData";
 
 const translations = {
@@ -27,7 +28,9 @@ const translations = {
     vehicleMotorcycle: "Motocykl",
     retailQuoteMessage: "Na czas aktualizacji cenników wycena detaliczna wymaga indywidualnego potwierdzenia. Skontaktuj się z nami przez WhatsApp.",
     wholesaleActive: "Panel HURT aktywny",
-    wholesaleInfo: "Jesteś zalogowany jako broker. Cennik hurtowy zostanie aktywowany po uzupełnieniu stawek.",
+    wholesaleInfo: "Jesteś zalogowany jako broker. Widzisz cennik STANDARD HURT.",
+    wholesalePriceInfo: "Cennik STANDARD HURT aktywny.",
+    wholesaleMissing: "Brak stawki HURT dla tej konfiguracji. Skontaktuj się z administratorem.",
     brokerCodePlaceholder: "Kod dostępu brokera",
     brokerLogin: "Zaloguj HURT",
     brokerLogout: "Wyloguj HURT",
@@ -82,7 +85,9 @@ const translations = {
     vehicleMotorcycle: "Motorcycle",
     retailQuoteMessage: "During price list updates, retail quotes require individual confirmation. Please contact us via WhatsApp.",
     wholesaleActive: "WHOLESALE panel active",
-    wholesaleInfo: "You are logged in as a broker. Wholesale pricing will be activated after rates are completed.",
+    wholesaleInfo: "You are logged in as a broker. You are viewing STANDARD WHOLESALE pricing.",
+    wholesalePriceInfo: "STANDARD WHOLESALE pricing active.",
+    wholesaleMissing: "No WHOLESALE rate for this configuration. Contact the administrator.",
     brokerCodePlaceholder: "Broker access code",
     brokerLogin: "Login WHOLESALE",
     brokerLogout: "Logout WHOLESALE",
@@ -137,7 +142,9 @@ const translations = {
     vehicleMotorcycle: "Мотоцикл",
     retailQuoteMessage: "Під час оновлення прайсів роздрібна ціна потребує індивідуального підтвердження. Звʼяжіться з нами через WhatsApp.",
     wholesaleActive: "Оптова панель активна",
-    wholesaleInfo: "Ви увійшли як брокер. Оптові ціни будуть активовані після заповнення ставок.",
+    wholesaleInfo: "Ви увійшли як брокер. Ви бачите STANDARD HURT ціни.",
+    wholesalePriceInfo: "STANDARD HURT ціни активні.",
+    wholesaleMissing: "Немає HURT ставки для цієї конфігурації. Звʼяжіться з адміністратором.",
     brokerCodePlaceholder: "Код доступу брокера",
     brokerLogin: "Увійти ОПТ",
     brokerLogout: "Вийти ОПТ",
@@ -192,7 +199,9 @@ const translations = {
     vehicleMotorcycle: "Мотоциклет",
     retailQuoteMessage: "По време на актуализацията на цените крайната оферта изисква индивидуално потвърждение. Свържете се с нас чрез WhatsApp.",
     wholesaleActive: "HURT панелът е активен",
-    wholesaleInfo: "Влезли сте като брокер. Цените на едро ще бъдат активирани след попълване на тарифите.",
+    wholesaleInfo: "Влезли сте като брокер. Виждате STANDARD HURT цени.",
+    wholesalePriceInfo: "STANDARD HURT цените са активни.",
+    wholesaleMissing: "Няма HURT цена за тази конфигурация. Свържете се с администратора.",
     brokerCodePlaceholder: "Код за достъп на брокер",
     brokerLogin: "Вход ЕДРО",
     brokerLogout: "Изход ЕДРО",
@@ -247,7 +256,9 @@ const translations = {
     vehicleMotorcycle: "دراجة نارية",
     retailQuoteMessage: "أثناء تحديث الأسعار، تحتاج عروض التجزئة إلى تأكيد فردي. يرجى التواصل معنا عبر WhatsApp.",
     wholesaleActive: "لوحة الجملة مفعلة",
-    wholesaleInfo: "أنت مسجل كوسيط. سيتم تفعيل أسعار الجملة بعد إكمال الأسعار.",
+    wholesaleInfo: "أنت مسجل كوسيط. أنت ترى أسعار STANDARD HURT.",
+    wholesalePriceInfo: "أسعار STANDARD HURT مفعلة.",
+    wholesaleMissing: "لا توجد تسعيرة HURT لهذا الاختيار. تواصل مع المسؤول.",
     brokerCodePlaceholder: "رمز دخول الوسيط",
     brokerLogin: "دخول الجملة",
     brokerLogout: "خروج الجملة",
@@ -330,17 +341,24 @@ export default function Home() {
 
   const pricingCity = selectedLocation?.city || "";
   const inlandKey = `${pricingCity}-${portUsa}`;
-  const oceanKey = vehicle === "Motocykl" ? `${portUsa}-${portEu}-Motocykl` : `${portUsa}-${portEu}-${packing}`;
+  const oceanKey =
+    vehicle === "Motocykl"
+      ? `${portUsa}-${portEu}-Motocykl`
+      : vehicle === "Pickup"
+        ? `${portUsa}-${portEu}-Pickup`
+        : `${portUsa}-${portEu}-${packing}`;
 
   const baseInland =
     INLAND_RATES[inlandKey]?.[vehicle === "SUV" ? "suv" : "osobowe"] || 0;
 
   const hasRequiredSelection = Boolean(auction && location && selectedLocation);
-  const baseOcean = hasRequiredSelection ? OCEAN_RATES[oceanKey] || 0 : 0;
+  const wholesaleOcean = hasRequiredSelection
+    ? WHOLESALE_STANDARD_RATES[oceanKey] || 0
+    : 0;
 
-  // Tryb prac nad cennikiem detalicznym: klient widzi $0 i prośbę o kontakt.
+  // DETAL: pokazujemy $0 i kontakt. HURT: pokazujemy STANDARD HURT.
   const inland = 0;
-  const ocean = 0;
+  const ocean = mode === "wholesale" ? wholesaleOcean : 0;
   const total = inland + ocean;
 
   const isFlorida =
@@ -587,11 +605,9 @@ export default function Home() {
             {t.total}: ${total.toFixed(2)}
           </p>
 
-          {hasRequiredSelection && (
+          {hasRequiredSelection && mode === "retail" && (
             <div className="mt-4 rounded-xl bg-yellow-500 p-4 text-black">
-              <p>
-                {mode === "wholesale" ? t.wholesaleInfo : t.retailQuoteMessage}
-              </p>
+              <p>{t.retailQuoteMessage}</p>
 
               <a
                 className="mt-3 inline-block rounded-xl bg-green-600 px-4 py-2 font-bold text-white"
@@ -601,6 +617,18 @@ export default function Home() {
                 {t.whatsapp}
               </a>
             </div>
+          )}
+
+          {hasRequiredSelection && mode === "wholesale" && wholesaleOcean > 0 && (
+            <p className="mt-4 rounded-xl bg-emerald-500 p-3 text-white">
+              {t.wholesalePriceInfo}
+            </p>
+          )}
+
+          {hasRequiredSelection && mode === "wholesale" && wholesaleOcean === 0 && (
+            <p className="mt-4 rounded-xl bg-yellow-500 p-3 text-black">
+              {t.wholesaleMissing}
+            </p>
           )}
 
           {showSavannahRecommendation && (

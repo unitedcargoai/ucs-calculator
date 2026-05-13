@@ -7271,3 +7271,31 @@ export const STATE_TO_PORT = {
   "NV": "Los Angeles",
   "OR": "Los Angeles"
 };
+
+
+export const WHOLESALE_STANDARD_RATES = {
+  "Chicago-Rotterdam-1 z 4": 700,
+  "Chicago-Rotterdam-1 z 3": 900,
+  "Chicago-Rotterdam-Motocykl": 350,
+  "Chicago-Rotterdam-Pickup": 1200,
+  "Houston-Rotterdam-1 z 4": 700,
+  "Houston-Rotterdam-1 z 3": 900,
+  "Houston-Rotterdam-Motocykl": 350,
+  "Houston-Rotterdam-Pickup": 1200,
+  "Los Angeles-Rotterdam-1 z 4": 1125,
+  "Los Angeles-Rotterdam-1 z 3": 1450,
+  "Los Angeles-Rotterdam-Motocykl": 450,
+  "Los Angeles-Rotterdam-Pickup": 1750,
+  "Miami-Rotterdam-1 z 4": 0,
+  "Miami-Rotterdam-1 z 3": 0,
+  "Miami-Rotterdam-Motocykl": 0,
+  "Miami-Rotterdam-Pickup": 0,
+  "Newark-Rotterdam-1 z 4": 650,
+  "Newark-Rotterdam-1 z 3": 850,
+  "Newark-Rotterdam-Motocykl": 350,
+  "Newark-Rotterdam-Pickup": 1150,
+  "Savannah-Rotterdam-1 z 4": 600,
+  "Savannah-Rotterdam-1 z 3": 750,
+  "Savannah-Rotterdam-Motocykl": 350,
+  "Savannah-Rotterdam-Pickup": 1050
+};
