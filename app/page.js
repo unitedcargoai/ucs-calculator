@@ -34,6 +34,11 @@ const translations = {
     waBosLabel: "WA BOS — nowe TITLE",
     waBosInfo: "Dodatkowa opłata za nowe TITLE: $350",
     waBosLine: "WA BOS / TITLE",
+    purchaseTitle: "Zgłoszenie zakupu / przelewu",
+    purchaseVin: "VIN pojazdu",
+    purchaseAmount: "Kwota przelewu",
+    purchaseNote: "Notatka / auto / aukcja",
+    purchaseWhatsapp: "Wyślij zgłoszenie WhatsApp",
     wholesaleActive: "Panel HURT aktywny",
     wholesaleInfo: "Jesteś zalogowany jako broker.",
     wholesalePriceInfo: "Cennik Premium HURT aktywny.",
@@ -101,6 +106,11 @@ const translations = {
     waBosLabel: "WA BOS — new TITLE",
     waBosInfo: "Additional new TITLE fee: $350",
     waBosLine: "WA BOS / TITLE",
+    purchaseTitle: "Purchase / transfer report",
+    purchaseVin: "Vehicle VIN",
+    purchaseAmount: "Transfer amount",
+    purchaseNote: "Note / vehicle / auction",
+    purchaseWhatsapp: "Send report via WhatsApp",
     wholesaleActive: "WHOLESALE panel active",
     wholesaleInfo: "You are logged in as a broker.",
     wholesalePriceInfo: "Premium WHOLESALE pricing active.",
@@ -168,6 +178,11 @@ const translations = {
     waBosLabel: "WA BOS — новий TITLE",
     waBosInfo: "Додаткова плата за новий TITLE: $350",
     waBosLine: "WA BOS / TITLE",
+    purchaseTitle: "Заявка покупки / переказу",
+    purchaseVin: "VIN авто",
+    purchaseAmount: "Сума переказу",
+    purchaseNote: "Нотатка / авто / аукціон",
+    purchaseWhatsapp: "Надіслати через WhatsApp",
     wholesaleActive: "Оптова панель активна",
     wholesaleInfo: "Ви увійшли як брокер.",
     wholesalePriceInfo: "Premium HURT ціни активні.",
@@ -235,6 +250,11 @@ const translations = {
     waBosLabel: "WA BOS — нов TITLE",
     waBosInfo: "Допълнителна такса за нов TITLE: $350",
     waBosLine: "WA BOS / TITLE",
+    purchaseTitle: "Заявка за покупка / превод",
+    purchaseVin: "VIN на автомобила",
+    purchaseAmount: "Сума на превода",
+    purchaseNote: "Бележка / автомобил / аукцион",
+    purchaseWhatsapp: "Изпрати чрез WhatsApp",
     wholesaleActive: "HURT панелът е активен",
     wholesaleInfo: "Влезли сте като брокер.",
     wholesalePriceInfo: "Premium HURT цените са активни.",
@@ -302,6 +322,11 @@ const translations = {
     waBosLabel: "WA BOS — TITLE جديد",
     waBosInfo: "رسوم إضافية لإصدار TITLE جديد: $350",
     waBosLine: "WA BOS / TITLE",
+    purchaseTitle: "تقرير شراء / تحويل",
+    purchaseVin: "VIN السيارة",
+    purchaseAmount: "مبلغ التحويل",
+    purchaseNote: "ملاحظة / سيارة / مزاد",
+    purchaseWhatsapp: "إرسال عبر WhatsApp",
     wholesaleActive: "لوحة الجملة مفعلة",
     wholesaleInfo: "أنت مسجل كوسيط.",
     wholesalePriceInfo: "أسعار Premium HURT مفعلة.",
@@ -374,6 +399,9 @@ export default function Home() {
   const [vehicle, setVehicle] = useState("SUV");
   const [hazmat, setHazmat] = useState(false);
   const [waBos, setWaBos] = useState(false);
+  const [purchaseVin, setPurchaseVin] = useState("");
+  const [purchaseAmount, setPurchaseAmount] = useState("");
+  const [purchaseNote, setPurchaseNote] = useState("");
   const [portUsa, setPortUsa] = useState("Savannah");
   const [portEu, setPortEu] = useState("Rotterdam");
   const [packing, setPacking] = useState("1 z 3");
@@ -448,6 +476,25 @@ export default function Home() {
   const inland = mode === "wholesale" ? wholesaleInland : 0;
   const ocean = mode === "wholesale" ? wholesaleOcean : 0;
   const total = inland + ocean + hazmatFee + waBosFee;
+
+  const purchaseWhatsappMessage = encodeURIComponent(
+    `ZAKUP / PRZELEW\n` +
+      `Broker: ${activeBroker?.name || ""}\n` +
+      `Pakiet: ${activeBroker?.package || ""}\n` +
+      `VIN: ${purchaseVin}\n` +
+      `Kwota przelewu: ${purchaseAmount}\n` +
+      `Notatka: ${purchaseNote}\n` +
+      `Aukcja: ${auction}\n` +
+      `Lokalizacja: ${location}\n` +
+      `Port USA: ${portUsa}\n` +
+      `Port EU: ${portEu}\n` +
+      `Typ pojazdu: ${vehicle}\n` +
+      `Transport lądowy: $${inland.toFixed(2)}\n` +
+      `Transport morski: $${ocean.toFixed(2)}\n` +
+      `HAZMAT: $${hazmatFee.toFixed(2)}\n` +
+      `WA BOS / TITLE: $${waBosFee.toFixed(2)}\n` +
+      `Cena końcowa: $${total.toFixed(2)}`
+  );
 
   const isFlorida =
     selectedLocation?.state === "FL" ||
@@ -792,6 +839,49 @@ export default function Home() {
             </p>
           )}
         </div>
+
+        {mode === "wholesale" && activeBroker && (
+          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
+            <h3 className="text-2xl font-bold text-slate-900">
+              {t.purchaseTitle}
+            </h3>
+
+            <p className="mt-2 text-slate-600">
+              Wypełnij po zakupie auta lub wykonaniu przelewu. Wiadomość otworzy się gotowa w WhatsApp.
+            </p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <input
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={purchaseVin}
+                onChange={(e) => setPurchaseVin(e.target.value)}
+                placeholder={t.purchaseVin}
+              />
+
+              <input
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={purchaseAmount}
+                onChange={(e) => setPurchaseAmount(e.target.value)}
+                placeholder={t.purchaseAmount}
+              />
+
+              <input
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={purchaseNote}
+                onChange={(e) => setPurchaseNote(e.target.value)}
+                placeholder={t.purchaseNote}
+              />
+            </div>
+
+            <a
+              className="mt-5 inline-block rounded-2xl bg-green-600 px-6 py-4 text-lg font-bold text-white shadow hover:bg-green-700"
+              href={`https://wa.me/19412505868?text=${purchaseWhatsappMessage}`}
+              target="_blank"
+            >
+              {t.purchaseWhatsapp}
+            </a>
+          </div>
+        )}
 
         <div className="mt-10 rounded-3xl border border-slate-200 bg-gradient-to-r from-slate-900 to-slate-700 p-6 text-white shadow-xl">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
