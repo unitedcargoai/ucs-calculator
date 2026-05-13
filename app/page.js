@@ -13,7 +13,10 @@ import {
 const translations = {
   pl: {
     companyCountries: "USA • Kanada • Polska",
-    calculatorTitle: "Kalkulator transportu auta do portu w Europie",
+    calculatorTitle: "Kalkulator DETAL — transport aut USA → Europa",
+    retailTab: "Detal",
+    wholesaleTab: "Logowanie Brokerzy — HURT",
+    soon: "Wkrótce",
     calculatorSubtitle: "Transport lądowy USA + transport morski",
     banner:
       "Szybka wycena transportu aut z aukcji Copart, IAA i Manheim. Sprawdź koszt do portu w Europie lub skontaktuj się z nami, jeśli trasa wymaga indywidualnego potwierdzenia.",
@@ -56,7 +59,10 @@ const translations = {
   },
   en: {
     companyCountries: "USA • Canada • Poland",
-    calculatorTitle: "Vehicle transport calculator to a European port",
+    calculatorTitle: "RETAIL Calculator — USA → Europe vehicle transport",
+    retailTab: "Retail",
+    wholesaleTab: "Broker Login — WHOLESALE",
+    soon: "Coming soon",
     calculatorSubtitle: "USA inland transport + ocean freight",
     banner:
       "Fast shipping quote for vehicles from Copart, IAA and Manheim auctions. Check the cost to a European port or contact us if the route requires individual confirmation.",
@@ -99,7 +105,10 @@ const translations = {
   },
   ua: {
     companyCountries: "США • Канада • Польща",
-    calculatorTitle: "Калькулятор доставки авто до порту в Європі",
+    calculatorTitle: "РОЗДРІБНИЙ калькулятор — доставка авто США → Європа",
+    retailTab: "Роздріб",
+    wholesaleTab: "Логін брокера — ОПТ",
+    soon: "Скоро",
     calculatorSubtitle: "Наземний транспорт США + морський фрахт",
     banner:
       "Швидка оцінка доставки авто з аукціонів Copart, IAA та Manheim. Перевірте вартість до порту в Європі або звʼяжіться з нами, якщо маршрут потребує індивідуального підтвердження.",
@@ -142,7 +151,10 @@ const translations = {
   },
   bg: {
     companyCountries: "САЩ • Канада • Полша",
-    calculatorTitle: "Калкулатор за транспорт на автомобил до европейско пристанище",
+    calculatorTitle: "Калкулатор ДРЕБНО — транспорт на автомобили САЩ → Европа",
+    retailTab: "Дребно",
+    wholesaleTab: "Вход брокери — ЕДРО",
+    soon: "Очаквайте",
     calculatorSubtitle: "Вътрешен транспорт в САЩ + морски транспорт",
     banner:
       "Бърза оферта за транспорт на автомобили от Copart, IAA и Manheim. Проверете цената до европейско пристанище или се свържете с нас, ако маршрутът изисква индивидуално потвърждение.",
@@ -185,7 +197,10 @@ const translations = {
   },
   ar: {
     companyCountries: "الولايات المتحدة • كندا • بولندا",
-    calculatorTitle: "حاسبة نقل السيارات إلى ميناء أوروبي",
+    calculatorTitle: "حاسبة التجزئة — نقل السيارات من أمريكا إلى أوروبا",
+    retailTab: "تجزئة",
+    wholesaleTab: "دخول الوسطاء — جملة",
+    soon: "قريباً",
     calculatorSubtitle: "نقل بري داخل أمريكا + شحن بحري",
     banner:
       "تسعير سريع لشحن السيارات من مزادات Copart و IAA و Manheim. تحقق من التكلفة إلى ميناء أوروبي أو تواصل معنا إذا كان المسار يحتاج إلى تأكيد خاص.",
@@ -270,8 +285,7 @@ export default function Home() {
     INLAND_RATES[inlandKey]?.[vehicle === "SUV" ? "suv" : "osobowe"] || 0;
 
   const hasRequiredSelection = Boolean(auction && location && selectedLocation);
-  const baseOcean = hasRequiredSelection ? OCEAN_RATES[oceanKey] || 0 : 0;
-  const ocean = baseOcean > 0 ? baseOcean + 100 : 0;
+  const ocean = hasRequiredSelection ? OCEAN_RATES[oceanKey] || 0 : 0;
   const total = inland + ocean;
 
   const isFlorida =
@@ -318,7 +332,24 @@ export default function Home() {
 
           <p className="mt-2 text-slate-600">Marek Witkowski</p>
 
-          <h2 className="mt-10 text-2xl font-bold tracking-tight">
+          <div className="mx-auto mt-6 flex max-w-2xl flex-col gap-3 rounded-3xl bg-slate-100 p-3 md:flex-row">
+            <button className="flex-1 rounded-2xl bg-slate-900 px-5 py-3 font-bold text-white shadow">
+              {t.retailTab}
+            </button>
+
+            <button
+              disabled
+              className="flex-1 rounded-2xl border border-slate-300 bg-white px-5 py-3 font-bold text-slate-500"
+              title={t.soon}
+            >
+              {t.wholesaleTab}
+              <span className="ml-2 rounded-full bg-amber-100 px-2 py-1 text-xs text-amber-700">
+                {t.soon}
+              </span>
+            </button>
+          </div>
+
+          <h2 className="mt-8 text-2xl font-bold tracking-tight">
             {t.calculatorTitle}
           </h2>
 

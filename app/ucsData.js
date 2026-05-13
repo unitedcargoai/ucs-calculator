@@ -1,5 +1,7 @@
-// AUTO-GENERATED FROM UCS EXCEL.
-// Do not edit manually unless needed. Later we will replace this with database/admin panel.
+// AUTO-GENERATED FROM UCS EXCEL v7.
+// Ocean freight prices include +$100 UCS margin.
+// Inland prices include +$100 UCS margin.
+// Inland $100 placeholder prices are converted to 0 and shown as quote-required.
 
 export const AUCTIONS = [
   {
@@ -23,7 +25,7 @@ export const AUCTIONS = [
     "location": "ADESA Cincinnati/Dayton",
     "state": "",
     "city": "ADESA Cincinnati/Dayton",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -47,7 +49,7 @@ export const AUCTIONS = [
     "location": "ADESA PITTSBURGH",
     "state": "",
     "city": "ADESA PITTSBURGH",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -79,7 +81,7 @@ export const AUCTIONS = [
     "location": "Adesa Boston",
     "state": "",
     "city": "Adesa Boston",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -95,7 +97,7 @@ export const AUCTIONS = [
     "location": "Adesa Buffalo",
     "state": "",
     "city": "Adesa Buffalo",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -119,7 +121,7 @@ export const AUCTIONS = [
     "location": "Adesa Long Island",
     "state": "",
     "city": "Adesa Long Island",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -127,7 +129,7 @@ export const AUCTIONS = [
     "location": "Adesa Mercer",
     "state": "",
     "city": "Adesa Mercer",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -247,7 +249,7 @@ export const AUCTIONS = [
     "location": "AMSTERDAM SUBLOT",
     "state": "",
     "city": "AMSTERDAM SUBLOT",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -255,7 +257,7 @@ export const AUCTIONS = [
     "location": "Adamsburg Sublot",
     "state": "",
     "city": "Adamsburg Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -263,7 +265,7 @@ export const AUCTIONS = [
     "location": "Alden Sublot",
     "state": "",
     "city": "Alden Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -351,7 +353,7 @@ export const AUCTIONS = [
     "location": "Coopersburg",
     "state": "",
     "city": "Coopersburg",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -383,7 +385,7 @@ export const AUCTIONS = [
     "location": "Coplay",
     "state": "",
     "city": "Coplay",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -399,7 +401,7 @@ export const AUCTIONS = [
     "location": "Devil's Bowl Raceway",
     "state": "",
     "city": "Devil's Bowl Raceway",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -423,7 +425,7 @@ export const AUCTIONS = [
     "location": "FRUITLAND SUBLOT",
     "state": "",
     "city": "FRUITLAND SUBLOT",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -471,7 +473,7 @@ export const AUCTIONS = [
     "location": "Hudson Sublot",
     "state": "",
     "city": "Hudson Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -487,7 +489,7 @@ export const AUCTIONS = [
     "location": "Jobstown Sublot",
     "state": "",
     "city": "Jobstown Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -495,7 +497,7 @@ export const AUCTIONS = [
     "location": "Laurel Sublot",
     "state": "",
     "city": "Laurel Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -535,7 +537,7 @@ export const AUCTIONS = [
     "location": "Malvern Sublot",
     "state": "",
     "city": "Malvern Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -559,7 +561,7 @@ export const AUCTIONS = [
     "location": "Newburgh Sublot",
     "state": "",
     "city": "Newburgh Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -567,7 +569,7 @@ export const AUCTIONS = [
     "location": "Northeast Auto Transport",
     "state": "",
     "city": "Northeast Auto Transport",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -615,7 +617,7 @@ export const AUCTIONS = [
     "location": "STATEN ISLAND SUBLOT",
     "state": "",
     "city": "STATEN ISLAND SUBLOT",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -655,7 +657,7 @@ export const AUCTIONS = [
     "location": "White Marsh Sublot",
     "state": "",
     "city": "White Marsh Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -663,7 +665,7 @@ export const AUCTIONS = [
     "location": "White Plains Sublot",
     "state": "",
     "city": "White Plains Sublot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -1031,7 +1033,7 @@ export const AUCTIONS = [
     "location": "DC - WASHINGTON DC",
     "state": "DC",
     "city": "WASHINGTON DC",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2511,7 +2513,7 @@ export const AUCTIONS = [
     "location": "WV - CHARLESTON",
     "state": "WV",
     "city": "CHARLESTON",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2567,7 +2569,7 @@ export const AUCTIONS = [
     "location": "Akron-Canton",
     "state": "",
     "city": "Akron-Canton",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2575,7 +2577,7 @@ export const AUCTIONS = [
     "location": "Albany",
     "state": "",
     "city": "Albany",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2591,7 +2593,7 @@ export const AUCTIONS = [
     "location": "Altoona",
     "state": "",
     "city": "Altoona",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2695,7 +2697,7 @@ export const AUCTIONS = [
     "location": "Baltimore",
     "state": "",
     "city": "Baltimore",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2735,7 +2737,7 @@ export const AUCTIONS = [
     "location": "Boston - Shirley",
     "state": "",
     "city": "Boston - Shirley",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2751,7 +2753,7 @@ export const AUCTIONS = [
     "location": "Bridgeport",
     "state": "",
     "city": "Bridgeport",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2759,7 +2761,7 @@ export const AUCTIONS = [
     "location": "Buckhannon",
     "state": "",
     "city": "Buckhannon",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2767,7 +2769,7 @@ export const AUCTIONS = [
     "location": "Buffalo",
     "state": "",
     "city": "Buffalo",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2775,7 +2777,7 @@ export const AUCTIONS = [
     "location": "Burlington",
     "state": "",
     "city": "Burlington",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2847,7 +2849,7 @@ export const AUCTIONS = [
     "location": "Cincinnati",
     "state": "",
     "city": "Cincinnati",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2855,7 +2857,7 @@ export const AUCTIONS = [
     "location": "Cincinnati South",
     "state": "",
     "city": "Cincinnati South",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2871,7 +2873,7 @@ export const AUCTIONS = [
     "location": "Cleveland",
     "state": "",
     "city": "Cleveland",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2903,7 +2905,7 @@ export const AUCTIONS = [
     "location": "Columbus",
     "state": "",
     "city": "Columbus",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2927,7 +2929,7 @@ export const AUCTIONS = [
     "location": "Culpeper",
     "state": "",
     "city": "Culpeper",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -2959,7 +2961,7 @@ export const AUCTIONS = [
     "location": "Dayton",
     "state": "",
     "city": "Dayton",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3015,7 +3017,7 @@ export const AUCTIONS = [
     "location": "Dundalk",
     "state": "",
     "city": "Dundalk",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3039,7 +3041,7 @@ export const AUCTIONS = [
     "location": "Elkton",
     "state": "",
     "city": "Elkton",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3047,7 +3049,7 @@ export const AUCTIONS = [
     "location": "Englishtown",
     "state": "",
     "city": "Englishtown",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3055,7 +3057,7 @@ export const AUCTIONS = [
     "location": "Erie",
     "state": "",
     "city": "Erie",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3151,7 +3153,7 @@ export const AUCTIONS = [
     "location": "Fredericksburg South",
     "state": "",
     "city": "Fredericksburg South",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3215,7 +3217,7 @@ export const AUCTIONS = [
     "location": "Hartford",
     "state": "",
     "city": "Hartford",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3223,7 +3225,7 @@ export const AUCTIONS = [
     "location": "Hartford-South",
     "state": "",
     "city": "Hartford-South",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3287,7 +3289,7 @@ export const AUCTIONS = [
     "location": "IAA CAT Long Island - West",
     "state": "",
     "city": "CAT Long Island - West",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3343,7 +3345,7 @@ export const AUCTIONS = [
     "location": "IAA Stimmel Road",
     "state": "",
     "city": "Stimmel Road",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3399,7 +3401,7 @@ export const AUCTIONS = [
     "location": "Laurel",
     "state": "",
     "city": "Laurel",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3431,7 +3433,7 @@ export const AUCTIONS = [
     "location": "Long Island",
     "state": "",
     "city": "Long Island",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3439,7 +3441,7 @@ export const AUCTIONS = [
     "location": "Long Island - East Yard",
     "state": "",
     "city": "Long Island - East Yard",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3447,7 +3449,7 @@ export const AUCTIONS = [
     "location": "Long Island - Green Yard",
     "state": "",
     "city": "Long Island - Green Yard",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3455,7 +3457,7 @@ export const AUCTIONS = [
     "location": "Long Island - North Yard",
     "state": "",
     "city": "Long Island - North Yard",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3463,7 +3465,7 @@ export const AUCTIONS = [
     "location": "Long Island - Rice Court",
     "state": "",
     "city": "Long Island - Rice Court",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3527,7 +3529,7 @@ export const AUCTIONS = [
     "location": "Manchester",
     "state": "",
     "city": "Manchester",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3551,7 +3553,7 @@ export const AUCTIONS = [
     "location": "Metro DC",
     "state": "",
     "city": "Metro DC",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3615,7 +3617,7 @@ export const AUCTIONS = [
     "location": "Monticello",
     "state": "",
     "city": "Monticello",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3631,7 +3633,7 @@ export const AUCTIONS = [
     "location": "New Castle",
     "state": "",
     "city": "New Castle",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3655,7 +3657,7 @@ export const AUCTIONS = [
     "location": "Newburgh",
     "state": "",
     "city": "Newburgh",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3727,7 +3729,7 @@ export const AUCTIONS = [
     "location": "Philadelphia",
     "state": "",
     "city": "Philadelphia",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3743,7 +3745,7 @@ export const AUCTIONS = [
     "location": "Pittsburgh",
     "state": "",
     "city": "Pittsburgh",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3751,7 +3753,7 @@ export const AUCTIONS = [
     "location": "Pittsburgh-North",
     "state": "",
     "city": "Pittsburgh-North",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3759,7 +3761,7 @@ export const AUCTIONS = [
     "location": "Port Murray",
     "state": "",
     "city": "Port Murray",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3783,7 +3785,7 @@ export const AUCTIONS = [
     "location": "Portland - Gorham",
     "state": "",
     "city": "Portland - Gorham",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3807,7 +3809,7 @@ export const AUCTIONS = [
     "location": "Providence",
     "state": "",
     "city": "Providence",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3823,7 +3825,7 @@ export const AUCTIONS = [
     "location": "Pulaski",
     "state": "",
     "city": "Pulaski",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3847,7 +3849,7 @@ export const AUCTIONS = [
     "location": "Richmond",
     "state": "",
     "city": "Richmond",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3863,7 +3865,7 @@ export const AUCTIONS = [
     "location": "Roanoke",
     "state": "",
     "city": "Roanoke",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3871,7 +3873,7 @@ export const AUCTIONS = [
     "location": "Rochester",
     "state": "",
     "city": "Rochester",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3943,7 +3945,7 @@ export const AUCTIONS = [
     "location": "Sayreville",
     "state": "",
     "city": "Sayreville",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3951,7 +3953,7 @@ export const AUCTIONS = [
     "location": "Scranton",
     "state": "",
     "city": "Scranton",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -3967,7 +3969,7 @@ export const AUCTIONS = [
     "location": "Shady Spring",
     "state": "",
     "city": "Shady Spring",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4039,7 +4041,7 @@ export const AUCTIONS = [
     "location": "Staten Island",
     "state": "",
     "city": "Staten Island",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4055,7 +4057,7 @@ export const AUCTIONS = [
     "location": "Suffolk",
     "state": "",
     "city": "Suffolk",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4063,7 +4065,7 @@ export const AUCTIONS = [
     "location": "Syracuse",
     "state": "",
     "city": "Syracuse",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4087,7 +4089,7 @@ export const AUCTIONS = [
     "location": "Taunton",
     "state": "",
     "city": "Taunton",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4095,7 +4097,7 @@ export const AUCTIONS = [
     "location": "Taunton offsite",
     "state": "",
     "city": "Taunton offsite",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4103,7 +4105,7 @@ export const AUCTIONS = [
     "location": "Templeton",
     "state": "",
     "city": "Templeton",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4111,7 +4113,7 @@ export const AUCTIONS = [
     "location": "Terminal Drive",
     "state": "",
     "city": "Terminal Drive",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4119,7 +4121,7 @@ export const AUCTIONS = [
     "location": "Tidewater",
     "state": "",
     "city": "Tidewater",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4159,7 +4161,7 @@ export const AUCTIONS = [
     "location": "Vermillion - North Ford Lot",
     "state": "",
     "city": "Vermillion - North Ford Lot",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4191,7 +4193,7 @@ export const AUCTIONS = [
     "location": "York Springs",
     "state": "",
     "city": "York Springs",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4311,7 +4313,7 @@ export const AUCTIONS = [
     "location": "MANHEIM HARRISONBURG",
     "state": "",
     "city": "HARRISONBURG",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4327,7 +4329,7 @@ export const AUCTIONS = [
     "location": "Manheim Albany",
     "state": "",
     "city": "Albany",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4359,7 +4361,7 @@ export const AUCTIONS = [
     "location": "Manheim Cincinnati",
     "state": "",
     "city": "Cincinnati",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4367,7 +4369,7 @@ export const AUCTIONS = [
     "location": "Manheim Cleveland",
     "state": "",
     "city": "Cleveland",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4431,7 +4433,7 @@ export const AUCTIONS = [
     "location": "Manheim Fredericksburg",
     "state": "",
     "city": "Fredericksburg",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4487,7 +4489,7 @@ export const AUCTIONS = [
     "location": "Manheim NY Metro Skyline",
     "state": "",
     "city": "NY Metro Skyline",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4503,7 +4505,7 @@ export const AUCTIONS = [
     "location": "Manheim New England",
     "state": "",
     "city": "New England",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4551,7 +4553,7 @@ export const AUCTIONS = [
     "location": "Manheim Philadelphia",
     "state": "",
     "city": "Philadelphia",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4567,7 +4569,7 @@ export const AUCTIONS = [
     "location": "Manheim Pittsburgh",
     "state": "",
     "city": "Pittsburgh",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4591,7 +4593,7 @@ export const AUCTIONS = [
     "location": "Manheim Rochester",
     "state": "",
     "city": "Rochester",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4766,7 +4768,7 @@ export const AUCTIONS = [
     "auction": "Manheim",
     "location": "Manheim New York",
     "state": "NY",
-    "city": "Newark",
+    "city": "New York",
     "recommendedPort": "Newark",
     "specialNotice": ""
   },
@@ -4823,7 +4825,7 @@ export const AUCTIONS = [
     "location": "NPA Cincinnati",
     "state": "",
     "city": "NPA Cincinnati",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4863,7 +4865,7 @@ export const AUCTIONS = [
     "location": "NPA Philadelphia",
     "state": "",
     "city": "NPA Philadelphia",
-    "recommendedPort": "Newark",
+    "recommendedPort": "New York",
     "specialNotice": ""
   },
   {
@@ -4902,2394 +4904,2394 @@ export const AUCTIONS = [
 
 export const INLAND_RATES = {
   "Dallas-Houston": {
-    "osobowe": 375.0,
-    "suv": 375.0
+    "osobowe": 475.0,
+    "suv": 475.0
   },
   "Longview-Houston": {
-    "osobowe": 375.0,
-    "suv": 375.0
+    "osobowe": 475.0,
+    "suv": 475.0
   },
   "San Antonio-South-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
+    "osobowe": 450.0,
+    "suv": 450.0
   },
   "Baton Rouge-Houston": {
-    "osobowe": 425.0,
-    "suv": 425.0
-  },
-  "Tulsa-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "El Paso-Houston": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Albuquerque-Houston": {
-    "osobowe": 650.0,
-    "suv": 650.0
-  },
-  "Corpus Christi-Houston": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "New Orleans-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Waco-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Houston-North-Houston": {
-    "osobowe": 200.0,
-    "suv": 200.0
-  },
-  "CrashedToys Dallas-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Houston East-Houston": {
-    "osobowe": 200.0,
-    "suv": 200.0
-  },
-  "San Antonio-Houston": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Dallas South-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Austin-Houston": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Dallas/Ft Worth-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Oklahoma City-Houston": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "McAllen-Houston": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Fort Worth North-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Houston-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Houston South-Houston": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Ft. Worth-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "New Orleans East-Houston": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Lubbock-Houston": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Lafayette-Houston": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Lufkin-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Andrews-Houston": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "ACE - Carson-Los Angeles": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "ACE - Perris-Los Angeles": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "ADESA Birmingham-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Akron-Canton-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Albany-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Altoona-Newark": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Anaheim-Los Angeles": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Asheville-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Ashland-Chicago": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Atlanta-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Atlanta East-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Atlanta North-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "ATLANTA SOUTH-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Avenel New Jersey-Newark": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Baltimore-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Birmingham-Savannah": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Boston - Shirley-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Bowling Green-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Bridgeport-Newark": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Buckhannon-Newark": {
-    "osobowe": 700.0,
-    "suv": 700.0
-  },
-  "Buffalo-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Burlington-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Central New Jersey-Newark": {
-    "osobowe": 250.0,
-    "suv": 250.0
-  },
-  "Charleston-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "Charlotte-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Chattanooga-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Chicago-North-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Chicago-South-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Chicago-West-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Cincinnati-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Cincinnati South-Newark": {
-    "osobowe": 620.0,
-    "suv": 620.0
-  },
-  "Clearwater-Miami": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Cleveland-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Colton-Los Angeles": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Columbia-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "Columbus-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Concord-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Culpeper-Newark": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Davenport-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Dayton-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Denver-Chicago": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Denver East-Chicago": {
-    "osobowe": 650.0,
-    "suv": 650.0
-  },
-  "Detroit-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Dothan-Savannah": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Dundalk-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "East Bay-Los Angeles": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Erie-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Fargo-Chicago": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Fayetteville-Chicago": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Flint-Chicago": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Fontana-Los Angeles": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Fort Myers-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Fort Pierce-Miami": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Fredericksburg South-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Fremont-Los Angeles": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Fresno-Los Angeles": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Grand Rapids-Chicago": {
-    "osobowe": 425.0,
-    "suv": 425.0
-  },
-  "Greensboro-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Greenville-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Grenada-Savannah": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Gulf Coast-Savannah": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Hartford-Newark": {
-    "osobowe": 320.0,
-    "suv": 320.0
-  },
-  "Hartford-South-Newark": {
-    "osobowe": 320.0,
-    "suv": 320.0
-  },
-  "High Desert-Los Angeles": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Honolulu-Los Angeles": {
-    "osobowe": 1900.0,
-    "suv": 1900.0
-  },
-  "Huntsville-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Indianapolis-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Jackson-Savannah": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Jacksonville-Savannah": {
-    "osobowe": 250.0,
-    "suv": 250.0
-  },
-  "Kansas City-Chicago": {
-    "osobowe": 425.0,
-    "suv": 425.0
-  },
-  "Knoxville-Savannah": {
-    "osobowe": 460.0,
-    "suv": 460.0
-  },
-  "Lafayette-Savannah": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Las Vegas-Los Angeles": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Laurel-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Lexington-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "Lincoln-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Little Rock-Chicago": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Los Angeles-Los Angeles": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "Louisville-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Louisville North-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Macon-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Manchester-Newark": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Memphis-Savannah": {
-    "osobowe": 650.0,
-    "suv": 650.0
-  },
-  "Metro DC-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Miami-Miami": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Miami-North-Miami": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Milwaukee-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Minneapolis/St. Paul-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Nashville-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "New Castle-Newark": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Newburgh-Newark": {
-    "osobowe": 285.0,
-    "suv": 285.0
-  },
-  "North Hollywood-Los Angeles": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Northern Virginia-Newark": {
-    "osobowe": 480.0,
-    "suv": 480.0
-  },
-  "Omaha-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Orlando-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Orlando-North-Miami": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Paducah-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Pensacola-Miami": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Philadelphia-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Phoenix-Los Angeles": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Pittsburgh-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Pittsburgh-North-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Portage-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Portland - Gorham-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Providence-Newark": {
-    "osobowe": 425.0,
-    "suv": 425.0
-  },
-  "Pulaski-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Raleigh-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Reno-Los Angeles": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Richmond-Newark": {
-    "osobowe": 520.0,
-    "suv": 520.0
-  },
-  "Rochester-Newark": {
-    "osobowe": 480.0,
-    "suv": 480.0
-  },
-  "Sacramento-Los Angeles": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Salt Lake City-Chicago": {
-    "osobowe": 850.0,
-    "suv": 850.0
-  },
-  "San Diego-Los Angeles": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Savannah-Savannah": {
-    "osobowe": 200.0,
-    "suv": 200.0
-  },
-  "Scranton-Newark": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "Shady Spring-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Shreveport-Houston": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Sioux Falls-Chicago": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "South Bend-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Southern New Jersey-Newark": {
-    "osobowe": 250.0,
-    "suv": 250.0
-  },
-  "Springfield-Chicago": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "St. Louis-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Suffolk-Newark": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Syracuse-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Tampa North-Miami": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Taunton-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Templeton-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Tidewater-Newark": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Tifton-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Tucson-Los Angeles": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Wichita-Chicago": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Wilmington-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "York Springs-Newark": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "ALBANY-Newark": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "ALTOONA-Newark": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Antelope-Los Angeles": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "ATLANTA EAST-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "ATLANTA NORTH-Savannah": {
-    "osobowe": 425.0,
-    "suv": 425.0
-  },
-  "ATLANTA WEST-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Bakersfield-Los Angeles": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "BALTIMORE-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "CANDIA-Newark": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "CARTERSVILLE-Savannah": {
-    "osobowe": 425.0,
-    "suv": 425.0
-  },
-  "CHAMBERSBURG-Newark": {
-    "osobowe": 425.0,
-    "suv": 425.0
-  },
-  "CHARLESTON-Newark": {
-    "osobowe": 650.0,
-    "suv": 650.0
-  },
-  "CHINA GROVE-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "CLEVELAND EAST-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "CLEVELAND WEST-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "COLUMBIA-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "COLUMBIA-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "COLUMBUS-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Blaine Sublot-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "DANVILLE-Newark": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "DAVENPORT-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "DAYTON-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "DENVER-Chicago": {
-    "osobowe": 650.0,
-    "suv": 650.0
-  },
-  "DENVER CENTRAL-Chicago": {
-    "osobowe": 650.0,
-    "suv": 650.0
-  },
-  "DENVER SOUTH-Chicago": {
-    "osobowe": 650.0,
-    "suv": 650.0
-  },
-  "DES MOINES-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "EXETER-Newark": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "FLINT-Chicago": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "FORT WAYNE-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Fredericksburg-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "FT. PIERCE-Miami": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "GLASSBORO EAST-Newark": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "Glassboro West-Newark": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "HAMMOND-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "HAMPTON-Newark": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "HARRISBURG-Newark": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "HARTFORD-Newark": {
-    "osobowe": 320.0,
-    "suv": 320.0
-  },
-  "HARTFORD SPRINGFIELD-Newark": {
-    "osobowe": 320.0,
-    "suv": 320.0
-  },
-  "Hayward-Los Angeles": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "HONOLULU-Los Angeles": {
-    "osobowe": 1900.0,
-    "suv": 1900.0
-  },
-  "IONIA-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "JACKSONVILLE EAST-Savannah": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "JACKSONVILLE WEST-Savannah": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "KANSAS CITY-Chicago": {
     "osobowe": 525.0,
     "suv": 525.0
   },
-  "KNOXVILLE-Savannah": {
-    "osobowe": 460.0,
-    "suv": 460.0
+  "Tulsa-Houston": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "LAS VEGAS-Los Angeles": {
-    "osobowe": 550.0,
-    "suv": 550.0
+  "El Paso-Houston": {
+    "osobowe": 700.0,
+    "suv": 700.0
   },
-  "LEXINGTON EAST-Chicago": {
+  "Albuquerque-Houston": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "Corpus Christi-Houston": {
     "osobowe": 475.0,
     "suv": 475.0
   },
-  "LEXINGTON WEST-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
+  "New Orleans-Houston": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "LINCOLN-Chicago": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "LITTLE ROCK-Chicago": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Long Beach-Los Angeles": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "LOUISVILLE-Chicago": {
+  "Waco-Houston": {
     "osobowe": 450.0,
     "suv": 450.0
   },
-  "LUMBERTON-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "LYMAN-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "MADISON-Chicago": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "MEBANE-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "MEMPHIS-Savannah": {
-    "osobowe": 650.0,
-    "suv": 650.0
-  },
-  "MIAMI CENTRAL-Miami": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "MIAMI NORTH-Miami": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "MIAMI SOUTH-Miami": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "MILWAUKEE-Chicago": {
+  "Houston-North-Houston": {
     "osobowe": 300.0,
     "suv": 300.0
   },
-  "MINNEAPOLIS-Chicago": {
+  "CrashedToys Dallas-Houston": {
     "osobowe": 450.0,
     "suv": 450.0
   },
-  "Mobile-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "MOCKSVILLE-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Montgomery-Savannah": {
-    "osobowe": 460.0,
-    "suv": 460.0
-  },
-  "NASHVILLE-Savannah": {
-    "osobowe": 460.0,
-    "suv": 460.0
-  },
-  "NEWBURGH-Newark": {
-    "osobowe": 285.0,
-    "suv": 285.0
-  },
-  "NORTH BOSTON-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "NORTH CHARLESTON-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "OCALA-Miami": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "ORLANDO NORTH-Miami": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "ORLANDO SOUTH-Miami": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "PEORIA-Chicago": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "PHILADELPHIA-Newark": {
+  "Houston East-Houston": {
     "osobowe": 300.0,
     "suv": 300.0
   },
-  "Philadelphia East-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Adamsburg Sublot-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "PITTSBURGH NORTH-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "PITTSBURGH SOUTH-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "PUNTA GORDA-Miami": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "RALEIGH-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Rancho Cucamonga-Los Angeles": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "RENO-Los Angeles": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "RICHMOND-Newark": {
-    "osobowe": 520.0,
-    "suv": 520.0
-  },
-  "RICHMOND EAST-Newark": {
-    "osobowe": 520.0,
-    "suv": 520.0
-  },
-  "ROCHESTER-Newark": {
-    "osobowe": 480.0,
-    "suv": 480.0
-  },
-  "SALT LAKE CITY-Chicago": {
-    "osobowe": 850.0,
-    "suv": 850.0
-  },
-  "SAN BERNARDINO-Los Angeles": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "San Jose-Los Angeles": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "SAVANNAH-Savannah": {
-    "osobowe": 200.0,
-    "suv": 200.0
-  },
-  "SCRANTON-Newark": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "SEAFORD-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "SHREVEPORT-Houston": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "SIKESTON-Chicago": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "So Sacramento-Los Angeles": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "SOMERVILLE-Newark": {
-    "osobowe": 250.0,
-    "suv": 250.0
-  },
-  "SOUTH BOSTON-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Southern Illinois-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "SPARTANBURG-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "SPRINGFIELD-Chicago": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "ST. CLOUD-Chicago": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "ST. LOUIS-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Sun Valley-Los Angeles": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "SYRACUSE-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "TALLAHASSEE-Savannah": {
+  "San Antonio-Houston": {
     "osobowe": 425.0,
     "suv": 425.0
   },
-  "TAMPA SOUTH-Miami": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "TANNER-Savannah": {
+  "Dallas South-Houston": {
     "osobowe": 450.0,
     "suv": 450.0
   },
-  "TIFTON-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
+  "Austin-Houston": {
+    "osobowe": 425.0,
+    "suv": 425.0
   },
-  "TRENTON-Newark": {
-    "osobowe": 275.0,
-    "suv": 275.0
+  "Dallas/Ft Worth-Houston": {
+    "osobowe": 450.0,
+    "suv": 450.0
   },
-  "Vallejo-Los Angeles": {
+  "Oklahoma City-Houston": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "McAllen-Houston": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Fort Worth North-Houston": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Houston-Houston": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Houston South-Houston": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Ft. Worth-Houston": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "New Orleans East-Houston": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Lubbock-Houston": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Lafayette-Houston": {
     "osobowe": 500.0,
     "suv": 500.0
   },
-  "Van Nuys-Los Angeles": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "WALTON-Chicago": {
+  "Lufkin-Houston": {
     "osobowe": 450.0,
     "suv": 450.0
   },
-  "WASHINGTON DC-Newark": {
-    "osobowe": 375.0,
-    "suv": 375.0
+  "Andrews-Houston": {
+    "osobowe": 550.0,
+    "suv": 550.0
   },
-  "WEST PALM BEACH-Miami": {
-    "osobowe": 260.0,
-    "suv": 260.0
+  "ACE - Carson-Los Angeles": {
+    "osobowe": 400.0,
+    "suv": 400.0
   },
-  "WEST WARREN-Newark": {
+  "ACE - Perris-Los Angeles": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "ADESA Birmingham-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Akron-Canton-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Albany-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Altoona-New York": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Anaheim-Los Angeles": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Asheville-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Ashland-Chicago": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Atlanta-Savannah": {
     "osobowe": 450.0,
     "suv": 450.0
   },
-  "WHEELING-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
+  "Atlanta East-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
   },
-  "WICHITA-Chicago": {
+  "Atlanta North-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "ATLANTA SOUTH-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Avenel New Jersey-New York": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Baltimore-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Birmingham-Savannah": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Boston - Shirley-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Bowling Green-Chicago": {
     "osobowe": 575.0,
     "suv": 575.0
   },
-  "YORK HAVEN-Newark": {
+  "Bridgeport-New York": {
     "osobowe": 450.0,
     "suv": 450.0
   },
-  "Casper-Chicago": {
-    "osobowe": 1100.0,
-    "suv": 1100.0
+  "Buckhannon-New York": {
+    "osobowe": 800.0,
+    "suv": 800.0
   },
-  "Ogden-Chicago": {
-    "osobowe": 850.0,
-    "suv": 850.0
-  },
-  "Raleigh North-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Long Island-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Cicero-Chicago": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Los Angeles South-Los Angeles": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "Boise-Chicago": {
-    "osobowe": 1100.0,
-    "suv": 1100.0
-  },
-  "Englishtown-Newark": {
-    "osobowe": 250.0,
-    "suv": 250.0
-  },
-  "Toronto-Montreal": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Amarillo-Houston": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Milwaukee North-Chicago": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Billings-Chicago": {
-    "osobowe": 1000.0,
-    "suv": 1000.0
-  },
-  "Gastonia-Savannah": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Pittsburgh West-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Martinez-Los Angeles": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Jacksonville North-Savannah": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "Colorado Springs-Chicago": {
+  "Buffalo-New York": {
     "osobowe": 650.0,
     "suv": 650.0
   },
-  "Missoula-Chicago": {
-    "osobowe": 1000.0,
-    "suv": 1000.0
-  },
-  "Abilene-Houston": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Western Colorado-Chicago": {
-    "osobowe": 1100.0,
-    "suv": 1100.0
-  },
-  "BIllings-Chicago": {
-    "osobowe": 1000.0,
-    "suv": 1000.0
-  },
-  "Kincheloe-Chicago": {
+  "Burlington-New York": {
     "osobowe": 700.0,
     "suv": 700.0
   },
-  "Dyer-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
+  "Central New Jersey-New York": {
+    "osobowe": 350.0,
+    "suv": 350.0
   },
-  "Baltimore East-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
+  "Charleston-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
   },
-  "Redding-Los Angeles": {
-    "osobowe": 650.0,
-    "suv": 650.0
+  "Charlotte-Savannah": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "Adelanto-Los Angeles": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "Helena-Chicago": {
-    "osobowe": 1100.0,
-    "suv": 1100.0
-  },
-  "Roanoke-Newark": {
+  "Chattanooga-Savannah": {
     "osobowe": 550.0,
     "suv": 550.0
   },
-  "Atlanta South-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
+  "Chicago-North-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
   },
-  "Bismarck-Chicago": {
-    "osobowe": 750.0,
-    "suv": 750.0
+  "Chicago-South-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
   },
-  "Mobile South-Savannah": {
+  "Chicago-West-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Cincinnati-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Cincinnati South-New York": {
+    "osobowe": 720.0,
+    "suv": 720.0
+  },
+  "Clearwater-Miami": {
     "osobowe": 450.0,
     "suv": 450.0
   },
-  "Fairburn-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
+  "Cleveland-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "Sayreville-Newark": {
-    "osobowe": 250.0,
-    "suv": 250.0
-  },
-  "Newburgh Sublot-Newark": {
-    "osobowe": 285.0,
-    "suv": 285.0
-  },
-  "BIRMINGHAM-Savannah": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "New Jersey-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Chicago-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "California-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Pennsylvania-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "St. Pete-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Tampa-Miami": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Madison South-Chicago": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Fort Lauderdale-Miami": {
-    "osobowe": 220.0,
-    "suv": 220.0
-  },
-  "New England-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "STATEN ISLAND SUBLOT-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "San Francisco Bay-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "EARLINGTON-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "ELK RIVER SUBLOT-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Permian Basin-Houston": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "PHILADELPHIA EAST-SUBLOT-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Port Murray-Newark": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Caseyville-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "HARRISONBURG-Newark": {
-    "osobowe": 480.0,
-    "suv": 480.0
-  },
-  "Hudson Sublot-Newark": {
+  "Colton-Los Angeles": {
     "osobowe": 425.0,
     "suv": 425.0
   },
-  "White Marsh Sublot-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Roseville Sublot-Chicago": {
+  "Columbia-Savannah": {
     "osobowe": 475.0,
     "suv": 475.0
   },
-  "CAT Long Island - West-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Indianapolis South-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Vermillion - North Ford Lot-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "FREETOWN-Newark": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Fridley Sublot-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Miami-North 2 Offsite-Miami": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "ACE - Perris 2-Los Angeles": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "HARTFORD SOUTH-Newark": {
-    "osobowe": 320.0,
-    "suv": 320.0
-  },
-  "KANSAS CITY EAST-Chicago": {
-    "osobowe": 525.0,
-    "suv": 525.0
-  },
-  "Jobstown Sublot-Newark": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "Des Moines-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "LANSING-Chicago": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Chicago North-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Chicago South-Chicago": {
-    "osobowe": 275.0,
-    "suv": 275.0
-  },
-  "DETROIT-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "MINNEAPOLIS NORTH-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "HOUSTON-Houston": {
-    "osobowe": 200.0,
-    "suv": 200.0
-  },
-  "APPLETON-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Appleton-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "SUBLOT @ Modesto-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "St Louis-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "DES MOINES @ METRO-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Detroit B & G Lot-Chicago": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "HAMMER SUBLOT-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Clewiston CAT Yard-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "SHA LIU-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "PUNTA GORDA SOUTH-Miami": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Hartford @ North Sublot-Newark": {
-    "osobowe": 320.0,
-    "suv": 320.0
-  },
-  "YARD 81 SUBLOT-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Minneapolis South-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Bridgeton Sublot-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "MILWAUKEE SOUTH-Chicago": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "AUGUSTA-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "West Palm Beach-Miami": {
-    "osobowe": 260.0,
-    "suv": 260.0
-  },
-  "Riverside-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Fontana Off Site (San Bernardino)-Los Angeles": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Jefferson GA Sublot-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "SOUTH GASTON SUBLOT-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "RAPID CITY-Chicago": {
+  "Columbus-New York": {
     "osobowe": 700.0,
     "suv": 700.0
   },
-  "Elkton-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
+  "Concord-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
   },
-  "Fort Wayne-Chicago": {
-    "osobowe": 350.0,
-    "suv": 350.0
+  "Culpeper-New York": {
+    "osobowe": 550.0,
+    "suv": 550.0
   },
-  "High Point-Savannah": {
+  "Davenport-Chicago": {
     "osobowe": 450.0,
     "suv": 450.0
   },
-  "Kansas City East-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Dayton-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
   },
-  "Vallejo Sublot-Los Angeles": {
-    "osobowe": 500.0,
-    "suv": 500.0
+  "Denver-Chicago": {
+    "osobowe": 700.0,
+    "suv": 700.0
   },
-  "San Martin Sublot-Los Angeles": {
-    "osobowe": 500.0,
-    "suv": 500.0
+  "Denver East-Chicago": {
+    "osobowe": 750.0,
+    "suv": 750.0
   },
-  "MOORE SUBLOT-Houston": {
+  "Detroit-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Dothan-Savannah": {
     "osobowe": 600.0,
     "suv": 600.0
   },
-  "Mentone-Los Angeles": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "LANCASTER-Los Angeles": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Birmingham North-Savannah": {
+  "Dundalk-New York": {
     "osobowe": 500.0,
     "suv": 500.0
   },
-  "Roseville-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
+  "East Bay-Los Angeles": {
+    "osobowe": 575.0,
+    "suv": 575.0
   },
-  "Lucky Sublot-Los Angeles": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Alden Sublot-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Memphis-Chicago": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Ham Lake Sublot-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Santa Clarita-Los Angeles": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "Lyman @ Scarborough-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Savannah @ Metter Sublot-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Windham-Newark": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Clayton Sublot-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Springfield Sublot-Chicago": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Stimmel Road-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Northeast Auto Transport-Newark": {
-    "osobowe": 625.0,
-    "suv": 625.0
-  },
-  "Long Island - Rice Court-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Long Island - East Yard-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "So Sacramento @ Modesto-Los Angeles": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "Kansas City Sublot B-Chicago": {
-    "osobowe": 525.0,
-    "suv": 525.0
-  },
-  "Rice-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "Mission Rock Road-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Devil's Bowl Raceway-Newark": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Pensacola-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "FRUITLAND SUBLOT-Newark": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "Indy Minnesota Street-Chicago": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Long Island - North Yard-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "OUTER LOOP SUBLOT-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "FREETOWN-Savannah": {
+  "Erie-New York": {
     "osobowe": 650.0,
     "suv": 650.0
   },
-  "Clearwater-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "St Paul- North-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
-  },
-  "South Bend @ Sample St Offsite-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "AMSTERDAM SUBLOT-Newark": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Lyman @ Gray-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Monticello-Newark": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Long Island - Green Yard-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "LONDON-Montreal": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "6522 Old 41A Hwy_Tampa FL-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "CLEWISTON SUBLOT-Miami": {
-    "osobowe": 250.0,
-    "suv": 250.0
-  },
-  "Malvern Sublot-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "TAMPA NORTH-Miami": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Staten Island-Newark": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Rutland-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "MEBANE SUBLOT-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "AKRON-Newark": {
-    "osobowe": 600.0,
-    "suv": 600.0
-  },
-  "Wayland-Chicago": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Statesville-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Georgia-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Texas Hobby-Houston": {
-    "osobowe": 200.0,
-    "suv": 200.0
-  },
-  "LAS VEGAS WEST-Los Angeles": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "Nevada-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Oceanside-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "North Carolina-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Newark-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "COLORADO SPRINGS-Houston": {
+  "Fargo-Chicago": {
     "osobowe": 700.0,
     "suv": 700.0
   },
-  "Taylor Sublot-Houston": {
-    "osobowe": 350.0,
-    "suv": 350.0
+  "Fayetteville-Chicago": {
+    "osobowe": 700.0,
+    "suv": 700.0
   },
-  "Utah-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Flint-Chicago": {
+    "osobowe": 600.0,
+    "suv": 600.0
   },
-  "TAMPA SOUTH-Savannah": {
+  "Fontana-Los Angeles": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "Fort Myers-Miami": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Fort Pierce-Miami": {
     "osobowe": 400.0,
     "suv": 400.0
   },
-  "Seattle-Chicago": {
-    "osobowe": 1200.0,
-    "suv": 1200.0
-  },
-  "MIAMI SOUTH-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "Houston, TX 77031-Houston": {
-    "osobowe": 200.0,
-    "suv": 200.0
-  },
-  "Mississippi-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "NY Metro Skyline-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Fort Lauderdale-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Central Florida-Miami": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "Portland-Chicago": {
-    "osobowe": 1000.0,
-    "suv": 1000.0
-  },
-  "SUBLOT YD 168-Chicago": {
-    "osobowe": 225.0,
-    "suv": 225.0
-  },
-  "Fairfield Sublot-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Auction Lane Sublot-Los Angeles": {
-    "osobowe": 475.0,
-    "suv": 475.0
-  },
-  "ORLANDO NORTH-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "PORTLAND SUBLOT TX-Houston": {
+  "Fredericksburg South-New York": {
     "osobowe": 500.0,
     "suv": 500.0
   },
-  "Little Rock-Houston": {
+  "Fremont-Los Angeles": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Fresno-Los Angeles": {
     "osobowe": 550.0,
     "suv": 550.0
   },
-  "LITTLE ROCK-Houston": {
-    "osobowe": 550.0,
-    "suv": 550.0
-  },
-  "St Cloud-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Darlington-Savannah": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "KANSAS CITY-Houston": {
+  "Grand Rapids-Chicago": {
     "osobowe": 525.0,
     "suv": 525.0
   },
-  "PHOENIX NORTH-Los Angeles": {
-    "osobowe": 500.0,
-    "suv": 500.0
+  "Greensboro-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
   },
-  "Cudahy Yard 39 Sublot-Chicago": {
-    "osobowe": 300.0,
-    "suv": 300.0
+  "Greenville-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
   },
-  "St. Pete-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
+  "Grenada-Savannah": {
+    "osobowe": 650.0,
+    "suv": 650.0
   },
-  "Palm Beach-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "TAMPA NORTH-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "Zephyrhills, FL-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "PASCO-Chicago": {
-    "osobowe": 1200.0,
-    "suv": 1200.0
-  },
-  "Southern California-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Phoenix-Houston": {
-    "osobowe": 625.0,
-    "suv": 625.0
-  },
-  "WEST PALM BEACH-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "Austin North-Houston": {
-    "osobowe": 325.0,
-    "suv": 325.0
-  },
-  "EDMONTON-Montreal": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "PUNTA GORDA SOUTH-Savannah": {
-    "osobowe": 375.0,
-    "suv": 375.0
-  },
-  "Tulsa-Chicago": {
+  "Gulf Coast-Savannah": {
     "osobowe": 600.0,
     "suv": 600.0
   },
-  "Stockton-Los Angeles": {
+  "Hartford-New York": {
+    "osobowe": 420.0,
+    "suv": 420.0
+  },
+  "Hartford-South-New York": {
+    "osobowe": 420.0,
+    "suv": 420.0
+  },
+  "High Desert-Los Angeles": {
     "osobowe": 500.0,
     "suv": 500.0
   },
-  "HALIFAX-Montreal": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Honolulu-Los Angeles": {
+    "osobowe": 2000.0,
+    "suv": 2000.0
   },
-  "MONTREAL-Montreal": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Huntsville-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
   },
-  "Norwalk Auto Auction-Los Angeles": {
-    "osobowe": 275.0,
-    "suv": 275.0
+  "Indianapolis-Chicago": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "New Orleans-Savannah": {
+  "Jackson-Savannah": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Jacksonville-Savannah": {
+    "osobowe": 350.0,
+    "suv": 350.0
+  },
+  "Kansas City-Chicago": {
+    "osobowe": 525.0,
+    "suv": 525.0
+  },
+  "Knoxville-Savannah": {
+    "osobowe": 560.0,
+    "suv": 560.0
+  },
+  "Lafayette-Savannah": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Las Vegas-Los Angeles": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Laurel-New York": {
     "osobowe": 500.0,
     "suv": 500.0
   },
-  "Eugene AUX Lot-Los Angeles": {
+  "Lexington-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "Lincoln-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Little Rock-Chicago": {
     "osobowe": 700.0,
     "suv": 700.0
   },
-  "OTTAWA-Montreal": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "St Pete-Savannah": {
+  "Los Angeles-Los Angeles": {
     "osobowe": 375.0,
     "suv": 375.0
   },
-  "Dunn Sublot-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Louisville-Chicago": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "MULBERRY SUBLOT-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Louisville North-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
   },
-  "Orlando-North-Savannah": {
+  "Macon-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Manchester-New York": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Memphis-Savannah": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "Metro DC-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Miami-Miami": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Miami-North-Miami": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Milwaukee-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Minneapolis/St. Paul-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Nashville-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "New Castle-New York": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Newburgh-New York": {
+    "osobowe": 385.0,
+    "suv": 385.0
+  },
+  "North Hollywood-Los Angeles": {
     "osobowe": 400.0,
     "suv": 400.0
   },
+  "Northern Virginia-New York": {
+    "osobowe": 580.0,
+    "suv": 580.0
+  },
+  "Omaha-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Orlando-Miami": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Orlando-North-Miami": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "Paducah-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Pensacola-Miami": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Philadelphia-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Phoenix-Los Angeles": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Pittsburgh-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Pittsburgh-North-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Portage-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Portland - Gorham-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Providence-New York": {
+    "osobowe": 525.0,
+    "suv": 525.0
+  },
+  "Pulaski-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Raleigh-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Reno-Los Angeles": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Richmond-New York": {
+    "osobowe": 620.0,
+    "suv": 620.0
+  },
+  "Rochester-New York": {
+    "osobowe": 580.0,
+    "suv": 580.0
+  },
+  "Sacramento-Los Angeles": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Salt Lake City-Chicago": {
+    "osobowe": 950.0,
+    "suv": 950.0
+  },
+  "San Diego-Los Angeles": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Savannah-Savannah": {
+    "osobowe": 300.0,
+    "suv": 300.0
+  },
+  "Scranton-New York": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "Shady Spring-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Shreveport-Houston": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Sioux Falls-Chicago": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "South Bend-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Southern New Jersey-New York": {
+    "osobowe": 350.0,
+    "suv": 350.0
+  },
+  "Springfield-Chicago": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "St. Louis-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Suffolk-New York": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Syracuse-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Tampa North-Miami": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Taunton-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Templeton-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Tidewater-New York": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Tifton-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Tucson-Los Angeles": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Wichita-Chicago": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Wilmington-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "York Springs-New York": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "ALBANY-New York": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "ALTOONA-New York": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Antelope-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "ATLANTA EAST-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "ATLANTA NORTH-Savannah": {
+    "osobowe": 525.0,
+    "suv": 525.0
+  },
+  "ATLANTA WEST-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Bakersfield-Los Angeles": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "BALTIMORE-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "CANDIA-New York": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "CARTERSVILLE-Savannah": {
+    "osobowe": 525.0,
+    "suv": 525.0
+  },
+  "CHAMBERSBURG-New York": {
+    "osobowe": 525.0,
+    "suv": 525.0
+  },
+  "CHARLESTON-New York": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "CHINA GROVE-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "CLEVELAND EAST-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "CLEVELAND WEST-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "COLUMBIA-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "COLUMBIA-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "COLUMBUS-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Blaine Sublot-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "DANVILLE-New York": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "DAVENPORT-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "DAYTON-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "DENVER-Chicago": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "DENVER CENTRAL-Chicago": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "DENVER SOUTH-Chicago": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "DES MOINES-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "EXETER-New York": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "FLINT-Chicago": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "FORT WAYNE-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Fredericksburg-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "FT. PIERCE-Miami": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "GLASSBORO EAST-New York": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "Glassboro West-New York": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "HAMMOND-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "HAMPTON-New York": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "HARRISBURG-New York": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "HARTFORD-New York": {
+    "osobowe": 420.0,
+    "suv": 420.0
+  },
+  "HARTFORD SPRINGFIELD-New York": {
+    "osobowe": 420.0,
+    "suv": 420.0
+  },
+  "Hayward-Los Angeles": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "HONOLULU-Los Angeles": {
+    "osobowe": 2000.0,
+    "suv": 2000.0
+  },
+  "IONIA-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "JACKSONVILLE EAST-Savannah": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "JACKSONVILLE WEST-Savannah": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "KANSAS CITY-Chicago": {
+    "osobowe": 625.0,
+    "suv": 625.0
+  },
+  "KNOXVILLE-Savannah": {
+    "osobowe": 560.0,
+    "suv": 560.0
+  },
+  "LAS VEGAS-Los Angeles": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "LEXINGTON EAST-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "LEXINGTON WEST-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "LINCOLN-Chicago": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "LITTLE ROCK-Chicago": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Long Beach-Los Angeles": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "LOUISVILLE-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "LUMBERTON-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "LYMAN-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "MADISON-Chicago": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "MEBANE-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "MEMPHIS-Savannah": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "MIAMI CENTRAL-Miami": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "MIAMI NORTH-Miami": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "MIAMI SOUTH-Miami": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "MILWAUKEE-Chicago": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "MINNEAPOLIS-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Mobile-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "MOCKSVILLE-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Montgomery-Savannah": {
+    "osobowe": 560.0,
+    "suv": 560.0
+  },
+  "NASHVILLE-Savannah": {
+    "osobowe": 560.0,
+    "suv": 560.0
+  },
+  "NEWBURGH-New York": {
+    "osobowe": 385.0,
+    "suv": 385.0
+  },
+  "NORTH BOSTON-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "NORTH CHARLESTON-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "OCALA-Miami": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "ORLANDO NORTH-Miami": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "ORLANDO SOUTH-Miami": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "PEORIA-Chicago": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "PHILADELPHIA-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Philadelphia East-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Adamsburg Sublot-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "PITTSBURGH NORTH-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "PITTSBURGH SOUTH-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "PUNTA GORDA-Miami": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "RALEIGH-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Rancho Cucamonga-Los Angeles": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "RENO-Los Angeles": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "RICHMOND-New York": {
+    "osobowe": 620.0,
+    "suv": 620.0
+  },
+  "RICHMOND EAST-New York": {
+    "osobowe": 620.0,
+    "suv": 620.0
+  },
+  "ROCHESTER-New York": {
+    "osobowe": 580.0,
+    "suv": 580.0
+  },
+  "SALT LAKE CITY-Chicago": {
+    "osobowe": 950.0,
+    "suv": 950.0
+  },
+  "SAN BERNARDINO-Los Angeles": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "San Jose-Los Angeles": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "SAVANNAH-Savannah": {
+    "osobowe": 300.0,
+    "suv": 300.0
+  },
+  "SCRANTON-New York": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "SEAFORD-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "SHREVEPORT-Houston": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "SIKESTON-Chicago": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "So Sacramento-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "SOMERVILLE-New York": {
+    "osobowe": 350.0,
+    "suv": 350.0
+  },
+  "SOUTH BOSTON-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Southern Illinois-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "SPARTANBURG-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "SPRINGFIELD-Chicago": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "ST. CLOUD-Chicago": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "ST. LOUIS-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Sun Valley-Los Angeles": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "SYRACUSE-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "TALLAHASSEE-Savannah": {
+    "osobowe": 525.0,
+    "suv": 525.0
+  },
+  "TAMPA SOUTH-Miami": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "TANNER-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "TIFTON-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "TRENTON-New York": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "Vallejo-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Van Nuys-Los Angeles": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "WALTON-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "WASHINGTON DC-New York": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "WEST PALM BEACH-Miami": {
+    "osobowe": 360.0,
+    "suv": 360.0
+  },
+  "WEST WARREN-New York": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "WHEELING-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "WICHITA-Chicago": {
+    "osobowe": 675.0,
+    "suv": 675.0
+  },
+  "YORK HAVEN-New York": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Casper-Chicago": {
+    "osobowe": 1200.0,
+    "suv": 1200.0
+  },
+  "Ogden-Chicago": {
+    "osobowe": 950.0,
+    "suv": 950.0
+  },
+  "Raleigh North-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Long Island-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Cicero-Chicago": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "Los Angeles South-Los Angeles": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "Boise-Chicago": {
+    "osobowe": 1200.0,
+    "suv": 1200.0
+  },
+  "Englishtown-New York": {
+    "osobowe": 350.0,
+    "suv": 350.0
+  },
+  "Toronto-Montreal": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Amarillo-Houston": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Milwaukee North-Chicago": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Billings-Chicago": {
+    "osobowe": 1100.0,
+    "suv": 1100.0
+  },
+  "Gastonia-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Pittsburgh West-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Martinez-Los Angeles": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Jacksonville North-Savannah": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "Colorado Springs-Chicago": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "Missoula-Chicago": {
+    "osobowe": 1100.0,
+    "suv": 1100.0
+  },
+  "Abilene-Houston": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Western Colorado-Chicago": {
+    "osobowe": 1200.0,
+    "suv": 1200.0
+  },
+  "BIllings-Chicago": {
+    "osobowe": 1100.0,
+    "suv": 1100.0
+  },
+  "Kincheloe-Chicago": {
+    "osobowe": 800.0,
+    "suv": 800.0
+  },
+  "Dyer-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Baltimore East-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Redding-Los Angeles": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "Adelanto-Los Angeles": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "Helena-Chicago": {
+    "osobowe": 1200.0,
+    "suv": 1200.0
+  },
+  "Roanoke-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Atlanta South-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Bismarck-Chicago": {
+    "osobowe": 850.0,
+    "suv": 850.0
+  },
+  "Mobile South-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Fairburn-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Sayreville-New York": {
+    "osobowe": 350.0,
+    "suv": 350.0
+  },
+  "Newburgh Sublot-New York": {
+    "osobowe": 385.0,
+    "suv": 385.0
+  },
+  "BIRMINGHAM-Savannah": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "New Jersey-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Chicago-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "California-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Pennsylvania-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "St. Pete-Miami": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Tampa-Miami": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Madison South-Chicago": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "Fort Lauderdale-Miami": {
+    "osobowe": 320.0,
+    "suv": 320.0
+  },
+  "New England-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "STATEN ISLAND SUBLOT-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "San Francisco Bay-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "EARLINGTON-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "ELK RIVER SUBLOT-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Permian Basin-Houston": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "PHILADELPHIA EAST-SUBLOT-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Port Murray-New York": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "Caseyville-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "HARRISONBURG-New York": {
+    "osobowe": 580.0,
+    "suv": 580.0
+  },
+  "Hudson Sublot-New York": {
+    "osobowe": 525.0,
+    "suv": 525.0
+  },
+  "White Marsh Sublot-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Roseville Sublot-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "CAT Long Island - West-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Indianapolis South-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Vermillion - North Ford Lot-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "FREETOWN-New York": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Fridley Sublot-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Miami-North 2 Offsite-Miami": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "ACE - Perris 2-Los Angeles": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "HARTFORD SOUTH-New York": {
+    "osobowe": 420.0,
+    "suv": 420.0
+  },
+  "KANSAS CITY EAST-Chicago": {
+    "osobowe": 625.0,
+    "suv": 625.0
+  },
+  "Jobstown Sublot-New York": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "Des Moines-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "LANSING-Chicago": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Chicago North-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Chicago South-Chicago": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "DETROIT-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "MINNEAPOLIS NORTH-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "HOUSTON-Houston": {
+    "osobowe": 300.0,
+    "suv": 300.0
+  },
+  "APPLETON-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Appleton-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "SUBLOT @ Modesto-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "St Louis-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "DES MOINES @ METRO-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Detroit B & G Lot-Chicago": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "HAMMER SUBLOT-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Clewiston CAT Yard-Miami": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "SHA LIU-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "PUNTA GORDA SOUTH-Miami": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Hartford @ North Sublot-New York": {
+    "osobowe": 420.0,
+    "suv": 420.0
+  },
+  "YARD 81 SUBLOT-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Minneapolis South-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Bridgeton Sublot-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "MILWAUKEE SOUTH-Chicago": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "AUGUSTA-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "West Palm Beach-Miami": {
+    "osobowe": 360.0,
+    "suv": 360.0
+  },
+  "Riverside-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Fontana Off Site (San Bernardino)-Los Angeles": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "Jefferson GA Sublot-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "SOUTH GASTON SUBLOT-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "RAPID CITY-Chicago": {
+    "osobowe": 800.0,
+    "suv": 800.0
+  },
+  "Elkton-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Fort Wayne-Chicago": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "High Point-Savannah": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Kansas City East-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Vallejo Sublot-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "San Martin Sublot-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "MOORE SUBLOT-Houston": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Mentone-Los Angeles": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "LANCASTER-Los Angeles": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Birmingham North-Savannah": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Roseville-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Lucky Sublot-Los Angeles": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Alden Sublot-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Memphis-Chicago": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Ham Lake Sublot-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Santa Clarita-Los Angeles": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "Lyman @ Scarborough-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Savannah @ Metter Sublot-Savannah": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Windham-New York": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Clayton Sublot-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Springfield Sublot-Chicago": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Stimmel Road-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Northeast Auto Transport-New York": {
+    "osobowe": 725.0,
+    "suv": 725.0
+  },
+  "Long Island - Rice Court-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Long Island - East Yard-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "So Sacramento @ Modesto-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Kansas City Sublot B-Chicago": {
+    "osobowe": 625.0,
+    "suv": 625.0
+  },
+  "Rice-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "Mission Rock Road-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Devil's Bowl Raceway-New York": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Pensacola-Savannah": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "FRUITLAND SUBLOT-New York": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "Indy Minnesota Street-Chicago": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Long Island - North Yard-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "OUTER LOOP SUBLOT-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "FREETOWN-Savannah": {
+    "osobowe": 750.0,
+    "suv": 750.0
+  },
+  "Clearwater-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "St Paul- North-Chicago": {
+    "osobowe": 550.0,
+    "suv": 550.0
+  },
+  "South Bend @ Sample St Offsite-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "AMSTERDAM SUBLOT-New York": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Lyman @ Gray-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Monticello-New York": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Long Island - Green Yard-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "LONDON-Montreal": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "6522 Old 41A Hwy_Tampa FL-Miami": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "CLEWISTON SUBLOT-Miami": {
+    "osobowe": 350.0,
+    "suv": 350.0
+  },
+  "Malvern Sublot-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "TAMPA NORTH-Miami": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Staten Island-New York": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Rutland-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "MEBANE SUBLOT-Savannah": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "AKRON-New York": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Wayland-Chicago": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Statesville-Savannah": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Georgia-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Texas Hobby-Houston": {
+    "osobowe": 300.0,
+    "suv": 300.0
+  },
+  "LAS VEGAS WEST-Los Angeles": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "Nevada-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Oceanside-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "North Carolina-Savannah": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "New York-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "COLORADO SPRINGS-Houston": {
+    "osobowe": 800.0,
+    "suv": 800.0
+  },
+  "Taylor Sublot-Houston": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Utah-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "TAMPA SOUTH-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Seattle-Chicago": {
+    "osobowe": 1300.0,
+    "suv": 1300.0
+  },
+  "MIAMI SOUTH-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "Houston, TX 77031-Houston": {
+    "osobowe": 300.0,
+    "suv": 300.0
+  },
+  "Mississippi-Savannah": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "NY Metro Skyline-New York": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Fort Lauderdale-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Central Florida-Miami": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "Portland-Chicago": {
+    "osobowe": 1100.0,
+    "suv": 1100.0
+  },
+  "SUBLOT YD 168-Chicago": {
+    "osobowe": 325.0,
+    "suv": 325.0
+  },
+  "Fairfield Sublot-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Auction Lane Sublot-Los Angeles": {
+    "osobowe": 575.0,
+    "suv": 575.0
+  },
+  "ORLANDO NORTH-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "PORTLAND SUBLOT TX-Houston": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Little Rock-Houston": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "LITTLE ROCK-Houston": {
+    "osobowe": 650.0,
+    "suv": 650.0
+  },
+  "St Cloud-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Darlington-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "KANSAS CITY-Houston": {
+    "osobowe": 625.0,
+    "suv": 625.0
+  },
+  "PHOENIX NORTH-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Cudahy Yard 39 Sublot-Chicago": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "St. Pete-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "Palm Beach-Miami": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "TAMPA NORTH-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "Zephyrhills, FL-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "PASCO-Chicago": {
+    "osobowe": 1300.0,
+    "suv": 1300.0
+  },
+  "Southern California-Los Angeles": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Phoenix-Houston": {
+    "osobowe": 725.0,
+    "suv": 725.0
+  },
+  "WEST PALM BEACH-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "Austin North-Houston": {
+    "osobowe": 425.0,
+    "suv": 425.0
+  },
+  "EDMONTON-Montreal": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "PUNTA GORDA SOUTH-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "Tulsa-Chicago": {
+    "osobowe": 700.0,
+    "suv": 700.0
+  },
+  "Stockton-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "HALIFAX-Montreal": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "MONTREAL-Montreal": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Norwalk Auto Auction-Los Angeles": {
+    "osobowe": 375.0,
+    "suv": 375.0
+  },
+  "New Orleans-Savannah": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "Eugene AUX Lot-Los Angeles": {
+    "osobowe": 800.0,
+    "suv": 800.0
+  },
+  "OTTAWA-Montreal": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "St Pete-Savannah": {
+    "osobowe": 475.0,
+    "suv": 475.0
+  },
+  "Dunn Sublot-Chicago": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "MULBERRY SUBLOT-Miami": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Orlando-North-Savannah": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
   "Provo-Chicago": {
+    "osobowe": 975.0,
+    "suv": 975.0
+  },
+  "OKEECHOBEE-Miami": {
+    "osobowe": 400.0,
+    "suv": 400.0
+  },
+  "OKEECHOBEE-Savannah": {
+    "osobowe": 525.0,
+    "suv": 525.0
+  },
+  "Clewiston CAT Yard-Savannah": {
+    "osobowe": 450.0,
+    "suv": 450.0
+  },
+  "NAPA-Los Angeles": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "MIAMI CENTRAL-Savannah": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "Laurel Sublot-New York": {
+    "osobowe": 500.0,
+    "suv": 500.0
+  },
+  "St. Cloud-Chicago": {
+    "osobowe": 600.0,
+    "suv": 600.0
+  },
+  "COOKSTOWN-Montreal": {
+    "osobowe": 0,
+    "suv": 0
+  },
+  "NORTH SEATTLE-Chicago": {
+    "osobowe": 1300.0,
+    "suv": 1300.0
+  },
+  "Yard 349 Sublot-Los Angeles": {
     "osobowe": 875.0,
     "suv": 875.0
   },
-  "OKEECHOBEE-Miami": {
-    "osobowe": 300.0,
-    "suv": 300.0
-  },
-  "OKEECHOBEE-Savannah": {
-    "osobowe": 425.0,
-    "suv": 425.0
-  },
-  "Clewiston CAT Yard-Savannah": {
-    "osobowe": 350.0,
-    "suv": 350.0
-  },
-  "NAPA-Los Angeles": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "MIAMI CENTRAL-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "Laurel Sublot-Newark": {
-    "osobowe": 400.0,
-    "suv": 400.0
-  },
-  "St. Cloud-Chicago": {
-    "osobowe": 500.0,
-    "suv": 500.0
-  },
-  "COOKSTOWN-Montreal": {
-    "osobowe": 0.0,
-    "suv": 0.0
-  },
-  "NORTH SEATTLE-Chicago": {
-    "osobowe": 1200.0,
-    "suv": 1200.0
-  },
-  "Yard 349 Sublot-Los Angeles": {
-    "osobowe": 775.0,
-    "suv": 775.0
-  },
   "SPOKANE-Chicago": {
-    "osobowe": 1200.0,
-    "suv": 1200.0
+    "osobowe": 1300.0,
+    "suv": 1300.0
   },
   "Spanaway-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Portland-Los Angeles": {
-    "osobowe": 750.0,
-    "suv": 750.0
+    "osobowe": 850.0,
+    "suv": 850.0
   },
-  "Coopersburg-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Coopersburg-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "PORTLAND SOUTH-Los Angeles": {
-    "osobowe": 750.0,
-    "suv": 750.0
+    "osobowe": 850.0,
+    "suv": 850.0
   },
   "PORTLAND NORTH-Los Angeles": {
-    "osobowe": 750.0,
-    "suv": 750.0
+    "osobowe": 850.0,
+    "suv": 850.0
   },
   "GRAHAM-Chicago": {
-    "osobowe": 1200.0,
-    "suv": 1200.0
+    "osobowe": 1300.0,
+    "suv": 1300.0
   },
   "Spokane-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "VERTIA ST SUB LOT-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "White Plains Sublot-Newark": {
-    "osobowe": 375.0,
-    "suv": 375.0
+  "White Plains Sublot-New York": {
+    "osobowe": 475.0,
+    "suv": 475.0
   },
   "Arlington Sublot-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Heights Sublot-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Omaha South-Chicago": {
-    "osobowe": 500.0,
-    "suv": 500.0
+    "osobowe": 600.0,
+    "suv": 600.0
   },
   "Napa Sublot-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Coplay-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Coplay-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "Lake City-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "CEDAR RAPIDS-Chicago": {
-    "osobowe": 450.0,
-    "suv": 450.0
+    "osobowe": 550.0,
+    "suv": 550.0
   },
   "Atlanta West-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Clewiston-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Calgary-Montreal": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "EUGENE-Los Angeles": {
-    "osobowe": 825.0,
-    "suv": 825.0
+    "osobowe": 925.0,
+    "suv": 925.0
   },
   "GRAHAM-Los Angeles": {
-    "osobowe": 850.0,
-    "suv": 850.0
+    "osobowe": 950.0,
+    "suv": 950.0
   },
   "Boise-Los Angeles": {
-    "osobowe": 850.0,
-    "suv": 850.0
+    "osobowe": 950.0,
+    "suv": 950.0
   },
   "Portland Sublot-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "St. Louis Off-Site Granite City-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "PITTSBURGH EAST-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "PITTSBURGH EAST-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "NORTH AUSTIN-Houston": {
-    "osobowe": 375.0,
-    "suv": 375.0
+    "osobowe": 475.0,
+    "suv": 475.0
   },
   "Portland South-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Sacramento West-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Dallas Fort Worth-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Ohio-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Ohio-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "Baltimore-Washington-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Baltimore-Washington-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA Atlanta-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "NPA Cincinnati-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "NPA Cincinnati-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA Dallas-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA Fort Worth Sublot-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA Denver-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA Kansas City-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA Lakeland-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "NPA Philadelphia-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "NPA Philadelphia-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA Portland-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA Sacramento-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "ADESA Flint-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "ADESA Cincinnati/Dayton-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "ADESA Cincinnati/Dayton-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "Eugene-Los Angeles": {
-    "osobowe": 700.0,
-    "suv": 700.0
+    "osobowe": 800.0,
+    "suv": 800.0
   },
   "ADESA Dallas-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "ADESA Sarasota-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "ADESA Charlotte-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Lakeland-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Portland West-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Sacramento-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Carvana Oklahoma City-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Portland-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Adesa Mercer-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Adesa Mercer-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Phoenix-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Vancouver Yard-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Raleigh-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Adesa Long Island-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Adesa Long Island-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Golden Gate-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Adesa Washington DC-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Adesa Washington DC-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Salt Lake-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Adesa Boston-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Adesa Boston-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Brashers-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Ocala-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Adesa New Jersey-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Adesa New Jersey-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "Taunton offsite-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Taunton offsite-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Boise-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Atlanta-Savannah": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Colorado Springs-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Tulsa-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Chicago-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Maryland-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Maryland-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
-  "Adesa Buffalo-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Adesa Buffalo-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Seattle-Chicago": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "ADESA PITTSBURGH-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "ADESA PITTSBURGH-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "NPA San Diego-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Orlando-Miami": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Adesa Reno-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
   "Apex Sublot-Los Angeles": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   },
-  "Terminal Drive-Newark": {
-    "osobowe": 0.0,
-    "suv": 0.0
+  "Terminal Drive-New York": {
+    "osobowe": 0,
+    "suv": 0
   },
   "West Palm Beach-Savannah": {
-    "osobowe": 425.0,
-    "suv": 425.0
+    "osobowe": 525.0,
+    "suv": 525.0
   },
   "VINTON-Houston": {
-    "osobowe": 0.0,
-    "suv": 0.0
+    "osobowe": 0,
+    "suv": 0
   }
 };
 
 export const OCEAN_RATES = {
-  "Chicago-Klaipeda-1 z 4-MSC": 1000.0,
-  "Chicago-Klaipeda-1 z 3-MSC": 1266.0,
-  "Savannah-Klaipeda-1 z 4-MSC": 850.0,
-  "Savannah-Klaipeda-1 z 3-MSC": 1066.0,
-  "Newark-Klaipeda-1 z 4-MSC": 875.0,
-  "Newark-Klaipeda-1 z 3-MSC": 1100.0,
-  "Miami-Klaipeda-1 z 4-MSC": 875.0,
-  "Miami-Klaipeda-1 z 3-MSC": 1100.0,
-  "Chicago-Rotterdam-1 z 4-MSC": 800.0,
-  "Chicago-Rotterdam-1 z 3-MSC": 933.0,
-  "Houston-Rotterdam-1 z 4-MSC": 725.0,
-  "Houston-Rotterdam-1 z 3-MSC": 900.0,
-  "Los Angeles-Rotterdam-1 z 4-MSC": 1125.0,
-  "Los Angeles-Rotterdam-1 z 3-MSC": 1400.0,
-  "Miami-Rotterdam-1 z 4-MSC": 825.0,
-  "Miami-Rotterdam-1 z 3-MSC": 1033.0,
-  "Newark-Rotterdam-1 z 4-MSC": 650.0,
-  "Newark-Rotterdam-1 z 3-MSC": 800.0,
-  "Savannah-Rotterdam-1 z 4-MSC": 600.0,
-  "Savannah-Rotterdam-1 z 3-MSC": 733.33,
-  "Los Angeles-Klaipeda-1 z 4-MSC": 1550.0,
-  "Los Angeles-Klaipeda-1 z 3-MSC": 2000.0,
-  "Savannah-Klaipeda-1 z 4-Maersk": 650.0,
-  "Savannah-Klaipeda-1 z 3-Maersk": 866.0,
-  "Savannah-Klaipeda-1 z 4-ONE": 650.0,
-  "Savannah-Klaipeda-1 z 3-ONE": 866.0,
-  "Houston-Klaipeda-1 z 4-Maersk": 850.0,
-  "Houston-Klaipeda-1 z 3-Maersk": 1133.0,
-  "Houston-Klaipeda-1 z 4-Evergreen": 850.0,
-  "Houston-Klaipeda-1 z 3-Evergreen": 1133.0,
-  "Newark-Klaipeda-1 z 4-Maersk": 675.0,
-  "Newark-Klaipeda-1 z 3-Maersk": 900.0,
-  "Newark-Klaipeda-1 z 4-CMA CGM": 675.0,
-  "Newark-Klaipeda-1 z 3-CMA CGM": 900.0,
-  "Savannah-Rotterdam-1 z 4-CMA CGM": 625.0,
-  "Savannah-Rotterdam-1 z 3-CMA CGM": 833.0,
-  "Savannah-Rotterdam-1 z 4-Evergreen": 625.0,
-  "Savannah-Rotterdam-1 z 3-Evergreen": 833.0,
-  "Houston-Rotterdam-1 z 4-Evergreen": 800.0,
-  "Houston-Rotterdam-1 z 3-Evergreen": 1066.0,
-  "Houston-Rotterdam-1 z 4-Cosco": 800.0,
-  "Houston-Rotterdam-1 z 3-Cosco": 1066.0,
-  "Houston-Rotterdam-1 z 4-CMA CGM": 800.0,
-  "Houston-Rotterdam-1 z 3-CMA CGM": 1066.0,
-  "Houston-Klaipeda-1 z 4-ONE": 850.0,
-  "Houston-Klaipeda-1 z 3-ONE": 1133.0,
-  "Newark-Rotterdam-1 z 4-CMA CGM": 600.0,
-  "Newark-Rotterdam-1 z 3-CMA CGM": 800.0,
-  "Newark-Rotterdam-1 z 4-ONE": 600.0,
-  "Newark-Rotterdam-1 z 3-ONE": 800.0,
-  "Savannah-Klaipeda-1 z 4-CMA CGM": 650.0,
-  "Savannah-Klaipeda-1 z 3-CMA CGM": 866.0,
-  "Chicago-Klaipeda-1 z 4-Maersk": 800.0,
-  "Chicago-Klaipeda-1 z 3-Maersk": 1066.0,
-  "Newark-Klaipeda-1 z 4-OOCL": 675.0,
-  "Newark-Klaipeda-1 z 3-OOCL": 900.0,
-  "Savannah-Klaipeda-1 z 4-Evergreen": 650.0,
-  "Savannah-Klaipeda-1 z 3-Evergreen": 866.0,
-  "Savannah-Klaipeda-1 z 4-OOCL": 650.0,
-  "Savannah-Klaipeda-1 z 3-OOCL": 866.0,
-  "Newark-Rotterdam-1 z 4-OOCL": 600.0,
-  "Newark-Rotterdam-1 z 3-OOCL": 800.0,
-  "Savannah-Klaipeda-1 z 4-Cosco": 650.0,
-  "Savannah-Klaipeda-1 z 3-Cosco": 866.0,
-  "Houston-Klaipeda-1 z 4-Cosco": 850.0,
-  "Houston-Klaipeda-1 z 3-Cosco": 1133.0,
-  "Houston-Klaipeda-1 z 4-CMA CGM": 850.0,
-  "Houston-Klaipeda-1 z 3-CMA CGM": 1133.0,
-  "Savannah-Rotterdam-1 z 4-Cosco": 625.0,
-  "Savannah-Rotterdam-1 z 3-Cosco": 833.0,
-  "Houston-Klaipeda-1 z 4-MSC": 1050.0,
-  "Houston-Klaipeda-1 z 3-MSC": 1366.0,
-  "Newark-Klaipeda-1 z 4-Cosco": 675.0,
-  "Newark-Klaipeda-1 z 3-Cosco": 900.0,
-  "Newark-Rotterdam-1 z 4-Cosco": 600.0,
-  "Newark-Rotterdam-1 z 3-Cosco": 800.0,
-  "Newark-Klaipeda-1 z 4-Hapag Lloyd": 675.0,
-  "Newark-Klaipeda-1 z 3-Hapag Lloyd": 900.0,
-  "Newark-Rotterdam-1 z 4-Hapag Lloyd": 600.0,
-  "Newark-Rotterdam-1 z 3-Hapag Lloyd": 800.0,
-  "Savannah-Klaipeda-1 z 4-Hapag Lloyd": 650.0,
-  "Savannah-Klaipeda-1 z 3-Hapag Lloyd": 866.0,
-  "Savannah-Rotterdam-1 z 4-Maersk": 600.0,
-  "Savannah-Rotterdam-1 z 3-Maersk": 733.33,
-  "Houston-Rotterdam-1 z 4-Maersk": 475.0,
-  "Houston-Rotterdam-1 z 3-Maersk": 633.33,
-  "Miami-Klaipeda-1 z 4-Maersk": 675.0,
-  "Miami-Klaipeda-1 z 3-Maersk": 900.0,
-  "Miami-Klaipeda-1 z 4-Hapag Lloyd": 675.0,
-  "Miami-Klaipeda-1 z 3-Hapag Lloyd": 900.0
+  "Chicago-Klaipeda-1 z 4-MSC": 1100.0,
+  "Chicago-Klaipeda-1 z 3-MSC": 1366.0,
+  "Savannah-Klaipeda-1 z 4-MSC": 950.0,
+  "Savannah-Klaipeda-1 z 3-MSC": 1166.0,
+  "Newark-Klaipeda-1 z 4-MSC": 975.0,
+  "Newark-Klaipeda-1 z 3-MSC": 1200.0,
+  "Miami-Klaipeda-1 z 4-MSC": 975.0,
+  "Miami-Klaipeda-1 z 3-MSC": 1200.0,
+  "Chicago-Rotterdam-1 z 4-MSC": 900.0,
+  "Chicago-Rotterdam-1 z 3-MSC": 1033.0,
+  "Houston-Rotterdam-1 z 4-MSC": 825.0,
+  "Houston-Rotterdam-1 z 3-MSC": 1000.0,
+  "Los Angeles-Rotterdam-1 z 4-MSC": 1225.0,
+  "Los Angeles-Rotterdam-1 z 3-MSC": 1500.0,
+  "Miami-Rotterdam-1 z 4-MSC": 925.0,
+  "Miami-Rotterdam-1 z 3-MSC": 1133.0,
+  "Newark-Rotterdam-1 z 4-MSC": 750.0,
+  "Newark-Rotterdam-1 z 3-MSC": 900.0,
+  "Savannah-Rotterdam-1 z 4-MSC": 700.0,
+  "Savannah-Rotterdam-1 z 3-MSC": 833.33,
+  "Los Angeles-Klaipeda-1 z 4-MSC": 1650.0,
+  "Los Angeles-Klaipeda-1 z 3-MSC": 2100.0,
+  "Savannah-Klaipeda-1 z 4-Maersk": 750.0,
+  "Savannah-Klaipeda-1 z 3-Maersk": 966.0,
+  "Savannah-Klaipeda-1 z 4-ONE": 750.0,
+  "Savannah-Klaipeda-1 z 3-ONE": 966.0,
+  "Houston-Klaipeda-1 z 4-Maersk": 950.0,
+  "Houston-Klaipeda-1 z 3-Maersk": 1233.0,
+  "Houston-Klaipeda-1 z 4-Evergreen": 950.0,
+  "Houston-Klaipeda-1 z 3-Evergreen": 1233.0,
+  "Newark-Klaipeda-1 z 4-Maersk": 775.0,
+  "Newark-Klaipeda-1 z 3-Maersk": 1000.0,
+  "Newark-Klaipeda-1 z 4-CMA CGM": 775.0,
+  "Newark-Klaipeda-1 z 3-CMA CGM": 1000.0,
+  "Savannah-Rotterdam-1 z 4-CMA CGM": 725.0,
+  "Savannah-Rotterdam-1 z 3-CMA CGM": 933.0,
+  "Savannah-Rotterdam-1 z 4-Evergreen": 725.0,
+  "Savannah-Rotterdam-1 z 3-Evergreen": 933.0,
+  "Houston-Rotterdam-1 z 4-Evergreen": 900.0,
+  "Houston-Rotterdam-1 z 3-Evergreen": 1166.0,
+  "Houston-Rotterdam-1 z 4-Cosco": 900.0,
+  "Houston-Rotterdam-1 z 3-Cosco": 1166.0,
+  "Houston-Rotterdam-1 z 4-CMA CGM": 900.0,
+  "Houston-Rotterdam-1 z 3-CMA CGM": 1166.0,
+  "Houston-Klaipeda-1 z 4-ONE": 950.0,
+  "Houston-Klaipeda-1 z 3-ONE": 1233.0,
+  "Newark-Rotterdam-1 z 4-CMA CGM": 700.0,
+  "Newark-Rotterdam-1 z 3-CMA CGM": 900.0,
+  "Newark-Rotterdam-1 z 4-ONE": 700.0,
+  "Newark-Rotterdam-1 z 3-ONE": 900.0,
+  "Savannah-Klaipeda-1 z 4-CMA CGM": 750.0,
+  "Savannah-Klaipeda-1 z 3-CMA CGM": 966.0,
+  "Chicago-Klaipeda-1 z 4-Maersk": 900.0,
+  "Chicago-Klaipeda-1 z 3-Maersk": 1166.0,
+  "Newark-Klaipeda-1 z 4-OOCL": 775.0,
+  "Newark-Klaipeda-1 z 3-OOCL": 1000.0,
+  "Savannah-Klaipeda-1 z 4-Evergreen": 750.0,
+  "Savannah-Klaipeda-1 z 3-Evergreen": 966.0,
+  "Savannah-Klaipeda-1 z 4-OOCL": 750.0,
+  "Savannah-Klaipeda-1 z 3-OOCL": 966.0,
+  "Newark-Rotterdam-1 z 4-OOCL": 700.0,
+  "Newark-Rotterdam-1 z 3-OOCL": 900.0,
+  "Savannah-Klaipeda-1 z 4-Cosco": 750.0,
+  "Savannah-Klaipeda-1 z 3-Cosco": 966.0,
+  "Houston-Klaipeda-1 z 4-Cosco": 950.0,
+  "Houston-Klaipeda-1 z 3-Cosco": 1233.0,
+  "Houston-Klaipeda-1 z 4-CMA CGM": 950.0,
+  "Houston-Klaipeda-1 z 3-CMA CGM": 1233.0,
+  "Savannah-Rotterdam-1 z 4-Cosco": 725.0,
+  "Savannah-Rotterdam-1 z 3-Cosco": 933.0,
+  "Houston-Klaipeda-1 z 4-MSC": 1150.0,
+  "Houston-Klaipeda-1 z 3-MSC": 1466.0,
+  "Newark-Klaipeda-1 z 4-Cosco": 775.0,
+  "Newark-Klaipeda-1 z 3-Cosco": 1000.0,
+  "Newark-Rotterdam-1 z 4-Cosco": 700.0,
+  "Newark-Rotterdam-1 z 3-Cosco": 900.0,
+  "Newark-Klaipeda-1 z 4-Hapag Lloyd": 775.0,
+  "Newark-Klaipeda-1 z 3-Hapag Lloyd": 1000.0,
+  "Newark-Rotterdam-1 z 4-Hapag Lloyd": 700.0,
+  "Newark-Rotterdam-1 z 3-Hapag Lloyd": 900.0,
+  "Savannah-Klaipeda-1 z 4-Hapag Lloyd": 750.0,
+  "Savannah-Klaipeda-1 z 3-Hapag Lloyd": 966.0,
+  "Savannah-Rotterdam-1 z 4-Maersk": 700.0,
+  "Savannah-Rotterdam-1 z 3-Maersk": 833.33,
+  "Houston-Rotterdam-1 z 4-Maersk": 575.0,
+  "Houston-Rotterdam-1 z 3-Maersk": 733.33,
+  "Miami-Klaipeda-1 z 4-Maersk": 775.0,
+  "Miami-Klaipeda-1 z 3-Maersk": 1000.0,
+  "Miami-Klaipeda-1 z 4-Hapag Lloyd": 775.0,
+  "Miami-Klaipeda-1 z 3-Hapag Lloyd": 1000.0
 };
 
 export const UCS_PORTS = ["Chicago", "Los Angeles", "Houston", "Newark", "Savannah", "Miami"];
