@@ -7306,7 +7306,7 @@ export const BROKERS = [
     "username": "bmjtrans",
     "password": "Pole123!o",
     "name": "Krzysztof Surmacz",
-    "package": "Premium Ultra",
-    "discount": 50
+    "package": "Premium Partner",
+    "discount": 100
   }
 ];
