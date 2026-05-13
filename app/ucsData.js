@@ -7322,5 +7322,12 @@ export const BROKERS = [
     "name": "Justyna Polak",
     "package": "Premium Ultra",
     "discount": 50
+  },
+  {
+    "username": "lukaslomza",
+    "password": "Lom123!za",
+    "name": "Łukasz Chojnowski",
+    "package": "Premium",
+    "discount": 25
   }
 ];
