@@ -31,6 +31,9 @@ const translations = {
     hazmatLabel: "HAZMAT / Electric / Hybrid",
     hazmatInfo: "Dodatkowa opłata HAZMAT: $300",
     hazmatLine: "HAZMAT",
+    waBosLabel: "WA BOS — nowe TITLE",
+    waBosInfo: "Dodatkowa opłata za nowe TITLE: $350",
+    waBosLine: "WA BOS / TITLE",
     wholesaleActive: "Panel HURT aktywny",
     wholesaleInfo: "Jesteś zalogowany jako broker.",
     wholesalePriceInfo: "Cennik Premium HURT aktywny.",
@@ -95,6 +98,9 @@ const translations = {
     hazmatLabel: "HAZMAT / Electric / Hybrid",
     hazmatInfo: "Additional HAZMAT fee: $300",
     hazmatLine: "HAZMAT",
+    waBosLabel: "WA BOS — new TITLE",
+    waBosInfo: "Additional new TITLE fee: $350",
+    waBosLine: "WA BOS / TITLE",
     wholesaleActive: "WHOLESALE panel active",
     wholesaleInfo: "You are logged in as a broker.",
     wholesalePriceInfo: "Premium WHOLESALE pricing active.",
@@ -159,6 +165,9 @@ const translations = {
     hazmatLabel: "HAZMAT / Electric / Hybrid",
     hazmatInfo: "Додаткова плата HAZMAT: $300",
     hazmatLine: "HAZMAT",
+    waBosLabel: "WA BOS — новий TITLE",
+    waBosInfo: "Додаткова плата за новий TITLE: $350",
+    waBosLine: "WA BOS / TITLE",
     wholesaleActive: "Оптова панель активна",
     wholesaleInfo: "Ви увійшли як брокер.",
     wholesalePriceInfo: "Premium HURT ціни активні.",
@@ -223,6 +232,9 @@ const translations = {
     hazmatLabel: "HAZMAT / Electric / Hybrid",
     hazmatInfo: "Допълнителна HAZMAT такса: $300",
     hazmatLine: "HAZMAT",
+    waBosLabel: "WA BOS — нов TITLE",
+    waBosInfo: "Допълнителна такса за нов TITLE: $350",
+    waBosLine: "WA BOS / TITLE",
     wholesaleActive: "HURT панелът е активен",
     wholesaleInfo: "Влезли сте като брокер.",
     wholesalePriceInfo: "Premium HURT цените са активни.",
@@ -287,6 +299,9 @@ const translations = {
     hazmatLabel: "HAZMAT / Electric / Hybrid",
     hazmatInfo: "رسوم HAZMAT إضافية: $300",
     hazmatLine: "HAZMAT",
+    waBosLabel: "WA BOS — TITLE جديد",
+    waBosInfo: "رسوم إضافية لإصدار TITLE جديد: $350",
+    waBosLine: "WA BOS / TITLE",
     wholesaleActive: "لوحة الجملة مفعلة",
     wholesaleInfo: "أنت مسجل كوسيط.",
     wholesalePriceInfo: "أسعار Premium HURT مفعلة.",
@@ -358,6 +373,7 @@ export default function Home() {
   const [location, setLocation] = useState("");
   const [vehicle, setVehicle] = useState("SUV");
   const [hazmat, setHazmat] = useState(false);
+  const [waBos, setWaBos] = useState(false);
   const [portUsa, setPortUsa] = useState("Savannah");
   const [portEu, setPortEu] = useState("Rotterdam");
   const [packing, setPacking] = useState("1 z 3");
@@ -426,11 +442,12 @@ export default function Home() {
       : 0;
 
   const hazmatFee = hazmat && mode === "wholesale" ? 300 : 0;
+  const waBosFee = waBos && mode === "wholesale" ? 350 : 0;
 
   // DETAL: $0 i kontakt. HURT: pokazujemy ceny brokera.
   const inland = mode === "wholesale" ? wholesaleInland : 0;
   const ocean = mode === "wholesale" ? wholesaleOcean : 0;
-  const total = inland + ocean + hazmatFee;
+  const total = inland + ocean + hazmatFee + waBosFee;
 
   const isFlorida =
     selectedLocation?.state === "FL" ||
@@ -658,6 +675,19 @@ export default function Home() {
             </span>
           </label>
 
+          <label className="flex items-center gap-3 rounded-xl border bg-white p-4 text-lg font-semibold text-slate-900">
+            <input
+              type="checkbox"
+              checked={waBos}
+              onChange={(e) => setWaBos(e.target.checked)}
+              className="h-5 w-5"
+            />
+            <span>{t.waBosLabel}</span>
+            <span className="ml-auto rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
+              +$350
+            </span>
+          </label>
+
           <select
             className="w-full rounded-xl border p-4 text-lg"
             value={packing}
@@ -711,6 +741,12 @@ export default function Home() {
           {hazmatFee > 0 && (
             <p className="text-lg">
               {t.hazmatLine}: ${hazmatFee.toFixed(2)}
+            </p>
+          )}
+
+          {waBosFee > 0 && (
+            <p className="text-lg">
+              {t.waBosLine}: ${waBosFee.toFixed(2)}
             </p>
           )}
 
