@@ -540,13 +540,6 @@ export default function Home() {
       `Cena końcowa: $${total.toFixed(2)}`
   );
 
-  const carfaxWhatsappMessage = encodeURIComponent(
-    `SPRAWDŹ CARFAX\n` +
-      `Broker: ${activeBroker?.name || ""}\n` +
-      `Pakiet: ${activeBroker?.package || ""}\n` +
-      `VIN: ${carfaxVin}`
-  );
-
   const publicQuoteWhatsappMessage = encodeURIComponent(
     `PROŚBA O WYCENĘ DETALICZNĄ\n` +
       `Aukcja: ${quoteAuction}\n` +
@@ -610,6 +603,13 @@ export default function Home() {
       setPortUsa(chosen.recommendedPort);
     }
   }
+
+  const carfaxWhatsappMessage = encodeURIComponent(
+    `SPRAWDŹ CARFAX\n` +
+      `Broker: ${activeBroker?.name || ""}\n` +
+      `Pakiet: ${activeBroker?.package || ""}\n` +
+      `VIN: ${carfaxVin}`
+  );
 
   return (
     <main
@@ -695,36 +695,7 @@ export default function Home() {
             </div>
           )}
 
-                  {mode === "wholesale" && activeBroker && (
-          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
-            <h3 className="text-2xl font-bold text-slate-900">
-              {t.carfaxTitle}
-            </h3>
-
-            <p className="mt-2 text-slate-600">
-              Wyślij VIN przez WhatsApp, aby szybko sprawdzić historię CARFAX przed licytacją.
-            </p>
-
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <input
-                className="rounded-xl border p-4 text-lg text-slate-900"
-                value={carfaxVin}
-                onChange={(e) => setCarfaxVin(e.target.value)}
-                placeholder={t.carfaxVin}
-              />
-
-              <a
-                className="inline-block rounded-2xl bg-green-600 px-6 py-4 text-center text-lg font-bold text-white shadow hover:bg-green-700"
-                href={`https://wa.me/19412505868?text=${carfaxWhatsappMessage}`}
-                target="_blank"
-              >
-                {t.carfaxWhatsapp}
-              </a>
-            </div>
-          </div>
-        )}
-
-{mode === "wholesale" && activeBroker && (
+          {mode === "wholesale" && activeBroker && (
             <div className="mx-auto mt-4 max-w-2xl rounded-3xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-900">
               <p className="text-lg font-bold">
                 {t.brokerWelcome} {activeBroker.name}
@@ -762,6 +733,55 @@ export default function Home() {
             {t.banner}
           </div>
         </div>
+
+        {mode === "retail" && (
+          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
+            <h3 className="text-2xl font-bold text-slate-900">
+              {t.quoteRequestTitle}
+            </h3>
+
+            <p className="mt-2 text-slate-600">
+              Wypełnij dane auta, a WhatsApp otworzy gotową wiadomość do UCS.
+            </p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <select
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={quoteAuction}
+                onChange={(e) => setQuoteAuction(e.target.value)}
+              >
+                <option>IAA</option>
+                <option>Copart</option>
+                <option>Manheim</option>
+                <option>Adesa</option>
+                <option>Progi</option>
+                <option>NPA</option>
+              </select>
+
+              <input
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={quoteLot}
+                onChange={(e) => setQuoteLot(e.target.value)}
+                placeholder={t.quoteLot}
+              />
+
+              <input
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={quoteNote}
+                onChange={(e) => setQuoteNote(e.target.value)}
+                placeholder={t.quoteNote}
+              />
+            </div>
+
+            <a
+              className="mt-5 inline-block rounded-2xl bg-green-600 px-6 py-4 text-lg font-bold text-white shadow hover:bg-green-700"
+              href={`https://wa.me/19412505868?text=${publicQuoteWhatsappMessage}`}
+              target="_blank"
+            >
+              {t.quoteWhatsapp}
+            </a>
+          </div>
+        )}
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           <select
@@ -932,7 +952,37 @@ export default function Home() {
           )}
         </div>
 
-                {mode === "wholesale" && activeBroker && (
+
+        {mode === "wholesale" && activeBroker && (
+          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
+            <h3 className="text-2xl font-bold text-slate-900">
+              {t.carfaxTitle}
+            </h3>
+
+            <p className="mt-2 text-slate-600">
+              Wyślij VIN przez WhatsApp, aby szybko sprawdzić CARFAX przed licytacją.
+            </p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <input
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={carfaxVin}
+                onChange={(e) => setCarfaxVin(e.target.value)}
+                placeholder={t.carfaxVin}
+              />
+
+              <a
+                className="inline-block rounded-2xl bg-green-600 px-6 py-4 text-center text-lg font-bold text-white shadow hover:bg-green-700"
+                href={`https://wa.me/19412505868?text=${carfaxWhatsappMessage}`}
+                target="_blank"
+              >
+                {t.carfaxWhatsapp}
+              </a>
+            </div>
+          </div>
+        )}
+
+        {mode === "wholesale" && activeBroker && (
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
             <h3 className="text-2xl font-bold text-slate-900">
               {t.purchaseTitle}
@@ -1055,54 +1105,4 @@ export default function Home() {
       </section>
     </main>
   );
-}{mode === "retail" && (
-          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
-            <h3 className="text-2xl font-bold text-slate-900">
-              {t.quoteRequestTitle}
-            </h3>
-
-            <p className="mt-2 text-slate-600">
-              Wypełnij dane auta, a WhatsApp otworzy gotową wiadomość do UCS.
-            </p>
-
-            <div className="mt-6 grid gap-4 md:grid-cols-3">
-              <select
-                className="rounded-xl border p-4 text-lg text-slate-900"
-                value={quoteAuction}
-                onChange={(e) => setQuoteAuction(e.target.value)}
-              >
-                <option>IAA</option>
-                <option>Copart</option>
-                <option>Manheim</option>
-                <option>Adesa</option>
-                <option>Progi</option>
-                <option>NPA</option>
-              </select>
-
-              <input
-                className="rounded-xl border p-4 text-lg text-slate-900"
-                value={quoteLot}
-                onChange={(e) => setQuoteLot(e.target.value)}
-                placeholder={t.quoteLot}
-              />
-
-              <input
-                className="rounded-xl border p-4 text-lg text-slate-900"
-                value={quoteNote}
-                onChange={(e) => setQuoteNote(e.target.value)}
-                placeholder={t.quoteNote}
-              />
-            </div>
-
-            <a
-              className="mt-5 inline-block rounded-2xl bg-green-600 px-6 py-4 text-lg font-bold text-white shadow hover:bg-green-700"
-              href={`https://wa.me/19412505868?text=${publicQuoteWhatsappMessage}`}
-              target="_blank"
-            >
-              {t.quoteWhatsapp}
-            </a>
-          </div>
-        )}
-
-
-
+}
