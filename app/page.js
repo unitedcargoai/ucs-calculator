@@ -26,6 +26,12 @@ const translations = {
     vehiclePickup: "Pickup",
     vehicleMotorcycle: "Motocykl",
     retailQuoteMessage: "Na czas aktualizacji cenników wycena detaliczna wymaga indywidualnego potwierdzenia. Skontaktuj się z nami przez WhatsApp.",
+    wholesaleActive: "Panel HURT aktywny",
+    wholesaleInfo: "Jesteś zalogowany jako broker. Cennik hurtowy zostanie aktywowany po uzupełnieniu stawek.",
+    brokerCodePlaceholder: "Kod dostępu brokera",
+    brokerLogin: "Zaloguj HURT",
+    brokerLogout: "Wyloguj HURT",
+    brokerError: "Nieprawidłowy kod dostępu.",
     packing3: "1 z 3 aut",
     packing4: "1 z 4 aut",
     pricingCity: "Miasto wyceny",
@@ -75,6 +81,12 @@ const translations = {
     vehiclePickup: "Pickup",
     vehicleMotorcycle: "Motorcycle",
     retailQuoteMessage: "During price list updates, retail quotes require individual confirmation. Please contact us via WhatsApp.",
+    wholesaleActive: "WHOLESALE panel active",
+    wholesaleInfo: "You are logged in as a broker. Wholesale pricing will be activated after rates are completed.",
+    brokerCodePlaceholder: "Broker access code",
+    brokerLogin: "Login WHOLESALE",
+    brokerLogout: "Logout WHOLESALE",
+    brokerError: "Invalid access code.",
     packing3: "1 of 3 vehicles",
     packing4: "1 of 4 vehicles",
     pricingCity: "Pricing city",
@@ -124,6 +136,12 @@ const translations = {
     vehiclePickup: "Пікап",
     vehicleMotorcycle: "Мотоцикл",
     retailQuoteMessage: "Під час оновлення прайсів роздрібна ціна потребує індивідуального підтвердження. Звʼяжіться з нами через WhatsApp.",
+    wholesaleActive: "Оптова панель активна",
+    wholesaleInfo: "Ви увійшли як брокер. Оптові ціни будуть активовані після заповнення ставок.",
+    brokerCodePlaceholder: "Код доступу брокера",
+    brokerLogin: "Увійти ОПТ",
+    brokerLogout: "Вийти ОПТ",
+    brokerError: "Невірний код доступу.",
     packing3: "1 з 3 авто",
     packing4: "1 з 4 авто",
     pricingCity: "Місто для розрахунку",
@@ -173,6 +191,12 @@ const translations = {
     vehiclePickup: "Пикап",
     vehicleMotorcycle: "Мотоциклет",
     retailQuoteMessage: "По време на актуализацията на цените крайната оферта изисква индивидуално потвърждение. Свържете се с нас чрез WhatsApp.",
+    wholesaleActive: "HURT панелът е активен",
+    wholesaleInfo: "Влезли сте като брокер. Цените на едро ще бъдат активирани след попълване на тарифите.",
+    brokerCodePlaceholder: "Код за достъп на брокер",
+    brokerLogin: "Вход ЕДРО",
+    brokerLogout: "Изход ЕДРО",
+    brokerError: "Невалиден код за достъп.",
     packing3: "1 от 3 автомобила",
     packing4: "1 от 4 автомобила",
     pricingCity: "Град за калкулация",
@@ -222,6 +246,12 @@ const translations = {
     vehiclePickup: "بيك أب",
     vehicleMotorcycle: "دراجة نارية",
     retailQuoteMessage: "أثناء تحديث الأسعار، تحتاج عروض التجزئة إلى تأكيد فردي. يرجى التواصل معنا عبر WhatsApp.",
+    wholesaleActive: "لوحة الجملة مفعلة",
+    wholesaleInfo: "أنت مسجل كوسيط. سيتم تفعيل أسعار الجملة بعد إكمال الأسعار.",
+    brokerCodePlaceholder: "رمز دخول الوسيط",
+    brokerLogin: "دخول الجملة",
+    brokerLogout: "خروج الجملة",
+    brokerError: "رمز الدخول غير صحيح.",
     packing3: "1 من 3 سيارات",
     packing4: "1 من 4 سيارات",
     pricingCity: "مدينة التسعير",
@@ -264,10 +294,18 @@ const languageLabels = [
   { code: "ar", label: "🇸🇦 العربية" },
 ];
 
+// Tymczasowy kod testowy. Później zastąpimy to prawdziwym logowaniem Supabase.
+const BROKER_ACCESS_CODE = "UCS-HURT-2026";
+
 export default function Home() {
   const [lang, setLang] = useState("pl");
   const t = translations[lang];
   const isRtl = lang === "ar";
+
+  const [mode, setMode] = useState("retail");
+  const [brokerCode, setBrokerCode] = useState("");
+  const [brokerError, setBrokerError] = useState("");
+  const [showBrokerLogin, setShowBrokerLogin] = useState(false);
 
   const [auction, setAuction] = useState("");
   const [location, setLocation] = useState("");
@@ -312,6 +350,24 @@ export default function Home() {
   const showSavannahRecommendation = isFlorida && portUsa !== "Savannah";
   const showWashingtonNotice = selectedLocation?.state === "WA";
 
+  function handleBrokerLogin() {
+    if (brokerCode.trim() === BROKER_ACCESS_CODE) {
+      setMode("wholesale");
+      setShowBrokerLogin(false);
+      setBrokerError("");
+      setBrokerCode("");
+      return;
+    }
+
+    setBrokerError(t.brokerError);
+  }
+
+  function handleBrokerLogout() {
+    setMode("retail");
+    setBrokerCode("");
+    setBrokerError("");
+  }
+
   function handleAuctionChange(value) {
     setAuction(value);
     setLocation("");
@@ -350,24 +406,70 @@ export default function Home() {
           <p className="mt-2 text-slate-600">Marek Witkowski</p>
 
           <div className="mx-auto mt-6 flex max-w-2xl flex-col gap-3 rounded-3xl bg-slate-100 p-3 md:flex-row">
-            <button className="flex-1 rounded-2xl bg-slate-900 px-5 py-3 font-bold text-white shadow">
+            <button
+              onClick={() => setMode("retail")}
+              className={`flex-1 rounded-2xl px-5 py-3 font-bold shadow ${
+                mode === "retail"
+                  ? "bg-slate-900 text-white"
+                  : "bg-white text-slate-700"
+              }`}
+            >
               {t.retailTab}
             </button>
 
-            <button
-              disabled
-              className="flex-1 rounded-2xl border border-slate-300 bg-white px-5 py-3 font-bold text-slate-500"
-              title={t.soon}
-            >
-              {t.wholesaleTab}
-              <span className="ml-2 rounded-full bg-amber-100 px-2 py-1 text-xs text-amber-700">
-                {t.soon}
-              </span>
-            </button>
+            {mode === "wholesale" ? (
+              <button
+                onClick={handleBrokerLogout}
+                className="flex-1 rounded-2xl bg-emerald-600 px-5 py-3 font-bold text-white shadow"
+              >
+                {t.brokerLogout}
+              </button>
+            ) : (
+              <button
+                onClick={() => setShowBrokerLogin(!showBrokerLogin)}
+                className="flex-1 rounded-2xl border border-slate-300 bg-white px-5 py-3 font-bold text-slate-800 shadow"
+              >
+                {t.wholesaleTab}
+              </button>
+            )}
           </div>
 
+          {showBrokerLogin && mode !== "wholesale" && (
+            <div className="mx-auto mt-4 max-w-2xl rounded-3xl border bg-white p-4 shadow">
+              <div className="flex flex-col gap-3 md:flex-row">
+                <input
+                  className="flex-1 rounded-2xl border p-4 text-lg text-slate-900"
+                  type="password"
+                  value={brokerCode}
+                  onChange={(e) => setBrokerCode(e.target.value)}
+                  placeholder={t.brokerCodePlaceholder}
+                />
+
+                <button
+                  onClick={handleBrokerLogin}
+                  className="rounded-2xl bg-slate-900 px-6 py-4 font-bold text-white"
+                >
+                  {t.brokerLogin}
+                </button>
+              </div>
+
+              {brokerError && (
+                <p className="mt-3 rounded-xl bg-red-100 p-3 text-sm font-semibold text-red-700">
+                  {brokerError}
+                </p>
+              )}
+            </div>
+          )}
+
+          {mode === "wholesale" && (
+            <div className="mx-auto mt-4 max-w-2xl rounded-3xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-900">
+              <p className="text-lg font-bold">{t.wholesaleActive}</p>
+              <p className="mt-1 text-sm">{t.wholesaleInfo}</p>
+            </div>
+          )}
+
           <h2 className="mt-8 text-2xl font-bold tracking-tight">
-            {t.calculatorTitle}
+            {mode === "wholesale" ? t.wholesaleTab : t.calculatorTitle}
           </h2>
 
           <p className="mt-2 text-slate-600">{t.calculatorSubtitle}</p>
@@ -487,7 +589,9 @@ export default function Home() {
 
           {hasRequiredSelection && (
             <div className="mt-4 rounded-xl bg-yellow-500 p-4 text-black">
-              <p>{t.retailQuoteMessage}</p>
+              <p>
+                {mode === "wholesale" ? t.wholesaleInfo : t.retailQuoteMessage}
+              </p>
 
               <a
                 className="mt-3 inline-block rounded-xl bg-green-600 px-4 py-2 font-bold text-white"
