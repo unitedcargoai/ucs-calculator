@@ -7299,3 +7299,14 @@ export const WHOLESALE_STANDARD_RATES = {
   "Savannah-Rotterdam-Motocykl": 350,
   "Savannah-Rotterdam-Pickup": 1050
 };
+
+
+export const BROKERS = [
+  {
+    "username": "bmjtrans",
+    "password": "Pole123!o",
+    "name": "Krzysztof Surmacz",
+    "package": "Premium Ultra",
+    "discount": 50
+  }
+];

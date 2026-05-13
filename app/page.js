@@ -8,6 +8,7 @@ import {
   OCEAN_RATES,
   UCS_PORTS,
   WHOLESALE_STANDARD_RATES,
+  BROKERS,
 } from "./ucsData";
 
 const translations = {
@@ -31,8 +32,12 @@ const translations = {
     wholesaleInfo: "Jesteś zalogowany jako broker. Widzisz cennik STANDARD HURT.",
     wholesalePriceInfo: "Cennik STANDARD HURT aktywny.",
     wholesaleMissing: "Brak stawki HURT dla tej konfiguracji. Skontaktuj się z administratorem.",
-    brokerCodePlaceholder: "Kod dostępu brokera",
+    brokerUsernamePlaceholder: "Login brokera",
+    brokerPasswordPlaceholder: "Hasło brokera",
     brokerLogin: "Zaloguj HURT",
+    brokerWelcome: "Witaj",
+    brokerPackage: "Pakiet",
+    brokerDiscount: "Rabat",
     brokerLogout: "Wyloguj HURT",
     brokerError: "Nieprawidłowy kod dostępu.",
     packing3: "1 z 3 aut",
@@ -88,8 +93,12 @@ const translations = {
     wholesaleInfo: "You are logged in as a broker. You are viewing STANDARD WHOLESALE pricing.",
     wholesalePriceInfo: "STANDARD WHOLESALE pricing active.",
     wholesaleMissing: "No WHOLESALE rate for this configuration. Contact the administrator.",
-    brokerCodePlaceholder: "Broker access code",
+    brokerUsernamePlaceholder: "Broker login",
+    brokerPasswordPlaceholder: "Broker password",
     brokerLogin: "Login WHOLESALE",
+    brokerWelcome: "Welcome",
+    brokerPackage: "Package",
+    brokerDiscount: "Discount",
     brokerLogout: "Logout WHOLESALE",
     brokerError: "Invalid access code.",
     packing3: "1 of 3 vehicles",
@@ -145,8 +154,12 @@ const translations = {
     wholesaleInfo: "Ви увійшли як брокер. Ви бачите STANDARD HURT ціни.",
     wholesalePriceInfo: "STANDARD HURT ціни активні.",
     wholesaleMissing: "Немає HURT ставки для цієї конфігурації. Звʼяжіться з адміністратором.",
-    brokerCodePlaceholder: "Код доступу брокера",
+    brokerUsernamePlaceholder: "Логін брокера",
+    brokerPasswordPlaceholder: "Пароль брокера",
     brokerLogin: "Увійти ОПТ",
+    brokerWelcome: "Вітаємо",
+    brokerPackage: "Пакет",
+    brokerDiscount: "Знижка",
     brokerLogout: "Вийти ОПТ",
     brokerError: "Невірний код доступу.",
     packing3: "1 з 3 авто",
@@ -202,8 +215,12 @@ const translations = {
     wholesaleInfo: "Влезли сте като брокер. Виждате STANDARD HURT цени.",
     wholesalePriceInfo: "STANDARD HURT цените са активни.",
     wholesaleMissing: "Няма HURT цена за тази конфигурация. Свържете се с администратора.",
-    brokerCodePlaceholder: "Код за достъп на брокер",
+    brokerUsernamePlaceholder: "Брокер логин",
+    brokerPasswordPlaceholder: "Брокер парола",
     brokerLogin: "Вход ЕДРО",
+    brokerWelcome: "Здравейте",
+    brokerPackage: "Пакет",
+    brokerDiscount: "Отстъпка",
     brokerLogout: "Изход ЕДРО",
     brokerError: "Невалиден код за достъп.",
     packing3: "1 от 3 автомобила",
@@ -259,8 +276,12 @@ const translations = {
     wholesaleInfo: "أنت مسجل كوسيط. أنت ترى أسعار STANDARD HURT.",
     wholesalePriceInfo: "أسعار STANDARD HURT مفعلة.",
     wholesaleMissing: "لا توجد تسعيرة HURT لهذا الاختيار. تواصل مع المسؤول.",
-    brokerCodePlaceholder: "رمز دخول الوسيط",
+    brokerUsernamePlaceholder: "اسم دخول الوسيط",
+    brokerPasswordPlaceholder: "كلمة مرور الوسيط",
     brokerLogin: "دخول الجملة",
+    brokerWelcome: "مرحباً",
+    brokerPackage: "الباقة",
+    brokerDiscount: "الخصم",
     brokerLogout: "خروج الجملة",
     brokerError: "رمز الدخول غير صحيح.",
     packing3: "1 من 3 سيارات",
@@ -305,8 +326,6 @@ const languageLabels = [
   { code: "ar", label: "🇸🇦 العربية" },
 ];
 
-// Tymczasowy kod testowy. Później zastąpimy to prawdziwym logowaniem Supabase.
-const BROKER_ACCESS_CODE = "UCS-HURT-2026";
 
 export default function Home() {
   const [lang, setLang] = useState("pl");
@@ -314,9 +333,11 @@ export default function Home() {
   const isRtl = lang === "ar";
 
   const [mode, setMode] = useState("retail");
-  const [brokerCode, setBrokerCode] = useState("");
+  const [brokerUsername, setBrokerUsername] = useState("");
+  const [brokerPassword, setBrokerPassword] = useState("");
   const [brokerError, setBrokerError] = useState("");
   const [showBrokerLogin, setShowBrokerLogin] = useState(false);
+  const [activeBroker, setActiveBroker] = useState(null);
 
   const [auction, setAuction] = useState("");
   const [location, setLocation] = useState("");
@@ -352,11 +373,17 @@ export default function Home() {
     INLAND_RATES[inlandKey]?.[vehicle === "SUV" ? "suv" : "osobowe"] || 0;
 
   const hasRequiredSelection = Boolean(auction && location && selectedLocation);
-  const wholesaleOcean = hasRequiredSelection
+  const standardWholesaleOcean = hasRequiredSelection
     ? WHOLESALE_STANDARD_RATES[oceanKey] || 0
     : 0;
 
-  // DETAL: pokazujemy $0 i kontakt. HURT: pokazujemy STANDARD HURT.
+  const brokerDiscount = activeBroker?.discount || 0;
+  const wholesaleOcean =
+    mode === "wholesale" && standardWholesaleOcean > 0
+      ? Math.max(standardWholesaleOcean - brokerDiscount, 0)
+      : 0;
+
+  // DETAL: pokazujemy $0 i kontakt. HURT: pokazujemy cenę brokera po rabacie.
   const inland = 0;
   const ocean = mode === "wholesale" ? wholesaleOcean : 0;
   const total = inland + ocean;
@@ -369,11 +396,19 @@ export default function Home() {
   const showWashingtonNotice = selectedLocation?.state === "WA";
 
   function handleBrokerLogin() {
-    if (brokerCode.trim() === BROKER_ACCESS_CODE) {
+    const broker = BROKERS.find(
+      (item) =>
+        item.username.toLowerCase() === brokerUsername.trim().toLowerCase() &&
+        item.password === brokerPassword
+    );
+
+    if (broker) {
+      setActiveBroker(broker);
       setMode("wholesale");
       setShowBrokerLogin(false);
       setBrokerError("");
-      setBrokerCode("");
+      setBrokerUsername("");
+      setBrokerPassword("");
       return;
     }
 
@@ -382,7 +417,9 @@ export default function Home() {
 
   function handleBrokerLogout() {
     setMode("retail");
-    setBrokerCode("");
+    setActiveBroker(null);
+    setBrokerUsername("");
+    setBrokerPassword("");
     setBrokerError("");
   }
 
@@ -457,10 +494,18 @@ export default function Home() {
               <div className="flex flex-col gap-3 md:flex-row">
                 <input
                   className="flex-1 rounded-2xl border p-4 text-lg text-slate-900"
+                  type="text"
+                  value={brokerUsername}
+                  onChange={(e) => setBrokerUsername(e.target.value)}
+                  placeholder={t.brokerUsernamePlaceholder}
+                />
+
+                <input
+                  className="flex-1 rounded-2xl border p-4 text-lg text-slate-900"
                   type="password"
-                  value={brokerCode}
-                  onChange={(e) => setBrokerCode(e.target.value)}
-                  placeholder={t.brokerCodePlaceholder}
+                  value={brokerPassword}
+                  onChange={(e) => setBrokerPassword(e.target.value)}
+                  placeholder={t.brokerPasswordPlaceholder}
                 />
 
                 <button
@@ -479,9 +524,14 @@ export default function Home() {
             </div>
           )}
 
-          {mode === "wholesale" && (
+          {mode === "wholesale" && activeBroker && (
             <div className="mx-auto mt-4 max-w-2xl rounded-3xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-900">
-              <p className="text-lg font-bold">{t.wholesaleActive}</p>
+              <p className="text-lg font-bold">
+                {t.brokerWelcome} {activeBroker.name}
+              </p>
+              <p className="mt-1 text-sm">
+                {t.brokerPackage}: <b>{activeBroker.package}</b> | {t.brokerDiscount}: <b>${activeBroker.discount}</b>
+              </p>
               <p className="mt-1 text-sm">{t.wholesaleInfo}</p>
             </div>
           )}
@@ -619,13 +669,13 @@ export default function Home() {
             </div>
           )}
 
-          {hasRequiredSelection && mode === "wholesale" && wholesaleOcean > 0 && (
+          {hasRequiredSelection && mode === "wholesale" && standardWholesaleOcean > 0 && (
             <p className="mt-4 rounded-xl bg-emerald-500 p-3 text-white">
               {t.wholesalePriceInfo}
             </p>
           )}
 
-          {hasRequiredSelection && mode === "wholesale" && wholesaleOcean === 0 && (
+          {hasRequiredSelection && mode === "wholesale" && standardWholesaleOcean === 0 && (
             <p className="mt-4 rounded-xl bg-yellow-500 p-3 text-black">
               {t.wholesaleMissing}
             </p>
