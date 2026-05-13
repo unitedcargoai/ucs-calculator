@@ -269,7 +269,9 @@ export default function Home() {
   const inland =
     INLAND_RATES[inlandKey]?.[vehicle === "SUV" ? "suv" : "osobowe"] || 0;
 
-  const ocean = OCEAN_RATES[oceanKey] || 0;
+  const hasRequiredSelection = Boolean(auction && location && selectedLocation);
+  const baseOcean = hasRequiredSelection ? OCEAN_RATES[oceanKey] || 0 : 0;
+  const ocean = baseOcean > 0 ? baseOcean + 100 : 0;
   const total = inland + ocean;
 
   const isFlorida =
@@ -472,7 +474,7 @@ export default function Home() {
             </div>
           )}
 
-          {ocean === 0 && (
+          {hasRequiredSelection && ocean === 0 && (
             <p className="mt-4 rounded-xl bg-yellow-500 p-3 text-black">
               {t.oceanMissing}
             </p>
