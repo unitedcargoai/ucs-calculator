@@ -361,7 +361,7 @@ export default function Home() {
   );
 
   const pricingCity = selectedLocation?.city || "";
-  const inlandKey = `${pricingCity}-${portUsa}`;
+  const inlandKey = `${auction}-${location}-${portUsa}`;
   const oceanKey =
     vehicle === "Motocykl"
       ? `${portUsa}-${portEu}-Motocykl`
@@ -369,22 +369,48 @@ export default function Home() {
         ? `${portUsa}-${portEu}-Pickup`
         : `${portUsa}-${portEu}-${packing}`;
 
-  const baseInland =
-    INLAND_RATES[inlandKey]?.[vehicle === "SUV" ? "suv" : "osobowe"] || 0;
-
   const hasRequiredSelection = Boolean(auction && location && selectedLocation);
+
+  const inlandVehicleKey =
+    vehicle === "Motocykl"
+      ? "motorcycle"
+      : vehicle === "Pickup"
+        ? "pickup"
+        : vehicle === "SUV"
+          ? "suv"
+          : "car";
+
+  const standardWholesaleInland =
+    hasRequiredSelection && INLAND_RATES[inlandKey]
+      ? INLAND_RATES[inlandKey][inlandVehicleKey] || 0
+      : 0;
+
   const standardWholesaleOcean = hasRequiredSelection
     ? WHOLESALE_STANDARD_RATES[oceanKey] || 0
     : 0;
 
   const brokerDiscount = activeBroker?.discount || 0;
+
   const wholesaleOcean =
-    mode === "wholesale" && standardWholesaleOcean > 0
+    mode === "wholesale" && (standardWholesaleOcean > 0 || standardWholesaleInland > 0)
       ? Math.max(standardWholesaleOcean - brokerDiscount, 0)
       : 0;
 
-  // DETAL: pokazujemy $0 i kontakt. HURT: pokazujemy cenę brokera po rabacie.
-  const inland = 0;
+  // Inland: wszyscy brokerzy widzą standard, tylko Premium Partner ma -$50.
+  const inlandPartnerDiscount =
+    mode === "wholesale" &&
+    activeBroker?.package === "Premium Partner" &&
+    standardWholesaleInland > 0
+      ? 50
+      : 0;
+
+  const wholesaleInland =
+    mode === "wholesale" && standardWholesaleInland > 0
+      ? Math.max(standardWholesaleInland - inlandPartnerDiscount, 0)
+      : 0;
+
+  // DETAL: $0 i kontakt. HURT: pokazujemy ceny brokera.
+  const inland = mode === "wholesale" ? wholesaleInland : 0;
   const ocean = mode === "wholesale" ? wholesaleOcean : 0;
   const total = inland + ocean;
 
@@ -669,13 +695,13 @@ export default function Home() {
             </div>
           )}
 
-          {hasRequiredSelection && mode === "wholesale" && standardWholesaleOcean > 0 && (
+          {hasRequiredSelection && mode === "wholesale" && (standardWholesaleOcean > 0 || standardWholesaleInland > 0) && (
             <p className="mt-4 rounded-xl bg-emerald-500 p-3 text-white">
               {t.wholesalePriceInfo}
             </p>
           )}
 
-          {hasRequiredSelection && mode === "wholesale" && standardWholesaleOcean === 0 && (
+          {hasRequiredSelection && mode === "wholesale" && standardWholesaleOcean === 0 && standardWholesaleInland === 0 && (
             <p className="mt-4 rounded-xl bg-yellow-500 p-3 text-black">
               {t.wholesaleMissing}
             </p>
