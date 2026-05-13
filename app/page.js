@@ -39,6 +39,11 @@ const translations = {
     purchaseAmount: "Kwota przelewu",
     purchaseNote: "Notatka / auto / aukcja",
     purchaseWhatsapp: "Wyślij zgłoszenie WhatsApp",
+    quoteRequestTitle: "Zapytaj o wycenę przez WhatsApp",
+    quoteAuction: "Aukcja",
+    quoteLot: "LOT / Stock nr",
+    quoteNote: "Uwagi / model auta / lokalizacja",
+    quoteWhatsapp: "Wyślij zapytanie WhatsApp",
     wholesaleActive: "Panel HURT aktywny",
     wholesaleInfo: "Jesteś zalogowany jako broker.",
     wholesalePriceInfo: "Cennik Premium HURT aktywny.",
@@ -111,6 +116,11 @@ const translations = {
     purchaseAmount: "Transfer amount",
     purchaseNote: "Note / vehicle / auction",
     purchaseWhatsapp: "Send report via WhatsApp",
+    quoteRequestTitle: "Ask for a quote via WhatsApp",
+    quoteAuction: "Auction",
+    quoteLot: "LOT / Stock no.",
+    quoteNote: "Notes / vehicle model / location",
+    quoteWhatsapp: "Send WhatsApp request",
     wholesaleActive: "WHOLESALE panel active",
     wholesaleInfo: "You are logged in as a broker.",
     wholesalePriceInfo: "Premium WHOLESALE pricing active.",
@@ -183,6 +193,11 @@ const translations = {
     purchaseAmount: "Сума переказу",
     purchaseNote: "Нотатка / авто / аукціон",
     purchaseWhatsapp: "Надіслати через WhatsApp",
+    quoteRequestTitle: "Запитати ціну через WhatsApp",
+    quoteAuction: "Аукціон",
+    quoteLot: "LOT / Stock №",
+    quoteNote: "Нотатки / модель авто / локація",
+    quoteWhatsapp: "Надіслати WhatsApp запит",
     wholesaleActive: "Оптова панель активна",
     wholesaleInfo: "Ви увійшли як брокер.",
     wholesalePriceInfo: "Premium HURT ціни активні.",
@@ -255,6 +270,11 @@ const translations = {
     purchaseAmount: "Сума на превода",
     purchaseNote: "Бележка / автомобил / аукцион",
     purchaseWhatsapp: "Изпрати чрез WhatsApp",
+    quoteRequestTitle: "Попитайте за цена чрез WhatsApp",
+    quoteAuction: "Аукцион",
+    quoteLot: "LOT / Stock №",
+    quoteNote: "Бележки / модел / локация",
+    quoteWhatsapp: "Изпрати WhatsApp запитване",
     wholesaleActive: "HURT панелът е активен",
     wholesaleInfo: "Влезли сте като брокер.",
     wholesalePriceInfo: "Premium HURT цените са активни.",
@@ -327,6 +347,11 @@ const translations = {
     purchaseAmount: "مبلغ التحويل",
     purchaseNote: "ملاحظة / سيارة / مزاد",
     purchaseWhatsapp: "إرسال عبر WhatsApp",
+    quoteRequestTitle: "اطلب تسعيرة عبر WhatsApp",
+    quoteAuction: "المزاد",
+    quoteLot: "LOT / Stock رقم",
+    quoteNote: "ملاحظات / موديل السيارة / الموقع",
+    quoteWhatsapp: "إرسال طلب WhatsApp",
     wholesaleActive: "لوحة الجملة مفعلة",
     wholesaleInfo: "أنت مسجل كوسيط.",
     wholesalePriceInfo: "أسعار Premium HURT مفعلة.",
@@ -402,6 +427,9 @@ export default function Home() {
   const [purchaseVin, setPurchaseVin] = useState("");
   const [purchaseAmount, setPurchaseAmount] = useState("");
   const [purchaseNote, setPurchaseNote] = useState("");
+  const [quoteAuction, setQuoteAuction] = useState("IAA");
+  const [quoteLot, setQuoteLot] = useState("");
+  const [quoteNote, setQuoteNote] = useState("");
   const [portUsa, setPortUsa] = useState("Savannah");
   const [portEu, setPortEu] = useState("Rotterdam");
   const [packing, setPacking] = useState("1 z 3");
@@ -494,6 +522,18 @@ export default function Home() {
       `HAZMAT: $${hazmatFee.toFixed(2)}\n` +
       `WA BOS / TITLE: $${waBosFee.toFixed(2)}\n` +
       `Cena końcowa: $${total.toFixed(2)}`
+  );
+
+  const publicQuoteWhatsappMessage = encodeURIComponent(
+    `PROŚBA O WYCENĘ DETALICZNĄ\n` +
+      `Aukcja: ${quoteAuction}\n` +
+      `LOT / Stock nr: ${quoteLot}\n` +
+      `Uwagi: ${quoteNote}\n` +
+      `Wybrana aukcja w kalkulatorze: ${auction}\n` +
+      `Wybrana lokalizacja: ${location}\n` +
+      `Typ pojazdu: ${vehicle}\n` +
+      `Port USA: ${portUsa}\n` +
+      `Port EU: ${portEu}`
   );
 
   const isFlorida =
@@ -709,6 +749,15 @@ export default function Home() {
             <option value="Motocykl">{t.vehicleMotorcycle}</option>
           </select>
 
+          <select
+            className="w-full rounded-xl border p-4 text-lg"
+            value={packing}
+            onChange={(e) => setPacking(e.target.value)}
+          >
+            <option value="1 z 3">{t.packing3}</option>
+            <option value="1 z 4">{t.packing4}</option>
+          </select>
+
           <label className="flex items-center gap-3 rounded-xl border bg-white p-4 text-lg font-semibold text-slate-900">
             <input
               type="checkbox"
@@ -734,15 +783,6 @@ export default function Home() {
               +$350
             </span>
           </label>
-
-          <select
-            className="w-full rounded-xl border p-4 text-lg"
-            value={packing}
-            onChange={(e) => setPacking(e.target.value)}
-          >
-            <option value="1 z 3">{t.packing3}</option>
-            <option value="1 z 4">{t.packing4}</option>
-          </select>
 
           <select
             className="w-full rounded-xl border p-4 text-lg"
@@ -839,6 +879,55 @@ export default function Home() {
             </p>
           )}
         </div>
+
+        {mode === "retail" && (
+          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
+            <h3 className="text-2xl font-bold text-slate-900">
+              {t.quoteRequestTitle}
+            </h3>
+
+            <p className="mt-2 text-slate-600">
+              Wypełnij dane auta, a WhatsApp otworzy gotową wiadomość do UCS.
+            </p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <select
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={quoteAuction}
+                onChange={(e) => setQuoteAuction(e.target.value)}
+              >
+                <option>IAA</option>
+                <option>Copart</option>
+                <option>Manheim</option>
+                <option>Adesa</option>
+                <option>Progi</option>
+                <option>NPA</option>
+              </select>
+
+              <input
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={quoteLot}
+                onChange={(e) => setQuoteLot(e.target.value)}
+                placeholder={t.quoteLot}
+              />
+
+              <input
+                className="rounded-xl border p-4 text-lg text-slate-900"
+                value={quoteNote}
+                onChange={(e) => setQuoteNote(e.target.value)}
+                placeholder={t.quoteNote}
+              />
+            </div>
+
+            <a
+              className="mt-5 inline-block rounded-2xl bg-green-600 px-6 py-4 text-lg font-bold text-white shadow hover:bg-green-700"
+              href={`https://wa.me/19412505868?text=${publicQuoteWhatsappMessage}`}
+              target="_blank"
+            >
+              {t.quoteWhatsapp}
+            </a>
+          </div>
+        )}
 
         {mode === "wholesale" && activeBroker && (
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
