@@ -6,7 +6,6 @@ import {
   EUROPE_PORTS,
   INLAND_RATES,
   OCEAN_RATES,
-  SHIPPING_LINES,
   UCS_PORTS,
 } from "./ucsData";
 
@@ -24,6 +23,9 @@ const translations = {
     location: "Wybierz lokalizację",
     vehicleCar: "Osobowe",
     vehicleSuv: "SUV",
+    vehiclePickup: "Pickup",
+    vehicleMotorcycle: "Motocykl",
+    retailQuoteMessage: "Na czas aktualizacji cenników wycena detaliczna wymaga indywidualnego potwierdzenia. Skontaktuj się z nami przez WhatsApp.",
     packing3: "1 z 3 aut",
     packing4: "1 z 4 aut",
     pricingCity: "Miasto wyceny",
@@ -70,6 +72,9 @@ const translations = {
     location: "Select location",
     vehicleCar: "Passenger car",
     vehicleSuv: "SUV",
+    vehiclePickup: "Pickup",
+    vehicleMotorcycle: "Motorcycle",
+    retailQuoteMessage: "During price list updates, retail quotes require individual confirmation. Please contact us via WhatsApp.",
     packing3: "1 of 3 vehicles",
     packing4: "1 of 4 vehicles",
     pricingCity: "Pricing city",
@@ -116,6 +121,9 @@ const translations = {
     location: "Виберіть локацію",
     vehicleCar: "Легкове авто",
     vehicleSuv: "SUV",
+    vehiclePickup: "Пікап",
+    vehicleMotorcycle: "Мотоцикл",
+    retailQuoteMessage: "Під час оновлення прайсів роздрібна ціна потребує індивідуального підтвердження. Звʼяжіться з нами через WhatsApp.",
     packing3: "1 з 3 авто",
     packing4: "1 з 4 авто",
     pricingCity: "Місто для розрахунку",
@@ -162,6 +170,9 @@ const translations = {
     location: "Изберете локация",
     vehicleCar: "Лек автомобил",
     vehicleSuv: "SUV",
+    vehiclePickup: "Пикап",
+    vehicleMotorcycle: "Мотоциклет",
+    retailQuoteMessage: "По време на актуализацията на цените крайната оферта изисква индивидуално потвърждение. Свържете се с нас чрез WhatsApp.",
     packing3: "1 от 3 автомобила",
     packing4: "1 от 4 автомобила",
     pricingCity: "Град за калкулация",
@@ -208,6 +219,9 @@ const translations = {
     location: "اختر الموقع",
     vehicleCar: "سيارة ركاب",
     vehicleSuv: "SUV",
+    vehiclePickup: "بيك أب",
+    vehicleMotorcycle: "دراجة نارية",
+    retailQuoteMessage: "أثناء تحديث الأسعار، تحتاج عروض التجزئة إلى تأكيد فردي. يرجى التواصل معنا عبر WhatsApp.",
     packing3: "1 من 3 سيارات",
     packing4: "1 من 4 سيارات",
     pricingCity: "مدينة التسعير",
@@ -261,7 +275,6 @@ export default function Home() {
   const [portUsa, setPortUsa] = useState("Savannah");
   const [portEu, setPortEu] = useState("Rotterdam");
   const [packing, setPacking] = useState("1 z 3");
-  const [shippingLine, setShippingLine] = useState("MSC");
 
   const auctionNames = useMemo(
     () => [...new Set(AUCTIONS.map((item) => item.auction))].sort(),
@@ -279,13 +292,17 @@ export default function Home() {
 
   const pricingCity = selectedLocation?.city || "";
   const inlandKey = `${pricingCity}-${portUsa}`;
-  const oceanKey = `${portUsa}-${portEu}-${packing}-${shippingLine}`;
+  const oceanKey = vehicle === "Motocykl" ? `${portUsa}-${portEu}-Motocykl` : `${portUsa}-${portEu}-${packing}`;
 
-  const inland =
+  const baseInland =
     INLAND_RATES[inlandKey]?.[vehicle === "SUV" ? "suv" : "osobowe"] || 0;
 
   const hasRequiredSelection = Boolean(auction && location && selectedLocation);
-  const ocean = hasRequiredSelection ? OCEAN_RATES[oceanKey] || 0 : 0;
+  const baseOcean = hasRequiredSelection ? OCEAN_RATES[oceanKey] || 0 : 0;
+
+  // Tryb prac nad cennikiem detalicznym: klient widzi $0 i prośbę o kontakt.
+  const inland = 0;
+  const ocean = 0;
   const total = inland + ocean;
 
   const isFlorida =
@@ -410,6 +427,8 @@ export default function Home() {
           >
             <option value="Osobowe">{t.vehicleCar}</option>
             <option value="SUV">{t.vehicleSuv}</option>
+            <option value="Pickup">{t.vehiclePickup}</option>
+            <option value="Motocykl">{t.vehicleMotorcycle}</option>
           </select>
 
           <select
@@ -440,16 +459,6 @@ export default function Home() {
               <option key={port}>{port}</option>
             ))}
           </select>
-
-          <select
-            className="w-full rounded-xl border p-4 text-lg md:col-span-2"
-            value={shippingLine}
-            onChange={(e) => setShippingLine(e.target.value)}
-          >
-            {SHIPPING_LINES.map((line) => (
-              <option key={line}>{line}</option>
-            ))}
-          </select>
         </div>
 
         {selectedLocation && (
@@ -460,9 +469,6 @@ export default function Home() {
             <p>
               {t.recommendedPort}:{" "}
               <b>{selectedLocation.recommendedPort || "brak"}</b>
-            </p>
-            <p>
-              {t.shippingLine}: <b>{shippingLine}</b>
             </p>
           </div>
         )}
@@ -479,21 +485,9 @@ export default function Home() {
             {t.total}: ${total.toFixed(2)}
           </p>
 
-          {showSavannahRecommendation && (
-            <p className="mt-4 rounded-xl bg-blue-500 p-3 text-white">
-              {t.savannah}
-            </p>
-          )}
-
-          {showWashingtonNotice && (
-            <p className="mt-4 rounded-xl bg-blue-500 p-3 text-white">
-              {t.washington}
-            </p>
-          )}
-
-          {inland === 0 && location && (
+          {hasRequiredSelection && (
             <div className="mt-4 rounded-xl bg-yellow-500 p-4 text-black">
-              <p>{t.inlandMissing}</p>
+              <p>{t.retailQuoteMessage}</p>
 
               <a
                 className="mt-3 inline-block rounded-xl bg-green-600 px-4 py-2 font-bold text-white"
@@ -505,9 +499,15 @@ export default function Home() {
             </div>
           )}
 
-          {hasRequiredSelection && ocean === 0 && (
-            <p className="mt-4 rounded-xl bg-yellow-500 p-3 text-black">
-              {t.oceanMissing}
+          {showSavannahRecommendation && (
+            <p className="mt-4 rounded-xl bg-blue-500 p-3 text-white">
+              {t.savannah}
+            </p>
+          )}
+
+          {showWashingtonNotice && (
+            <p className="mt-4 rounded-xl bg-blue-500 p-3 text-white">
+              {t.washington}
             </p>
           )}
         </div>
