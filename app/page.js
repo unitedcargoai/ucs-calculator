@@ -28,9 +28,12 @@ const translations = {
     vehiclePickup: "Pickup",
     vehicleMotorcycle: "Motocykl",
     retailQuoteMessage: "Na czas aktualizacji cenników wycena detaliczna wymaga indywidualnego potwierdzenia. Skontaktuj się z nami przez WhatsApp.",
+    hazmatLabel: "HAZMAT / Electric / Hybrid",
+    hazmatInfo: "Dodatkowa opłata HAZMAT: $300",
+    hazmatLine: "HAZMAT",
     wholesaleActive: "Panel HURT aktywny",
     wholesaleInfo: "Jesteś zalogowany jako broker.",
-    wholesalePriceInfo: "Cennik STANDARD HURT aktywny.",
+    wholesalePriceInfo: "Cennik Premium HURT aktywny.",
     wholesaleMissing: "Brak stawki HURT dla tej konfiguracji. Skontaktuj się z administratorem.",
     brokerUsernamePlaceholder: "Login brokera",
     brokerPasswordPlaceholder: "Hasło brokera",
@@ -89,9 +92,12 @@ const translations = {
     vehiclePickup: "Pickup",
     vehicleMotorcycle: "Motorcycle",
     retailQuoteMessage: "During price list updates, retail quotes require individual confirmation. Please contact us via WhatsApp.",
+    hazmatLabel: "HAZMAT / Electric / Hybrid",
+    hazmatInfo: "Additional HAZMAT fee: $300",
+    hazmatLine: "HAZMAT",
     wholesaleActive: "WHOLESALE panel active",
     wholesaleInfo: "You are logged in as a broker.",
-    wholesalePriceInfo: "STANDARD WHOLESALE pricing active.",
+    wholesalePriceInfo: "Premium WHOLESALE pricing active.",
     wholesaleMissing: "No WHOLESALE rate for this configuration. Contact the administrator.",
     brokerUsernamePlaceholder: "Broker login",
     brokerPasswordPlaceholder: "Broker password",
@@ -150,9 +156,12 @@ const translations = {
     vehiclePickup: "Пікап",
     vehicleMotorcycle: "Мотоцикл",
     retailQuoteMessage: "Під час оновлення прайсів роздрібна ціна потребує індивідуального підтвердження. Звʼяжіться з нами через WhatsApp.",
+    hazmatLabel: "HAZMAT / Electric / Hybrid",
+    hazmatInfo: "Додаткова плата HAZMAT: $300",
+    hazmatLine: "HAZMAT",
     wholesaleActive: "Оптова панель активна",
     wholesaleInfo: "Ви увійшли як брокер.",
-    wholesalePriceInfo: "STANDARD HURT ціни активні.",
+    wholesalePriceInfo: "Premium HURT ціни активні.",
     wholesaleMissing: "Немає HURT ставки для цієї конфігурації. Звʼяжіться з адміністратором.",
     brokerUsernamePlaceholder: "Логін брокера",
     brokerPasswordPlaceholder: "Пароль брокера",
@@ -211,9 +220,12 @@ const translations = {
     vehiclePickup: "Пикап",
     vehicleMotorcycle: "Мотоциклет",
     retailQuoteMessage: "По време на актуализацията на цените крайната оферта изисква индивидуално потвърждение. Свържете се с нас чрез WhatsApp.",
+    hazmatLabel: "HAZMAT / Electric / Hybrid",
+    hazmatInfo: "Допълнителна HAZMAT такса: $300",
+    hazmatLine: "HAZMAT",
     wholesaleActive: "HURT панелът е активен",
     wholesaleInfo: "Влезли сте като брокер.",
-    wholesalePriceInfo: "STANDARD HURT цените са активни.",
+    wholesalePriceInfo: "Premium HURT цените са активни.",
     wholesaleMissing: "Няма HURT цена за тази конфигурация. Свържете се с администратора.",
     brokerUsernamePlaceholder: "Брокер логин",
     brokerPasswordPlaceholder: "Брокер парола",
@@ -272,9 +284,12 @@ const translations = {
     vehiclePickup: "بيك أب",
     vehicleMotorcycle: "دراجة نارية",
     retailQuoteMessage: "أثناء تحديث الأسعار، تحتاج عروض التجزئة إلى تأكيد فردي. يرجى التواصل معنا عبر WhatsApp.",
+    hazmatLabel: "HAZMAT / Electric / Hybrid",
+    hazmatInfo: "رسوم HAZMAT إضافية: $300",
+    hazmatLine: "HAZMAT",
     wholesaleActive: "لوحة الجملة مفعلة",
     wholesaleInfo: "أنت مسجل كوسيط.",
-    wholesalePriceInfo: "أسعار STANDARD HURT مفعلة.",
+    wholesalePriceInfo: "أسعار Premium HURT مفعلة.",
     wholesaleMissing: "لا توجد تسعيرة HURT لهذا الاختيار. تواصل مع المسؤول.",
     brokerUsernamePlaceholder: "اسم دخول الوسيط",
     brokerPasswordPlaceholder: "كلمة مرور الوسيط",
@@ -342,6 +357,7 @@ export default function Home() {
   const [auction, setAuction] = useState("");
   const [location, setLocation] = useState("");
   const [vehicle, setVehicle] = useState("SUV");
+  const [hazmat, setHazmat] = useState(false);
   const [portUsa, setPortUsa] = useState("Savannah");
   const [portEu, setPortEu] = useState("Rotterdam");
   const [packing, setPacking] = useState("1 z 3");
@@ -409,10 +425,12 @@ export default function Home() {
       ? Math.max(standardWholesaleInland - inlandPartnerDiscount, 0)
       : 0;
 
+  const hazmatFee = hazmat && mode === "wholesale" ? 300 : 0;
+
   // DETAL: $0 i kontakt. HURT: pokazujemy ceny brokera.
   const inland = mode === "wholesale" ? wholesaleInland : 0;
   const ocean = mode === "wholesale" ? wholesaleOcean : 0;
-  const total = inland + ocean;
+  const total = inland + ocean + hazmatFee;
 
   const isFlorida =
     selectedLocation?.state === "FL" ||
@@ -627,6 +645,19 @@ export default function Home() {
             <option value="Motocykl">{t.vehicleMotorcycle}</option>
           </select>
 
+          <label className="flex items-center gap-3 rounded-xl border bg-white p-4 text-lg font-semibold text-slate-900">
+            <input
+              type="checkbox"
+              checked={hazmat}
+              onChange={(e) => setHazmat(e.target.checked)}
+              className="h-5 w-5"
+            />
+            <span>{t.hazmatLabel}</span>
+            <span className="ml-auto rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800">
+              +$300
+            </span>
+          </label>
+
           <select
             className="w-full rounded-xl border p-4 text-lg"
             value={packing}
@@ -676,6 +707,12 @@ export default function Home() {
           <p className="text-lg">
             {t.ocean}: ${ocean.toFixed(2)}
           </p>
+
+          {hazmatFee > 0 && (
+            <p className="text-lg">
+              {t.hazmatLine}: ${hazmatFee.toFixed(2)}
+            </p>
+          )}
 
           <p className="mt-4 text-3xl font-bold">
             {t.total}: ${total.toFixed(2)}
