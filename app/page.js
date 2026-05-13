@@ -530,7 +530,7 @@ export default function Home() {
                 {t.brokerWelcome} {activeBroker.name}
               </p>
               <p className="mt-1 text-sm">
-                {t.brokerPackage}: <b>{activeBroker.package}</b> | {t.brokerDiscount}: <b>${activeBroker.discount}</b>
+                {t.brokerPackage}: <b>{activeBroker.package}</b>
               </p>
               <p className="mt-1 text-sm">{t.wholesaleInfo}</p>
             </div>

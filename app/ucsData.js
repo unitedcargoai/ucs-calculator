@@ -7308,5 +7308,19 @@ export const BROKERS = [
     "name": "Krzysztof Surmacz",
     "package": "Premium Partner",
     "discount": 100
+  },
+  {
+    "username": "mawit",
+    "password": "loza123!m",
+    "name": "Maciej Witkowski",
+    "package": "Premium Ultra",
+    "discount": 50
+  },
+  {
+    "username": "justa",
+    "password": "bsto123!k",
+    "name": "Justyna Polak",
+    "package": "Premium Ultra",
+    "discount": 50
   }
 ];
