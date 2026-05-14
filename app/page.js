@@ -520,6 +520,9 @@ export default function Home() {
   const [aiOpen, setAiOpen] = useState(false);
   const [aiInput, setAiInput] = useState("");
   const [aiMessages, setAiMessages] = useState([]);
+  const [marketplaceOpen, setMarketplaceOpen] = useState(false);
+  const [marketplaceSearch, setMarketplaceSearch] = useState("");
+  const [selectedMarketplaceCar, setSelectedMarketplaceCar] = useState(null);
   const [carfaxVin, setCarfaxVin] = useState("");
   const [portUsa, setPortUsa] = useState("Savannah");
   const [portEu, setPortEu] = useState("Rotterdam");
@@ -770,6 +773,16 @@ export default function Home() {
         `Kontakt: ${car.brokerName}`
     );
   }
+
+  const filteredMarketplaceCars = MARKETPLACE_CARS.filter((car) => {
+    const search = marketplaceSearch.toLowerCase();
+    return (
+      car.make.toLowerCase().includes(search) ||
+      car.model.toLowerCase().includes(search) ||
+      String(car.year).includes(search) ||
+      car.vin.toLowerCase().includes(search)
+    );
+  });
 
   return (
     <main
@@ -1188,130 +1201,190 @@ export default function Home() {
                 {t.marketplaceTitle || "Auta na sprzedaż"}
               </h3>
               <p className="mt-2 max-w-3xl text-slate-600">
-                {t.marketplaceSubtitle || "Oferty brokerów UCS."}
+                Lista aut otwiera się osobno, żeby główna strona pozostała szybka i czytelna.
               </p>
             </div>
 
-            {mode === "wholesale" && activeBroker && (
-              <a
-                className="rounded-2xl bg-slate-900 px-5 py-4 text-center font-bold text-white shadow"
-                href={`https://wa.me/19412505868?text=${addCarWhatsappMessage}`}
-                target="_blank"
-              >
-                {t.marketplaceAdd || "+ Dodaj auto"}
-              </a>
-            )}
+            <button
+              onClick={() => setMarketplaceOpen(!marketplaceOpen)}
+              className="rounded-2xl bg-slate-900 px-6 py-4 font-bold text-white shadow"
+            >
+              {marketplaceOpen ? "Zamknij auta" : "Otwórz auta na sprzedaż"}
+            </button>
           </div>
 
-          {mode === "wholesale" && activeBroker && (
-            <p className="mt-3 rounded-2xl bg-blue-50 p-3 text-sm text-blue-900">
-              {t.marketplaceAddHint || "Na tym etapie dodawanie auta działa przez WhatsApp. Docelowo podłączymy bazę danych."}
-            </p>
-          )}
+          {marketplaceOpen && (
+            <div className="mt-6 rounded-3xl bg-slate-50 p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <input
+                  className="w-full rounded-2xl border p-4 text-lg text-slate-900 md:max-w-xl"
+                  value={marketplaceSearch}
+                  onChange={(e) => setMarketplaceSearch(e.target.value)}
+                  placeholder="Szukaj: marka, model, rok, VIN"
+                />
 
-          <div className="mt-6 grid gap-6">
-            {MARKETPLACE_CARS.map((car) => (
-              <div
-                key={car.id}
-                className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm"
-              >
-                <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
-                  <div className="bg-white p-4">
+                {mode === "wholesale" && activeBroker && (
+                  <a
+                    className="rounded-2xl bg-slate-900 px-5 py-4 text-center font-bold text-white shadow"
+                    href={`https://wa.me/19412505868?text=${addCarWhatsappMessage}`}
+                    target="_blank"
+                  >
+                    {t.marketplaceAdd || "+ Dodaj auto"}
+                  </a>
+                )}
+              </div>
+
+              <div className="mt-5 grid gap-4">
+                {filteredMarketplaceCars.map((car) => (
+                  <div
+                    key={car.id}
+                    className="grid gap-4 rounded-3xl border bg-white p-4 shadow-sm md:grid-cols-[180px_1fr_auto]"
+                  >
                     <img
                       src={car.images[0]}
                       alt={car.title}
-                      className="h-72 w-full rounded-2xl object-cover"
+                      className="h-36 w-full rounded-2xl object-cover md:w-44"
                     />
 
+                    <div>
+                      <p className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500">
+                        {car.auction} • LOT {car.lot}
+                      </p>
+                      <h4 className="mt-1 text-2xl font-extrabold text-slate-900">
+                        {car.title}
+                      </h4>
+                      <p className="mt-1 text-slate-600">VIN: {car.vin}</p>
+                      <p className="mt-1 text-slate-600">
+                        {car.mileage} • {car.engine} • {car.location}
+                      </p>
+
+                      {mode === "wholesale" ? (
+                        <p className="mt-2 text-xl font-extrabold text-emerald-700">
+                          ${car.price.toLocaleString("en-US")}
+                        </p>
+                      ) : (
+                        <p className="mt-2 font-bold text-slate-900">
+                          Cena dostępna po kontakcie
+                        </p>
+                      )}
+                    </div>
+
+                    <button
+                      onClick={() => setSelectedMarketplaceCar(car)}
+                      className="rounded-2xl bg-blue-600 px-5 py-4 font-bold text-white"
+                    >
+                      Zobacz auto
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {selectedMarketplaceCar && (
+            <div className="fixed inset-0 z-[60] overflow-y-auto bg-black/70 p-4">
+              <div className="mx-auto max-w-6xl rounded-3xl bg-white p-5 shadow-2xl">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
+                      {selectedMarketplaceCar.auction} • LOT {selectedMarketplaceCar.lot}
+                    </p>
+                    <h3 className="mt-2 text-3xl font-extrabold text-slate-900">
+                      {selectedMarketplaceCar.title}
+                    </h3>
+                    <p className="text-slate-600">VIN: {selectedMarketplaceCar.vin}</p>
+                  </div>
+
+                  <button
+                    onClick={() => setSelectedMarketplaceCar(null)}
+                    className="rounded-full bg-slate-100 px-4 py-2 text-xl font-bold text-slate-900"
+                  >
+                    ×
+                  </button>
+                </div>
+
+                <div className="mt-5 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+                  <div>
+                    <img
+                      src={selectedMarketplaceCar.images[0]}
+                      alt={selectedMarketplaceCar.title}
+                      className="h-[420px] w-full rounded-3xl object-cover"
+                    />
                     <div className="mt-3 grid grid-cols-4 gap-2">
-                      {car.images.slice(1, 5).map((image) => (
+                      {selectedMarketplaceCar.images.slice(1, 9).map((image) => (
                         <img
                           key={image}
                           src={image}
-                          alt={car.title}
-                          className="h-20 w-full rounded-xl object-cover"
+                          alt={selectedMarketplaceCar.title}
+                          className="h-24 w-full rounded-xl object-cover"
                         />
                       ))}
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                      <div>
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
-                          {car.auction} • LOT {car.lot}
-                        </p>
-                        <h4 className="mt-2 text-3xl font-extrabold text-slate-900">
-                          {car.title}
-                        </h4>
-                        <p className="mt-1 text-slate-600">VIN: {car.vin}</p>
-                      </div>
-
-                      <div className="rounded-2xl bg-white p-4 text-center shadow-sm">
-                        {mode === "wholesale" ? (
-                          <>
-                            <p className="text-xs font-bold uppercase text-slate-500">
-                              {t.marketplacePrice || "Cena brokera"}
-                            </p>
-                            <p className="mt-1 text-3xl font-extrabold text-emerald-700">
-                              ${car.price.toLocaleString("en-US")}
-                            </p>
-                          </>
-                        ) : (
-                          <>
-                            <p className="text-xs font-bold uppercase text-slate-500">
-                              {t.marketplacePublicPrice || "Cena dostępna po kontakcie"}
-                            </p>
-                            <p className="mt-1 text-lg font-bold text-slate-900">
-                              WhatsApp UCS
-                            </p>
-                          </>
-                        )}
-                      </div>
+                  <div>
+                    <div className="rounded-3xl bg-slate-50 p-5">
+                      {mode === "wholesale" ? (
+                        <>
+                          <p className="text-xs font-bold uppercase text-slate-500">
+                            Cena brokera
+                          </p>
+                          <p className="mt-1 text-4xl font-extrabold text-emerald-700">
+                            ${selectedMarketplaceCar.price.toLocaleString("en-US")}
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <p className="text-xs font-bold uppercase text-slate-500">
+                            Cena dostępna po kontakcie
+                          </p>
+                          <p className="mt-1 text-xl font-bold text-slate-900">
+                            WhatsApp UCS
+                          </p>
+                        </>
+                      )}
                     </div>
 
-                    <div className="mt-5 grid gap-3 md:grid-cols-2">
-                      <p className="rounded-xl bg-white p-3"><b>Przebieg:</b> {car.mileage}</p>
-                      <p className="rounded-xl bg-white p-3"><b>Silnik:</b> {car.engine}</p>
-                      <p className="rounded-xl bg-white p-3"><b>Paliwo:</b> {car.fuel}</p>
-                      <p className="rounded-xl bg-white p-3"><b>Napęd:</b> {car.drive}</p>
-                      <p className="rounded-xl bg-white p-3"><b>Lokalizacja:</b> {car.location}</p>
-                      <p className="rounded-xl bg-white p-3"><b>Port:</b> {car.destination}</p>
-                      <p className="rounded-xl bg-white p-3"><b>Title:</b> {car.titleStatus}</p>
-                      <p className="rounded-xl bg-white p-3"><b>Uszkodzenie:</b> {car.damage}</p>
+                    <div className="mt-4 grid gap-3 md:grid-cols-2">
+                      <p className="rounded-xl bg-slate-50 p-3"><b>Przebieg:</b> {selectedMarketplaceCar.mileage}</p>
+                      <p className="rounded-xl bg-slate-50 p-3"><b>Silnik:</b> {selectedMarketplaceCar.engine}</p>
+                      <p className="rounded-xl bg-slate-50 p-3"><b>Paliwo:</b> {selectedMarketplaceCar.fuel}</p>
+                      <p className="rounded-xl bg-slate-50 p-3"><b>Napęd:</b> {selectedMarketplaceCar.drive}</p>
+                      <p className="rounded-xl bg-slate-50 p-3"><b>Lokalizacja:</b> {selectedMarketplaceCar.location}</p>
+                      <p className="rounded-xl bg-slate-50 p-3"><b>Port:</b> {selectedMarketplaceCar.destination}</p>
+                      <p className="rounded-xl bg-slate-50 p-3"><b>Title:</b> {selectedMarketplaceCar.titleStatus}</p>
+                      <p className="rounded-xl bg-slate-50 p-3"><b>Uszkodzenie:</b> {selectedMarketplaceCar.damage}</p>
                     </div>
 
-                    <div className="mt-4 rounded-2xl bg-white p-4">
-                      <p className="font-bold text-slate-900">
-                        {t.marketplaceIncluded || "Opis ceny"}
-                      </p>
-                      <p className="mt-1 text-slate-700">{car.description}</p>
+                    <div className="mt-4 rounded-2xl bg-slate-50 p-4">
+                      <p className="font-bold text-slate-900">Opis ceny</p>
+                      <p className="mt-1 text-slate-700">{selectedMarketplaceCar.description}</p>
                     </div>
 
-                    <div className="mt-4 rounded-2xl bg-white p-4">
+                    <div className="mt-4 rounded-2xl bg-slate-50 p-4">
                       <p className="font-bold text-slate-900">CARFAX</p>
-                      <p className="mt-1 text-slate-700">{car.carfaxSummary}</p>
+                      <p className="mt-1 text-slate-700">{selectedMarketplaceCar.carfaxSummary}</p>
                       <a
                         className="mt-3 inline-block rounded-xl bg-blue-600 px-4 py-3 font-bold text-white"
-                        href={car.carfaxPdf}
+                        href={selectedMarketplaceCar.carfaxPdf}
                         target="_blank"
                       >
-                        {t.marketplaceCarfax || "Otwórz CARFAX PDF"}
+                        Otwórz CARFAX PDF
                       </a>
                     </div>
 
                     <a
                       className="mt-5 inline-block rounded-2xl bg-green-600 px-6 py-4 text-lg font-bold text-white shadow hover:bg-green-700"
-                      href={`https://wa.me/${car.brokerPhone}?text=${marketplaceWhatsappMessage(car)}`}
+                      href={`https://wa.me/${selectedMarketplaceCar.brokerPhone}?text=${marketplaceWhatsappMessage(selectedMarketplaceCar)}`}
                       target="_blank"
                     >
-                      {t.marketplaceContact || "Zapytaj o auto WhatsApp"}
+                      Zapytaj o auto WhatsApp
                     </a>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          )}
         </div>
 
         <div className="mt-10 rounded-3xl border border-slate-200 bg-gradient-to-r from-slate-900 to-slate-700 p-6 text-white shadow-xl">
