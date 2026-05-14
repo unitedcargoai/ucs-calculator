@@ -8754,20 +8754,6 @@ export const BROKERS = [
     "discount": 25
   },
   {
-    "username": "annas",
-    "password": "krakau123!",
-    "name": "Anna Sołkowska",
-    "package": "Standard",
-    "discount": 0
-  },
-  {
-    "username": "arturp",
-    "password": "Arturo123!",
-    "name": "Artur Pasieczyński",
-    "package": "Standard",
-    "discount": 0
-  },
-  {
     "username": "tomaszj",
     "password": "Trex123!",
     "name": "Tomasz Jędrzejewski",
