@@ -8610,11 +8610,18 @@ export const INLAND_RATES = {
     "motorcycle": 350.0
   },
   "Copart-AZ - Phoenix-Houston": {
-    "car": 900,
-    "suv": 1000,
-    "pickup": 1000,
-    "large": 1100,
-    "motorcycle": 350
+    "car": 800,
+    "suv": 900,
+    "pickup": 900,
+    "large": 1000,
+    "motorcycle": 500
+  },
+  "IAA-AZ - Phoenix-Houston": {
+    "car": 800,
+    "suv": 900,
+    "pickup": 900,
+    "large": 1000,
+    "motorcycle": 500
   }
 };
 
