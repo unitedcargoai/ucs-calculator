@@ -911,6 +911,58 @@ export default function Home() {
           </div>
         )}
 
+
+          {isAdmin && (
+            <div className="mx-auto mt-6 max-w-5xl rounded-3xl border-4 border-emerald-400 bg-white p-6 text-left shadow-2xl">
+              <h3 className="text-2xl font-extrabold text-slate-900">
+                Panel Administratora UCS
+              </h3>
+              <p className="mt-2 text-slate-600">
+                Widzisz listę wszystkich brokerów UCS. To jest panel przygotowany pod przyszłe komunikaty grupowe i zarządzanie brokerami.
+              </p>
+
+              <div className="mt-5 rounded-2xl bg-emerald-50 p-4">
+                <p className="font-bold text-slate-900">Komunikat do brokerów</p>
+                <textarea
+                  className="mt-3 h-28 w-full rounded-xl border p-3 text-slate-900"
+                  placeholder="Wpisz komunikat / nowość / zapytanie grupowe..."
+                />
+                <p className="mt-2 text-sm text-slate-500">
+                  Następny etap: podłączymy bazę danych, aby wiadomość mogła pojawić się brokerom w panelu.
+                </p>
+              </div>
+
+              <h4 className="mt-6 text-xl font-bold text-slate-900">Brokerzy UCS</h4>
+
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full min-w-[720px] overflow-hidden rounded-2xl border text-sm">
+                  <thead className="bg-slate-900 text-white">
+                    <tr>
+                      <th className="p-3 text-left">✓</th>
+                      <th className="p-3 text-left">Imię i nazwisko</th>
+                      <th className="p-3 text-left">Login</th>
+                      <th className="p-3 text-left">Pakiet</th>
+                      <th className="p-3 text-left">Rabat wewnętrzny</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {visibleBrokers.map((broker) => (
+                      <tr key={broker.username} className="border-b bg-white">
+                        <td className="p-3">
+                          <input type="checkbox" defaultChecked />
+                        </td>
+                        <td className="p-3 font-semibold text-slate-900">{broker.name}</td>
+                        <td className="p-3 text-slate-700">{broker.username}</td>
+                        <td className="p-3 text-slate-700">{broker.package}</td>
+                        <td className="p-3 text-slate-700">${broker.discount || 0}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           <select
             className="w-full rounded-xl border p-4 text-lg"

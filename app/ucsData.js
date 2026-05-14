@@ -350,6 +350,14 @@ export const AUCTIONS = [
   },
   {
     "auction": "Copart",
+    "location": "AZ - Phoenix",
+    "state": "AZ",
+    "city": "Phoenix",
+    "recommendedPort": "Houston",
+    "specialNotice": ""
+  },
+  {
+    "auction": "Copart",
     "location": "AZ - Tucson",
     "state": "AZ",
     "city": "AZ - Tucson",
@@ -8600,6 +8608,13 @@ export const INLAND_RATES = {
     "suv": 550.0,
     "pickup": 700.0,
     "motorcycle": 350.0
+  },
+  "Copart-AZ - Phoenix-Houston": {
+    "car": 900,
+    "suv": 1000,
+    "pickup": 1000,
+    "large": 1100,
+    "motorcycle": 350
   }
 };
 
@@ -8796,8 +8811,8 @@ export const BROKERS = [
     "username": "VictorB",
     "password": "Better123!",
     "name": "Victor BetterCargo",
-    "package": "Premium Ultra",
-    "discount": 50,
+    "package": "Premium Partner",
+    "discount": 100,
     "role": "broker"
   }
 ];
