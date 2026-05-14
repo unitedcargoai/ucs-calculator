@@ -13,12 +13,12 @@ import {
 
 const translations = {
   pl: {
-    companyCountries: "USA • Kanada • Polska",
-    calculatorTitle: "Kalkulator DETAL — transport aut USA → Europa",
+    companyCountries: "𝗨𝗦𝗔 • 𝗞𝗮𝗻𝗮𝗱𝗮 • 𝗣𝗼𝗹𝘀𝗸𝗮",
+    calculatorTitle: "Interaktywny Kalkulator Transportu USA → Europa",
     retailTab: "Detal",
-    wholesaleTab: "Logowanie Brokerzy — HURT",
+    wholesaleTab: "Logowanie Brokerzy — Panel Interaktywny",
     soon: "Wkrótce",
-    calculatorSubtitle: "Transport lądowy USA + transport morski",
+    calculatorSubtitle: "Samochody • Motocykle • ATV • Pojazdy specjalne",
     banner:
       "Szybka wycena transportu aut z aukcji Copart, IAA i Manheim. Sprawdź koszt do portu w Europie lub skontaktuj się z nami, jeśli trasa wymaga indywidualnego potwierdzenia.",
     auction: "Wybierz aukcję",
@@ -677,6 +677,34 @@ export default function Home() {
     if (q.includes("broker") || q.includes("hurt") || q.includes("login")) {
       return "Panel HURT jest dostępny tylko dla zatwierdzonych brokerów UCS. Po zalogowaniu broker widzi swoje ceny i dodatkowe narzędzia.";
     }
+    if (q.includes("copart") || q.includes("iaa")) {
+      return "UCS pomaga klientom i brokerom w zakupach aut z Copart, IAA, Manheim i Adesa.";
+    }
+
+    if (q.includes("kontener")) {
+      return "UCS pomaga śledzić kontenery i status transportu aż do Europy.";
+    }
+
+    if (q.includes("1 z 3") || q.includes("bezpie")) {
+      return "Transport 1 z 3 jest zwykle bezpieczniejszy dla większych i droższych pojazdów.";
+    }
+
+    if (q.includes("części")) {
+      return "Tak — UCS wysyła również części samochodowe, motocykle, ATV i pojazdy specjalne.";
+    }
+
+    if (q.includes("odpraw")) {
+      return "Tak — pomagamy z odprawami celnymi i dokumentami eksportowymi w Europie.";
+    }
+
+    if (q.includes("dom")) {
+      return "Tak — możemy zorganizować dostawę pojazdu pod wskazany adres.";
+    }
+
+    if (q.includes("kod")) {
+      return "Tak — partnerzy UCS mogą otrzymać dostęp do kodów licytacyjnych.";
+    }
+
     return "Mogę pomóc z wyborem portu, routingiem, HAZMAT, WA BOS/title, CARFAX i kontaktem z UCS. Jeśli pytanie wymaga indywidualnej wyceny, wyślij je do UCS przez WhatsApp.";
   }
 
@@ -717,7 +745,7 @@ export default function Home() {
             PL: +48 516 393 233 | USA: +1 773 987 9494 | CA: +1 403 390 6825
           </p>
 
-          <p className="mt-2 text-slate-600">Marek Witkowski</p>
+          <p className="mt-2 text-slate-600"></p>
 
           <div className="mx-auto mt-6 flex max-w-2xl flex-col gap-3 rounded-3xl bg-slate-100 p-3 md:flex-row">
             <button
@@ -1191,7 +1219,7 @@ export default function Home() {
             className="rounded-2xl bg-green-600 p-5 text-center text-white shadow-sm hover:bg-green-700"
           >
             <p className="text-sm font-semibold">{t.contact}</p>
-            <p className="mt-1 text-lg font-bold">{t.whatsappMarek}</p>
+            <p className="mt-1 text-lg font-bold">UCS Logistics Team</p>
           </a>
         </div>
       </section>
@@ -1222,6 +1250,14 @@ export default function Home() {
               <button onClick={() => handleAiAsk(t.aiQuickPort)} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">{t.aiQuickPort}</button>
               <button onClick={() => handleAiAsk(t.aiQuickTitle)} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">{t.aiQuickTitle}</button>
               <button onClick={() => handleAiAsk(t.aiQuickHazmat)} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">{t.aiQuickHazmat}</button>
+              <button onClick={() => handleAiAsk("Jak działa Copart / IAA?")} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">Copart / IAA</button>
+              <button onClick={() => handleAiAsk("Jak śledzić kontener?")} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">Śledzenie kontenera</button>
+              <button onClick={() => handleAiAsk("Czy 1 z 3 jest bezpieczniejsze?")} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">Bezpieczne pakowanie</button>
+              <button onClick={() => handleAiAsk("Czy wysyłacie części?")} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">Części</button>
+              <button onClick={() => handleAiAsk("Czy pomagacie z odprawą?")} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">Odprawy</button>
+              <button onClick={() => handleAiAsk("Czy dostarczacie pod dom?")} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">Dostawa pod dom</button>
+              <button onClick={() => handleAiAsk("Czy dajecie kody do licytacji?")} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">Kody do licytacji</button>
+              <button onClick={() => handleAiAsk("Czy sprawdzacie CARFAX?")} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">CARFAX</button>
             </div>
 
             <div className="border-t p-3">
