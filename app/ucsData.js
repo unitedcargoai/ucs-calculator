@@ -8715,20 +8715,41 @@ export const BROKERS = [
     "username": "mawit",
     "password": "loza123!m",
     "name": "Maciej Witkowski",
-    "package": "Premium Ultra",
-    "discount": 50
+    "package": "Premium",
+    "discount": 25
   },
   {
     "username": "justa",
     "password": "bsto123!k",
     "name": "Justyna Polak",
-    "package": "Premium Ultra",
-    "discount": 50
+    "package": "Premium",
+    "discount": 25
   },
   {
     "username": "lukaslomza",
     "password": "Lom123!za",
     "name": "Łukasz Chojnowski",
+    "package": "Premium",
+    "discount": 25
+  },
+  {
+    "username": "cezaryw",
+    "password": "czar123!",
+    "name": "Cezary Wysocki",
+    "package": "Premium",
+    "discount": 25
+  },
+  {
+    "username": "kurzydlo",
+    "password": "kurz123!",
+    "name": "Piotr Kurzydło",
+    "package": "Premium",
+    "discount": 25
+  },
+  {
+    "username": "micho",
+    "password": "Mich123!",
+    "name": "Adrian Michocki",
     "package": "Premium",
     "discount": 25
   }
