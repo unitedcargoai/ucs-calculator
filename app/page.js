@@ -21,7 +21,16 @@ function normalizeBroker(row) {
     password: row.password,
     name: row.full_name || row.name,
     package: row.package || "Standard",
-    discount: row.inland_discount ?? row.discount ?? 0,
+
+    // shipping_discount = rabat na ocean freight / wysyłkę morską
+    shippingDiscount: row.shipping_discount ?? row.discount ?? 0,
+
+    // inland_discount = rabat na transport lądowy
+    inlandDiscount: row.inland_discount ?? 0,
+
+    // stary discount zostawiamy jako backup dla lokalnego ucsData.js
+    discount: row.shipping_discount ?? row.discount ?? 0,
+
     role: row.role || "broker",
   };
 }
@@ -613,24 +622,24 @@ export default function Home() {
     ? WHOLESALE_STANDARD_RATES[oceanKey] || 0
     : 0;
 
-  const brokerDiscount = activeBroker?.discount || 0;
+  // shippingDiscount = rabat na ocean freight / wysyłkę morską
+  const shippingDiscount =
+    activeBroker?.shippingDiscount ?? activeBroker?.discount ?? 0;
+
+  // inlandDiscount = rabat na transport lądowy
+  // Tylko Premium Partner ma tu rabat, ale wartość pochodzi już z Supabase.
+  const brokerInlandDiscount =
+    activeBroker?.inlandDiscount ??
+    (activeBroker?.package === "Premium Partner" ? 50 : 0);
 
   const wholesaleOcean =
     mode === "wholesale" && (standardWholesaleOcean > 0 || standardWholesaleInland > 0)
-      ? Math.max(standardWholesaleOcean - brokerDiscount, 0)
-      : 0;
-
-  // Inland: wszyscy brokerzy widzą standard, tylko Premium Partner ma -$50.
-  const inlandPartnerDiscount =
-    mode === "wholesale" &&
-    activeBroker?.package === "Premium Partner" &&
-    standardWholesaleInland > 0
-      ? 50
+      ? Math.max(standardWholesaleOcean - shippingDiscount, 0)
       : 0;
 
   const wholesaleInland =
     mode === "wholesale" && standardWholesaleInland > 0
-      ? Math.max(standardWholesaleInland - inlandPartnerDiscount, 0)
+      ? Math.max(standardWholesaleInland - brokerInlandDiscount, 0)
       : 0;
 
   const hazmatFee = mode === "wholesale" && hazmat ? 300 : 0;
@@ -1001,7 +1010,8 @@ export default function Home() {
                       <th className="p-3 text-left">Imię i nazwisko</th>
                       <th className="p-3 text-left">Login</th>
                       <th className="p-3 text-left">Pakiet</th>
-                      <th className="p-3 text-left">Rabat wewnętrzny</th>
+                      <th className="p-3 text-left">Rabat ocean</th>
+                      <th className="p-3 text-left">Rabat lądowy</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1013,7 +1023,8 @@ export default function Home() {
                         <td className="p-3 font-semibold text-slate-900">{broker.name}</td>
                         <td className="p-3 text-slate-700">{broker.username}</td>
                         <td className="p-3 text-slate-700">{broker.package}</td>
-                        <td className="p-3 text-slate-700">${broker.discount || 0}</td>
+                        <td className="p-3 text-slate-700">${broker.shippingDiscount ?? broker.discount ?? 0}</td>
+                        <td className="p-3 text-slate-700">${broker.inlandDiscount ?? 0}</td>
                       </tr>
                     ))}
                   </tbody>

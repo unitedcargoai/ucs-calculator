@@ -8732,7 +8732,9 @@ export const BROKERS = [
     "name": "Marek Witkowski",
     "package": "Admin",
     "discount": 0,
-    "role": "admin"
+    "role": "admin",
+    "shippingDiscount": 0,
+    "inlandDiscount": 0
   },
   {
     "username": "bmjtrans",
@@ -8740,7 +8742,9 @@ export const BROKERS = [
     "name": "Krzysztof Surmacz",
     "package": "Premium Partner",
     "discount": 100,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 100,
+    "inlandDiscount": 50
   },
   {
     "username": "mawit",
@@ -8748,7 +8752,9 @@ export const BROKERS = [
     "name": "Maciej Witkowski",
     "package": "Premium",
     "discount": 25,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 25,
+    "inlandDiscount": 0
   },
   {
     "username": "justa",
@@ -8756,7 +8762,9 @@ export const BROKERS = [
     "name": "Justyna Polak",
     "package": "Premium",
     "discount": 25,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 25,
+    "inlandDiscount": 0
   },
   {
     "username": "lukaslomza",
@@ -8764,7 +8772,9 @@ export const BROKERS = [
     "name": "Łukasz Chojnowski",
     "package": "Premium",
     "discount": 25,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 25,
+    "inlandDiscount": 0
   },
   {
     "username": "cezaryw",
@@ -8772,7 +8782,9 @@ export const BROKERS = [
     "name": "Cezary Wysocki",
     "package": "Premium",
     "discount": 25,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 25,
+    "inlandDiscount": 0
   },
   {
     "username": "kurzydlo",
@@ -8780,7 +8792,9 @@ export const BROKERS = [
     "name": "Piotr Kurzydło",
     "package": "Premium",
     "discount": 25,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 25,
+    "inlandDiscount": 0
   },
   {
     "username": "micho",
@@ -8788,7 +8802,9 @@ export const BROKERS = [
     "name": "Adrian Michocki",
     "package": "Premium",
     "discount": 25,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 25,
+    "inlandDiscount": 0
   },
   {
     "username": "tomaszj",
@@ -8796,7 +8812,9 @@ export const BROKERS = [
     "name": "Tomasz Jędrzejewski",
     "package": "Standard",
     "discount": 0,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 0,
+    "inlandDiscount": 0
   },
   {
     "username": "daror",
@@ -8804,7 +8822,9 @@ export const BROKERS = [
     "name": "Dariusz Rybiński",
     "package": "Standard",
     "discount": 0,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 0,
+    "inlandDiscount": 0
   },
   {
     "username": "Davidbk",
@@ -8812,7 +8832,9 @@ export const BROKERS = [
     "name": "Dawid Bonk",
     "package": "Standard",
     "discount": 0,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 0,
+    "inlandDiscount": 0
   },
   {
     "username": "VictorB",
@@ -8820,7 +8842,9 @@ export const BROKERS = [
     "name": "Victor BetterCargo",
     "package": "Premium Partner",
     "discount": 100,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 100,
+    "inlandDiscount": 50
   },
   {
     "username": "arturp",
@@ -8828,6 +8852,8 @@ export const BROKERS = [
     "name": "Artur Pasieczyński",
     "package": "Standard",
     "discount": 0,
-    "role": "broker"
+    "role": "broker",
+    "shippingDiscount": 0,
+    "inlandDiscount": 0
   }
 ];
