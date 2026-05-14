@@ -8705,80 +8705,99 @@ export const WHOLESALE_STANDARD_RATES = {
 
 export const BROKERS = [
   {
+    "username": "marekw",
+    "password": "Better123!@#",
+    "name": "Marek Witkowski",
+    "package": "Admin",
+    "discount": 0,
+    "role": "admin"
+  },
+  {
     "username": "bmjtrans",
     "password": "Pole123!o",
     "name": "Krzysztof Surmacz",
     "package": "Premium Partner",
-    "discount": 100
+    "discount": 100,
+    "role": "broker"
   },
   {
     "username": "mawit",
     "password": "loza123!m",
     "name": "Maciej Witkowski",
     "package": "Premium",
-    "discount": 25
+    "discount": 25,
+    "role": "broker"
   },
   {
     "username": "justa",
     "password": "bsto123!k",
     "name": "Justyna Polak",
     "package": "Premium",
-    "discount": 25
+    "discount": 25,
+    "role": "broker"
   },
   {
     "username": "lukaslomza",
     "password": "Lom123!za",
     "name": "Łukasz Chojnowski",
     "package": "Premium",
-    "discount": 25
+    "discount": 25,
+    "role": "broker"
   },
   {
     "username": "cezaryw",
     "password": "czar123!",
     "name": "Cezary Wysocki",
     "package": "Premium",
-    "discount": 25
+    "discount": 25,
+    "role": "broker"
   },
   {
     "username": "kurzydlo",
     "password": "kurz123!",
     "name": "Piotr Kurzydło",
     "package": "Premium",
-    "discount": 25
+    "discount": 25,
+    "role": "broker"
   },
   {
     "username": "micho",
     "password": "Mich123!",
     "name": "Adrian Michocki",
     "package": "Premium",
-    "discount": 25
+    "discount": 25,
+    "role": "broker"
   },
   {
     "username": "tomaszj",
     "password": "Trex123!",
     "name": "Tomasz Jędrzejewski",
     "package": "Standard",
-    "discount": 0
+    "discount": 0,
+    "role": "broker"
   },
   {
     "username": "daror",
     "password": "Dark123!",
     "name": "Dariusz Rybiński",
     "package": "Standard",
-    "discount": 0
+    "discount": 0,
+    "role": "broker"
   },
   {
     "username": "Davidbk",
     "password": "Davido13!",
     "name": "Dawid Bonk",
     "package": "Standard",
-    "discount": 0
+    "discount": 0,
+    "role": "broker"
   },
   {
     "username": "VictorB",
     "password": "Better123!",
     "name": "Victor BetterCargo",
     "package": "Premium Ultra",
-    "discount": 50
+    "discount": 50,
+    "role": "broker"
   }
 ];

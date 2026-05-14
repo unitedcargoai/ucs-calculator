@@ -56,6 +56,12 @@ const translations = {
     brokerLogin: "Zaloguj HURT",
     brokerWelcome: "Witaj",
     brokerPackage: "Pakiet",
+    adminPanelTitle: "Panel Administratora UCS",
+    adminPanelSubtitle: "Lista brokerów i przygotowanie pod przyszłe komunikaty grupowe.",
+    adminBrokerList: "Brokerzy UCS",
+    adminMessageTitle: "Komunikat do brokerów",
+    adminMessagePlaceholder: "Wpisz komunikat / nowość / zapytanie grupowe...",
+    adminFutureNote: "Funkcja wysyłania komunikatów wymaga bazy danych. Na razie panel pokazuje strukturę i listę brokerów.",
     brokerDiscount: "Rabat",
     brokerLogout: "Wyloguj HURT",
     brokerError: "Nieprawidłowy kod dostępu.",
@@ -145,6 +151,12 @@ const translations = {
     brokerLogin: "Login WHOLESALE",
     brokerWelcome: "Welcome",
     brokerPackage: "Package",
+    adminPanelTitle: "UCS Admin Panel",
+    adminPanelSubtitle: "Broker list and preparation for future group announcements.",
+    adminBrokerList: "UCS Brokers",
+    adminMessageTitle: "Message to brokers",
+    adminMessagePlaceholder: "Type announcement / update / group question...",
+    adminFutureNote: "Sending announcements requires a database. For now this panel shows the structure and broker list.",
     brokerDiscount: "Discount",
     brokerLogout: "Logout WHOLESALE",
     brokerError: "Invalid access code.",
@@ -732,6 +744,9 @@ export default function Home() {
       `Tryb: ${mode}\n` +
       `Broker: ${activeBroker?.name || "niezalogowany"}`
   );
+
+  const isAdmin = activeBroker?.role === "admin" || activeBroker?.package === "Admin";
+  const visibleBrokers = BROKERS.filter((broker) => broker.role !== "admin");
 
   return (
     <main
