@@ -41,7 +41,7 @@ const translations = {
     purchaseWhatsapp: "Wyślij zgłoszenie WhatsApp",
     quoteRequestTitle: "Zapytaj o wycenę przez WhatsApp",
     quoteAuction: "Aukcja",
-    quoteLot: "LOT / Stock nr",
+    quoteLot: "LOT / Stock / VIN",
     quoteNote: "Uwagi / model auta / lokalizacja",
     quoteWhatsapp: "Wyślij zapytanie WhatsApp",
     carfaxTitle: "Sprawdź CARFAX",
@@ -121,7 +121,7 @@ const translations = {
     purchaseWhatsapp: "Send report via WhatsApp",
     quoteRequestTitle: "Ask for a quote via WhatsApp",
     quoteAuction: "Auction",
-    quoteLot: "LOT / Stock no.",
+    quoteLot: "LOT / Stock / VIN",
     quoteNote: "Notes / vehicle model / location",
     quoteWhatsapp: "Send WhatsApp request",
     carfaxTitle: "Check CARFAX",
@@ -201,7 +201,7 @@ const translations = {
     purchaseWhatsapp: "Надіслати через WhatsApp",
     quoteRequestTitle: "Запитати ціну через WhatsApp",
     quoteAuction: "Аукціон",
-    quoteLot: "LOT / Stock №",
+    quoteLot: "LOT / Stock / VIN",
     quoteNote: "Нотатки / модель авто / локація",
     quoteWhatsapp: "Надіслати WhatsApp запит",
     carfaxTitle: "Перевірити CARFAX",
@@ -281,7 +281,7 @@ const translations = {
     purchaseWhatsapp: "Изпрати чрез WhatsApp",
     quoteRequestTitle: "Попитайте за цена чрез WhatsApp",
     quoteAuction: "Аукцион",
-    quoteLot: "LOT / Stock №",
+    quoteLot: "LOT / Stock / VIN",
     quoteNote: "Бележки / модел / локация",
     quoteWhatsapp: "Изпрати WhatsApp запитване",
     carfaxTitle: "Провери CARFAX",
@@ -361,7 +361,7 @@ const translations = {
     purchaseWhatsapp: "إرسال عبر WhatsApp",
     quoteRequestTitle: "اطلب تسعيرة عبر WhatsApp",
     quoteAuction: "المزاد",
-    quoteLot: "LOT / Stock رقم",
+    quoteLot: "LOT / Stock / VIN",
     quoteNote: "ملاحظات / موديل السيارة / الموقع",
     quoteWhatsapp: "إرسال طلب WhatsApp",
     carfaxTitle: "تحقق من CARFAX",
@@ -513,8 +513,8 @@ export default function Home() {
       ? Math.max(standardWholesaleInland - inlandPartnerDiscount, 0)
       : 0;
 
-  const hazmatFee = hazmat && mode === "wholesale" ? 300 : 0;
-  const waBosFee = waBos && mode === "wholesale" ? 350 : 0;
+  const hazmatFee = mode === "wholesale" && hazmat ? 300 : 0;
+  const waBosFee = mode === "wholesale" && waBos ? 350 : 0;
 
   // DETAL: $0 i kontakt. HURT: pokazujemy ceny brokera.
   const inland = mode === "wholesale" ? wholesaleInland : 0;
@@ -830,31 +830,35 @@ export default function Home() {
             <option value="1 z 4">{t.packing4}</option>
           </select>
 
-          <label className="flex items-center gap-3 rounded-xl border bg-white p-4 text-lg font-semibold text-slate-900">
-            <input
-              type="checkbox"
-              checked={hazmat}
-              onChange={(e) => setHazmat(e.target.checked)}
-              className="h-5 w-5"
-            />
-            <span>{t.hazmatLabel}</span>
-            <span className="ml-auto rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800">
-              +$300
-            </span>
-          </label>
+          {mode === "wholesale" && (
+            <>
+              <label className="flex items-center gap-3 rounded-xl border bg-white p-4 text-lg font-semibold text-slate-900">
+                <input
+                  type="checkbox"
+                  checked={hazmat}
+                  onChange={(e) => setHazmat(e.target.checked)}
+                  className="h-5 w-5"
+                />
+                <span>{t.hazmatLabel}</span>
+                <span className="ml-auto rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800">
+                  +$300
+                </span>
+              </label>
 
-          <label className="flex items-center gap-3 rounded-xl border bg-white p-4 text-lg font-semibold text-slate-900">
-            <input
-              type="checkbox"
-              checked={waBos}
-              onChange={(e) => setWaBos(e.target.checked)}
-              className="h-5 w-5"
-            />
-            <span>{t.waBosLabel}</span>
-            <span className="ml-auto rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-              +$350
-            </span>
-          </label>
+              <label className="flex items-center gap-3 rounded-xl border bg-white p-4 text-lg font-semibold text-slate-900">
+                <input
+                  type="checkbox"
+                  checked={waBos}
+                  onChange={(e) => setWaBos(e.target.checked)}
+                  className="h-5 w-5"
+                />
+                <span>{t.waBosLabel}</span>
+                <span className="ml-auto rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
+                  +$350
+                </span>
+              </label>
+            </>
+          )}
 
           <select
             className="w-full rounded-xl border p-4 text-lg"
