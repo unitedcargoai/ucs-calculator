@@ -1201,7 +1201,7 @@ export default function Home() {
                 {t.marketplaceTitle || "Auta na sprzedaż"}
               </h3>
               <p className="mt-2 max-w-3xl text-slate-600">
-                Lista aut otwiera się osobno, żeby główna strona pozostała szybka i czytelna.
+                Wybrane oferty dostępne w sieci brokerów UCS.
               </p>
             </div>
 

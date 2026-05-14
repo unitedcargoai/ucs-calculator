@@ -8810,23 +8810,23 @@ export const MARKETPLACE_CARS = [
     "brokerPhone": "19412505868",
     "description": "Cena zawiera dostawę do portu w Rotterdam. Nie zawiera opłat agencyjnych ani celnych.",
     "images": [
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-01.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-02.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-03.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-04.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-05.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-06.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-07.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-08.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-09.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-10.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-11.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-12.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-13.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-14.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-15.jpeg",
-      "/marketplace/pacifica-2c4rc1bg8lr132612/pacifica-16.jpeg"
+      "/cars/pacifica/pacifica-01.jpeg",
+      "/cars/pacifica/pacifica-02.jpeg",
+      "/cars/pacifica/pacifica-03.jpeg",
+      "/cars/pacifica/pacifica-04.jpeg",
+      "/cars/pacifica/pacifica-05.jpeg",
+      "/cars/pacifica/pacifica-06.jpeg",
+      "/cars/pacifica/pacifica-07.jpeg",
+      "/cars/pacifica/pacifica-08.jpeg",
+      "/cars/pacifica/pacifica-09.jpeg",
+      "/cars/pacifica/pacifica-10.jpeg",
+      "/cars/pacifica/pacifica-11.jpeg",
+      "/cars/pacifica/pacifica-12.jpeg",
+      "/cars/pacifica/pacifica-13.jpeg",
+      "/cars/pacifica/pacifica-14.jpeg",
+      "/cars/pacifica/pacifica-15.jpeg",
+      "/cars/pacifica/pacifica-16.jpeg"
     ],
-    "carfaxPdf": "/marketplace/carfax/2C4RC1BG8LR132612-carfax.pdf"
+    "carfaxPdf": "/carfax/pacifica-carfax.pdf"
   }
 ];
