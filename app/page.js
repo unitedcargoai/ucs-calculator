@@ -88,6 +88,15 @@ const translations = {
     liveSupportText: "Szybki kontakt z UCS przez WhatsApp.",
     website: "Strona WWW",
     community: "Społeczność",
+    aiFloatTitle: "UCS AI Assistant",
+    aiFloatSubtitle: "Zapytaj o port, title, HAZMAT lub wycenę",
+    aiHello: "Cześć! Jestem asystentem UCS. Mogę pomóc z wyborem portu, HAZMAT, WA BOS/title i kontaktem z administratorem.",
+    aiQuestionPlaceholder: "Napisz pytanie...",
+    aiSend: "Zapytaj",
+    aiWhatsapp: "Wyślij pytanie do UCS przez WhatsApp",
+    aiQuickPort: "Jaki port wybrać?",
+    aiQuickTitle: "WA BOS / title",
+    aiQuickHazmat: "HAZMAT",
     facebookGroup: "Facebook Group",
     contact: "Kontakt",
     whatsappMarek: "WhatsApp Marek",
@@ -168,6 +177,15 @@ const translations = {
     liveSupportText: "Fast UCS contact via WhatsApp.",
     website: "Website",
     community: "Community",
+    aiFloatTitle: "UCS AI Assistant",
+    aiFloatSubtitle: "Ask about port, title, HAZMAT or quote",
+    aiHello: "Hi! I am the UCS assistant. I can help with port selection, HAZMAT, WA BOS/title, and contacting the administrator.",
+    aiQuestionPlaceholder: "Type your question...",
+    aiSend: "Ask",
+    aiWhatsapp: "Send question to UCS via WhatsApp",
+    aiQuickPort: "Which port?",
+    aiQuickTitle: "WA BOS / title",
+    aiQuickHazmat: "HAZMAT",
     facebookGroup: "Facebook Group",
     contact: "Contact",
     whatsappMarek: "WhatsApp Marek",
@@ -248,6 +266,15 @@ const translations = {
     liveSupportText: "Швидкий контакт з UCS через WhatsApp.",
     website: "Вебсайт",
     community: "Спільнота",
+    aiFloatTitle: "UCS AI Assistant",
+    aiFloatSubtitle: "Запитайте про порт, title, HAZMAT або ціну",
+    aiHello: "Привіт! Я асистент UCS. Допоможу з вибором порту, HAZMAT, WA BOS/title та контактом з адміністратором.",
+    aiQuestionPlaceholder: "Напишіть питання...",
+    aiSend: "Запитати",
+    aiWhatsapp: "Надіслати питання UCS через WhatsApp",
+    aiQuickPort: "Який порт?",
+    aiQuickTitle: "WA BOS / title",
+    aiQuickHazmat: "HAZMAT",
     facebookGroup: "Facebook Group",
     contact: "Контакт",
     whatsappMarek: "WhatsApp Marek",
@@ -328,6 +355,15 @@ const translations = {
     liveSupportText: "Бърз контакт с UCS чрез WhatsApp.",
     website: "Уебсайт",
     community: "Общност",
+    aiFloatTitle: "UCS AI Assistant",
+    aiFloatSubtitle: "Попитайте за порт, title, HAZMAT или цена",
+    aiHello: "Здравейте! Аз съм UCS асистент. Мога да помогна с избор на порт, HAZMAT, WA BOS/title и контакт с администратора.",
+    aiQuestionPlaceholder: "Напишете въпрос...",
+    aiSend: "Попитай",
+    aiWhatsapp: "Изпрати въпрос към UCS през WhatsApp",
+    aiQuickPort: "Кой порт?",
+    aiQuickTitle: "WA BOS / title",
+    aiQuickHazmat: "HAZMAT",
     facebookGroup: "Facebook Group",
     contact: "Контакт",
     whatsappMarek: "WhatsApp Marek",
@@ -407,6 +443,15 @@ const translations = {
     liveSupportText: "تواصل سريع مع UCS عبر WhatsApp.",
     website: "الموقع",
     community: "المجتمع",
+    aiFloatTitle: "UCS AI Assistant",
+    aiFloatSubtitle: "اسأل عن الميناء أو title أو HAZMAT أو السعر",
+    aiHello: "مرحباً! أنا مساعد UCS. أساعدك في اختيار الميناء و HAZMAT و WA BOS/title والتواصل مع الإدارة.",
+    aiQuestionPlaceholder: "اكتب سؤالك...",
+    aiSend: "اسأل",
+    aiWhatsapp: "أرسل السؤال إلى UCS عبر WhatsApp",
+    aiQuickPort: "أي ميناء؟",
+    aiQuickTitle: "WA BOS / title",
+    aiQuickHazmat: "HAZMAT",
     facebookGroup: "مجموعة Facebook",
     contact: "تواصل",
     whatsappMarek: "WhatsApp Marek",
@@ -445,6 +490,9 @@ export default function Home() {
   const [quoteAuction, setQuoteAuction] = useState("IAA");
   const [quoteLot, setQuoteLot] = useState("");
   const [quoteNote, setQuoteNote] = useState("");
+  const [aiOpen, setAiOpen] = useState(false);
+  const [aiInput, setAiInput] = useState("");
+  const [aiMessages, setAiMessages] = useState([]);
   const [carfaxVin, setCarfaxVin] = useState("");
   const [portUsa, setPortUsa] = useState("Savannah");
   const [portEu, setPortEu] = useState("Rotterdam");
@@ -609,6 +657,46 @@ export default function Home() {
       `Broker: ${activeBroker?.name || ""}\n` +
       `Pakiet: ${activeBroker?.package || ""}\n` +
       `VIN: ${carfaxVin}`
+  );
+
+  function getAiAnswer(question) {
+    const q = question.toLowerCase();
+
+    if (q.includes("savannah") || q.includes("miami") || q.includes("florida") || q.includes("tampa")) {
+      return "Dla większości lokalizacji na Florydzie UCS rekomenduje port Savannah — zwykle szybciej i korzystniej niż Miami. Jeśli trasa wymaga potwierdzenia, najlepiej wysłać zapytanie przez WhatsApp.";
+    }
+    if (q.includes("wa") || q.includes("washington") || q.includes("bos") || q.includes("title")) {
+      return "WA BOS oznacza, że auto z Washington może wymagać wyrobienia nowego title do eksportu/rejestracji w Europie. W kalkulatorze broker może zaznaczyć WA BOS / nowe TITLE, co dolicza dodatkową opłatę.";
+    }
+    if (q.includes("hazmat") || q.includes("electric") || q.includes("hybrid") || q.includes("tesla")) {
+      return "Auta elektryczne i hybrydowe mogą wymagać opłaty HAZMAT. W panelu brokera zaznacz HAZMAT / Electric / Hybrid, a system doliczy $300.";
+    }
+    if (q.includes("carfax") || q.includes("vin")) {
+      return "Zalogowany broker może użyć sekcji Sprawdź CARFAX, wkleić VIN i wysłać go bezpośrednio do UCS przez WhatsApp.";
+    }
+    if (q.includes("broker") || q.includes("hurt") || q.includes("login")) {
+      return "Panel HURT jest dostępny tylko dla zatwierdzonych brokerów UCS. Po zalogowaniu broker widzi swoje ceny i dodatkowe narzędzia.";
+    }
+    return "Mogę pomóc z wyborem portu, routingiem, HAZMAT, WA BOS/title, CARFAX i kontaktem z UCS. Jeśli pytanie wymaga indywidualnej wyceny, wyślij je do UCS przez WhatsApp.";
+  }
+
+  function handleAiAsk(customQuestion) {
+    const question = customQuestion || aiInput;
+    if (!question.trim()) return;
+    const answer = getAiAnswer(question);
+    setAiMessages((current) => [
+      ...current,
+      { role: "user", text: question },
+      { role: "assistant", text: answer },
+    ]);
+    setAiInput("");
+  }
+
+  const aiWhatsappMessage = encodeURIComponent(
+    `PYTANIE DO UCS AI / ADMINA\n` +
+      `Pytanie: ${aiInput}\n` +
+      `Tryb: ${mode}\n` +
+      `Broker: ${activeBroker?.name || "niezalogowany"}`
   );
 
   return (
@@ -1107,6 +1195,51 @@ export default function Home() {
           </a>
         </div>
       </section>
+      <div className="fixed bottom-5 right-5 z-50 max-w-[92vw]">
+        {aiOpen && (
+          <div className="mb-4 w-[360px] max-w-[92vw] overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
+            <div className="bg-slate-900 p-4 text-white">
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-2xl">🤖</div>
+                <div>
+                  <p className="font-bold">{t.aiFloatTitle}</p>
+                  <p className="text-sm text-slate-300">{t.aiFloatSubtitle}</p>
+                </div>
+                <button onClick={() => setAiOpen(false)} className="ml-auto rounded-full bg-white/10 px-3 py-1 text-sm">×</button>
+              </div>
+            </div>
+
+            <div className="max-h-80 space-y-3 overflow-y-auto p-4 text-sm">
+              <div className="rounded-2xl bg-slate-100 p-3 text-slate-800">{t.aiHello}</div>
+              {aiMessages.map((message, index) => (
+                <div key={index} className={`rounded-2xl p-3 ${message.role === "user" ? "ml-8 bg-blue-600 text-white" : "mr-8 bg-slate-100 text-slate-800"}`}>
+                  {message.text}
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-2 border-t p-3">
+              <button onClick={() => handleAiAsk(t.aiQuickPort)} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">{t.aiQuickPort}</button>
+              <button onClick={() => handleAiAsk(t.aiQuickTitle)} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">{t.aiQuickTitle}</button>
+              <button onClick={() => handleAiAsk(t.aiQuickHazmat)} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">{t.aiQuickHazmat}</button>
+            </div>
+
+            <div className="border-t p-3">
+              <div className="flex gap-2">
+                <input className="min-w-0 flex-1 rounded-xl border p-3 text-sm text-slate-900" value={aiInput} onChange={(e) => setAiInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") handleAiAsk(); }} placeholder={t.aiQuestionPlaceholder} />
+                <button onClick={() => handleAiAsk()} className="rounded-xl bg-slate-900 px-4 py-3 text-sm font-bold text-white">{t.aiSend}</button>
+              </div>
+              <a className="mt-3 block rounded-xl bg-green-600 px-4 py-3 text-center text-sm font-bold text-white" href={`https://wa.me/19412505868?text=${aiWhatsappMessage}`} target="_blank">{t.aiWhatsapp}</a>
+            </div>
+          </div>
+        )}
+
+        <button onClick={() => setAiOpen(!aiOpen)} className="flex items-center gap-3 rounded-full bg-slate-900 px-5 py-4 font-bold text-white shadow-2xl">
+          <span className="text-2xl">🤖</span>
+          <span>{t.aiFloatTitle}</span>
+        </button>
+      </div>
+
     </main>
   );
 }
