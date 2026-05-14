@@ -471,12 +471,6 @@ export default function Home() {
   const [lang, setLang] = useState("pl");
   const t = translations[lang];
   const isRtl = lang === "ar";
-  const websiteUrl =
-    lang === "pl"
-      ? "https://www.kontenerydopolski.pl"
-      : "https://www.unitedcargoshipping.com";
-  const websiteLabel =
-    lang === "pl" ? "kontenerydopolski.pl" : "unitedcargoshipping.com";
 
   const [mode, setMode] = useState("retail");
   const [brokerUsername, setBrokerUsername] = useState("");
@@ -754,7 +748,16 @@ export default function Home() {
           <p className="mt-2 text-slate-600"></p>
 
           <div className="mx-auto mt-6 flex max-w-2xl flex-col gap-3 rounded-3xl bg-slate-100 p-3 md:flex-row">
-            
+            <button
+              onClick={() => setMode("retail")}
+              className={`flex-1 rounded-2xl px-5 py-3 font-bold shadow ${
+                mode === "retail"
+                  ? "bg-slate-900 text-white"
+                  : "bg-white text-slate-700"
+              }`}
+            >
+              {t.retailTab}
+            </button>
 
             {mode === "wholesale" ? (
               <button
@@ -1187,13 +1190,13 @@ export default function Home() {
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <a
-            href={websiteUrl}
+            href="https://www.kontenerydopolski.pl"
             target="_blank"
             className="rounded-2xl border bg-white p-5 text-center shadow-sm hover:bg-slate-50"
           >
             <p className="text-sm font-semibold text-slate-500">{t.website}</p>
             <p className="mt-1 text-lg font-bold text-slate-900">
-              {websiteLabel}
+              kontenerydopolski.pl
             </p>
           </a>
 

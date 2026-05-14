@@ -8752,5 +8752,47 @@ export const BROKERS = [
     "name": "Adrian Michocki",
     "package": "Premium",
     "discount": 25
+  },
+  {
+    "username": "annas",
+    "password": "krakau123!",
+    "name": "Anna Sołkowska",
+    "package": "Standard",
+    "discount": 0
+  },
+  {
+    "username": "arturp",
+    "password": "Arturo123!",
+    "name": "Artur Pasieczyński",
+    "package": "Standard",
+    "discount": 0
+  },
+  {
+    "username": "tomaszj",
+    "password": "Trex123!",
+    "name": "Tomasz Jędrzejewski",
+    "package": "Standard",
+    "discount": 0
+  },
+  {
+    "username": "daror",
+    "password": "Dark123!",
+    "name": "Dariusz Rybiński",
+    "package": "Standard",
+    "discount": 0
+  },
+  {
+    "username": "Davidbk",
+    "password": "Davido13!",
+    "name": "Dawid Bonk",
+    "package": "Standard",
+    "discount": 0
+  },
+  {
+    "username": "VictorB",
+    "password": "Better123!",
+    "name": "Victor BetterCargo",
+    "package": "Premium Ultra",
+    "discount": 50
   }
 ];
