@@ -896,11 +896,7 @@ export default function Home() {
                 {t.brokerPackage}: <b>{activeBroker.package}</b>
               </p>
               <p className="mt-1 text-sm">{t.wholesaleInfo}</p>
-              {mode === "wholesale" && activeBroker && (
-                <p className="mt-2 rounded-xl bg-white/70 p-2 text-xs text-emerald-900">
-                  DEBUG rabaty: morski ${shippingDiscount} | lądowy ${brokerInlandDiscount}
-                </p>
-              )}
+
             </div>
           )}
 
