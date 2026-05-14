@@ -8810,23 +8810,23 @@ export const MARKETPLACE_CARS = [
     "brokerPhone": "19412505868",
     "description": "Cena zawiera dostawę do portu w Rotterdam. Nie zawiera opłat agencyjnych ani celnych.",
     "images": [
-      "/cars/pacifica/pacifica-01.jpeg",
-      "/cars/pacifica/pacifica-02.jpeg",
-      "/cars/pacifica/pacifica-03.jpeg",
-      "/cars/pacifica/pacifica-04.jpeg",
-      "/cars/pacifica/pacifica-05.jpeg",
-      "/cars/pacifica/pacifica-06.jpeg",
-      "/cars/pacifica/pacifica-07.jpeg",
-      "/cars/pacifica/pacifica-08.jpeg",
-      "/cars/pacifica/pacifica-09.jpeg",
-      "/cars/pacifica/pacifica-10.jpeg",
-      "/cars/pacifica/pacifica-11.jpeg",
-      "/cars/pacifica/pacifica-12.jpeg",
-      "/cars/pacifica/pacifica-13.jpeg",
-      "/cars/pacifica/pacifica-14.jpeg",
-      "/cars/pacifica/pacifica-15.jpeg",
-      "/cars/pacifica/pacifica-16.jpeg"
+      "/uploads/pacifica-01.jpeg",
+      "/uploads/pacifica-02.jpeg",
+      "/uploads/pacifica-03.jpeg",
+      "/uploads/pacifica-04.jpeg",
+      "/uploads/pacifica-05.jpeg",
+      "/uploads/pacifica-06.jpeg",
+      "/uploads/pacifica-07.jpeg",
+      "/uploads/pacifica-08.jpeg",
+      "/uploads/pacifica-09.jpeg",
+      "/uploads/pacifica-10.jpeg",
+      "/uploads/pacifica-11.jpeg",
+      "/uploads/pacifica-12.jpeg",
+      "/uploads/pacifica-13.jpeg",
+      "/uploads/pacifica-14.jpeg",
+      "/uploads/pacifica-15.jpeg",
+      "/uploads/pacifica-16.jpeg"
     ],
-    "carfaxPdf": "/carfax/pacifica-carfax.pdf"
+    "carfaxPdf": "/docs/pacifica-carfax.pdf"
   }
 ];

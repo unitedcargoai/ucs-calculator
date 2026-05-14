@@ -1387,6 +1387,38 @@ export default function Home() {
           )}
         </div>
 
+
+        <div className="mt-6 rounded-3xl border border-blue-200 bg-blue-50 p-5 text-blue-950">
+          <h3 className="text-xl font-extrabold">TEST ASSETÓW UCS</h3>
+          <p className="mt-2 text-sm">
+            Jeśli poniżej widzisz zdjęcie auta i link CARFAX działa, folder public jest wgrany poprawnie.
+          </p>
+
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl bg-white p-4 shadow-sm">
+              <p className="mb-2 font-bold">Test zdjęcia:</p>
+              <img
+                src="/uploads/pacifica-01.jpeg"
+                alt="Test Pacifica"
+                className="h-48 w-full rounded-xl object-cover"
+              />
+              <p className="mt-2 text-xs text-slate-600">Ścieżka: /uploads/pacifica-01.jpeg</p>
+            </div>
+
+            <div className="rounded-2xl bg-white p-4 shadow-sm">
+              <p className="mb-2 font-bold">Test CARFAX PDF:</p>
+              <a
+                href="/docs/pacifica-carfax.pdf"
+                target="_blank"
+                className="inline-block rounded-xl bg-blue-600 px-4 py-3 font-bold text-white"
+              >
+                Otwórz testowy CARFAX
+              </a>
+              <p className="mt-2 text-xs text-slate-600">Ścieżka: /docs/pacifica-carfax.pdf</p>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-10 rounded-3xl border border-slate-200 bg-gradient-to-r from-slate-900 to-slate-700 p-6 text-white shadow-xl">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
