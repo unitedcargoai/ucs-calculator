@@ -8821,5 +8821,13 @@ export const BROKERS = [
     "package": "Premium Partner",
     "discount": 100,
     "role": "broker"
+  },
+  {
+    "username": "arturp",
+    "password": "Arturo123!",
+    "name": "Artur Pasieczyński",
+    "package": "Standard",
+    "discount": 0,
+    "role": "broker"
   }
 ];
