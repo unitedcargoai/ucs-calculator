@@ -1,0 +1,8 @@
+-- UCS admin announcements table
+create table if not exists admin_announcements (
+  id bigint generated always as identity primary key,
+  message text not null,
+  created_by text,
+  active boolean not null default true,
+  created_at timestamptz default now()
+);

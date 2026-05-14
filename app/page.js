@@ -525,6 +525,11 @@ export default function Home() {
   const [brokers, setBrokers] = useState(BROKERS);
   const [brokersLoading, setBrokersLoading] = useState(false);
   const [brokersSource, setBrokersSource] = useState("local");
+  const [adminAnnouncement, setAdminAnnouncement] = useState("");
+  const [announcementSaving, setAnnouncementSaving] = useState(false);
+  const [announcementStatus, setAnnouncementStatus] = useState("");
+  const [latestAnnouncement, setLatestAnnouncement] = useState(null);
+  const [showAnnouncementPopup, setShowAnnouncementPopup] = useState(false);
 
   const [auction, setAuction] = useState("");
   const [location, setLocation] = useState("");
@@ -809,6 +814,98 @@ export default function Home() {
       `Broker: ${activeBroker?.name || "niezalogowany"}`
   );
 
+  async function loadLatestAnnouncement() {
+    try {
+      const response = await fetch(
+        `${SUPABASE_URL}/rest/v1/admin_announcements?select=*&active=eq.true&order=created_at.desc&limit=1`,
+        {
+          headers: {
+            apikey: SUPABASE_KEY,
+            Authorization: `Bearer ${SUPABASE_KEY}`,
+          },
+        }
+      );
+
+      if (!response.ok) return;
+
+      const rows = await response.json();
+      const announcement = rows?.[0];
+
+      if (!announcement) {
+        setLatestAnnouncement(null);
+        setShowAnnouncementPopup(false);
+        return;
+      }
+
+      setLatestAnnouncement(announcement);
+
+      if (activeBroker && activeBroker.role !== "admin") {
+        const seenKey = `ucs_announcement_seen_${announcement.id}_${activeBroker.username}`;
+        const seen = typeof window !== "undefined" ? window.localStorage.getItem(seenKey) : null;
+        setShowAnnouncementPopup(!seen);
+      }
+    } catch (error) {
+      console.error("Announcement load failed", error);
+    }
+  }
+
+  async function handleSendAnnouncement() {
+    if (!adminAnnouncement.trim()) {
+      setAnnouncementStatus("Wpisz treść komunikatu.");
+      return;
+    }
+
+    try {
+      setAnnouncementSaving(true);
+      setAnnouncementStatus("");
+
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/admin_announcements`, {
+        method: "POST",
+        headers: {
+          apikey: SUPABASE_KEY,
+          Authorization: `Bearer ${SUPABASE_KEY}`,
+          "Content-Type": "application/json",
+          Prefer: "return=representation",
+        },
+        body: JSON.stringify({
+          message: adminAnnouncement.trim(),
+          created_by: activeBroker?.username || "admin",
+          active: true,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Supabase announcement error ${response.status}`);
+      }
+
+      setAdminAnnouncement("");
+      setAnnouncementStatus("Komunikat wysłany. Brokerzy zobaczą go po zalogowaniu.");
+      await loadLatestAnnouncement();
+    } catch (error) {
+      console.error(error);
+      setAnnouncementStatus("Nie udało się wysłać komunikatu. Sprawdź tabelę admin_announcements w Supabase.");
+    } finally {
+      setAnnouncementSaving(false);
+    }
+  }
+
+  function handleAnnouncementSeen() {
+    if (!latestAnnouncement || !activeBroker) return;
+
+    const seenKey = `ucs_announcement_seen_${latestAnnouncement.id}_${activeBroker.username}`;
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(seenKey, "yes");
+    }
+
+    setShowAnnouncementPopup(false);
+  }
+
+  useEffect(() => {
+    if (activeBroker) {
+      loadLatestAnnouncement();
+    }
+  }, [activeBroker]);
+
   const isAdmin = activeBroker?.role === "admin" || activeBroker?.package === "Admin";
     const visibleBrokers = brokers.filter((broker) => broker.role !== "admin");
 
@@ -990,11 +1087,22 @@ export default function Home() {
                 <p className="font-bold text-slate-900">Komunikat do brokerów</p>
                 <textarea
                   className="mt-3 h-28 w-full rounded-xl border p-3 text-slate-900"
+                  value={adminAnnouncement}
+                  onChange={(e) => setAdminAnnouncement(e.target.value)}
                   placeholder="Wpisz komunikat / nowość / zapytanie grupowe..."
                 />
-                <p className="mt-2 text-sm text-slate-500">
-                  Następny etap: podłączymy bazę danych, aby wiadomość mogła pojawić się brokerom w panelu.
-                </p>
+                <button
+                  onClick={handleSendAnnouncement}
+                  disabled={announcementSaving}
+                  className="mt-3 rounded-xl bg-slate-900 px-5 py-3 font-bold text-white disabled:opacity-60"
+                >
+                  {announcementSaving ? "Wysyłanie..." : "Wyślij komunikat do brokerów"}
+                </button>
+                {announcementStatus && (
+                  <p className="mt-2 text-sm font-semibold text-slate-700">
+                    {announcementStatus}
+                  </p>
+                )}
               </div>
 
               <div className="mt-4 rounded-2xl bg-slate-50 p-3 text-sm text-slate-700">
@@ -1359,6 +1467,28 @@ export default function Home() {
           </a>
         </div>
       </section>
+      {showAnnouncementPopup && latestAnnouncement && activeBroker && activeBroker.role !== "admin" && (
+        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-4">
+          <div className="w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+              UCS Logistics Team
+            </p>
+            <h3 className="mt-2 text-2xl font-extrabold text-slate-900">
+              Ważny komunikat dla brokerów
+            </h3>
+            <div className="mt-4 whitespace-pre-wrap rounded-2xl bg-blue-50 p-4 text-slate-800">
+              {latestAnnouncement.message}
+            </div>
+            <button
+              onClick={handleAnnouncementSeen}
+              className="mt-5 w-full rounded-2xl bg-slate-900 px-5 py-4 font-bold text-white"
+            >
+              Zapoznałem się
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="fixed bottom-5 right-5 z-50 max-w-[92vw]">
         {aiOpen && (
           <div className="mb-4 w-[360px] max-w-[92vw] overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
