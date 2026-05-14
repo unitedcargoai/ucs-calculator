@@ -8782,3 +8782,51 @@ export const BROKERS = [
     "discount": 50
   }
 ];
+
+
+export const MARKETPLACE_CARS = [
+  {
+    "id": "pacifica-2020-2c4rc1bg8lr132612",
+    "vin": "2C4RC1BG8LR132612",
+    "title": "2020 Chrysler Pacifica Touring L",
+    "year": 2020,
+    "make": "Chrysler",
+    "model": "Pacifica Touring L",
+    "body": "Van",
+    "engine": "3.6L V6",
+    "fuel": "Gasoline",
+    "drive": "FWD",
+    "mileage": "21,522 mi",
+    "auction": "IAA",
+    "lot": "44718984",
+    "location": "Pittsburgh, PA",
+    "destination": "Rotterdam",
+    "titleStatus": "Salvage Title",
+    "damage": "Front / right front damage",
+    "carfaxSummary": "Accident reported, Total Loss Vehicle, Salvage Title, 2 previous owners, 10 service records",
+    "price": 10000,
+    "currency": "USD",
+    "brokerName": "UCS Logistics Team",
+    "brokerPhone": "19412505868",
+    "description": "Cena zawiera dostawę do portu w Rotterdam. Nie zawiera opłat agencyjnych ani celnych.",
+    "images": [
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_1_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_2_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_3_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_4_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_5_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_6_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_7_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_8_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_9_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_10_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_11_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_12_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_13_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_14_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_15_I.jpeg",
+      "/marketplace/pacifica-2c4rc1bg8lr132612/44718984_16_I.jpeg"
+    ],
+    "carfaxPdf": "/marketplace/carfax/2C4RC1BG8LR132612-carfax.pdf"
+  }
+];
