@@ -16,21 +16,22 @@ const SUPABASE_URL = "https://tcvlgbdjygzowltnuihi.supabase.co";
 const SUPABASE_KEY = "sb_publishable_gmfFSzUFcv28zxDmt03UlA_jA562ksZ";
 
 function normalizeBroker(row) {
+  const shippingDiscount = Number(
+    row.shipping_discount ?? row.shippingDiscount ?? row.discount ?? 0
+  );
+
+  const inlandDiscount = Number(
+    row.inland_discount ?? row.inlandDiscount ?? 0
+  );
+
   return {
     username: row.username,
     password: row.password,
     name: row.full_name || row.name,
     package: row.package || "Standard",
-
-    // shipping_discount = rabat na ocean freight / wysyłkę morską
-    shippingDiscount: row.shipping_discount ?? row.discount ?? 0,
-
-    // inland_discount = rabat na transport lądowy
-    inlandDiscount: row.inland_discount ?? 0,
-
-    // stary discount zostawiamy jako backup dla lokalnego ucsData.js
-    discount: row.shipping_discount ?? row.discount ?? 0,
-
+    shippingDiscount,
+    inlandDiscount,
+    discount: shippingDiscount,
     role: row.role || "broker",
   };
 }
@@ -623,17 +624,17 @@ export default function Home() {
     : 0;
 
   // shippingDiscount = rabat na ocean freight / wysyłkę morską
-  const shippingDiscount =
-    activeBroker?.shippingDiscount ?? activeBroker?.discount ?? 0;
+  const shippingDiscount = Number(
+    activeBroker?.shippingDiscount ?? activeBroker?.discount ?? 0
+  );
 
   // inlandDiscount = rabat na transport lądowy
-  // Tylko Premium Partner ma tu rabat, ale wartość pochodzi już z Supabase.
-  const brokerInlandDiscount =
-    activeBroker?.inlandDiscount ??
-    (activeBroker?.package === "Premium Partner" ? 50 : 0);
+  const brokerInlandDiscount = Number(
+    activeBroker?.inlandDiscount ?? 0
+  );
 
   const wholesaleOcean =
-    mode === "wholesale" && (standardWholesaleOcean > 0 || standardWholesaleInland > 0)
+    mode === "wholesale" && standardWholesaleOcean > 0
       ? Math.max(standardWholesaleOcean - shippingDiscount, 0)
       : 0;
 
@@ -895,6 +896,11 @@ export default function Home() {
                 {t.brokerPackage}: <b>{activeBroker.package}</b>
               </p>
               <p className="mt-1 text-sm">{t.wholesaleInfo}</p>
+              {mode === "wholesale" && activeBroker && (
+                <p className="mt-2 rounded-xl bg-white/70 p-2 text-xs text-emerald-900">
+                  DEBUG rabaty: morski ${shippingDiscount} | lądowy ${brokerInlandDiscount}
+                </p>
+              )}
             </div>
           )}
 
@@ -1010,7 +1016,7 @@ export default function Home() {
                       <th className="p-3 text-left">Imię i nazwisko</th>
                       <th className="p-3 text-left">Login</th>
                       <th className="p-3 text-left">Pakiet</th>
-                      <th className="p-3 text-left">Rabat ocean</th>
+                      <th className="p-3 text-left">Rabat morski</th>
                       <th className="p-3 text-left">Rabat lądowy</th>
                     </tr>
                   </thead>
@@ -1023,8 +1029,8 @@ export default function Home() {
                         <td className="p-3 font-semibold text-slate-900">{broker.name}</td>
                         <td className="p-3 text-slate-700">{broker.username}</td>
                         <td className="p-3 text-slate-700">{broker.package}</td>
-                        <td className="p-3 text-slate-700">${broker.shippingDiscount ?? broker.discount ?? 0}</td>
-                        <td className="p-3 text-slate-700">${broker.inlandDiscount ?? 0}</td>
+                        <td className="p-3 text-slate-700">${Number(broker.shippingDiscount ?? broker.discount ?? 0)}</td>
+                        <td className="p-3 text-slate-700">${Number(broker.inlandDiscount ?? 0)}</td>
                       </tr>
                     ))}
                   </tbody>
