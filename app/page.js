@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   AUCTIONS,
   EUROPE_PORTS,
@@ -10,6 +10,22 @@ import {
   WHOLESALE_STANDARD_RATES,
   BROKERS,
 } from "./ucsData";
+
+
+const SUPABASE_URL = "https://tcvlgbdjygzowltnuihi.supabase.co";
+const SUPABASE_KEY = "sb_publishable_gmfFSzUFcv28zxDmt03UlA_jA562ksZ";
+
+function normalizeBroker(row) {
+  return {
+    username: row.username,
+    password: row.password,
+    name: row.full_name || row.name,
+    package: row.package || "Standard",
+    discount: row.inland_discount ?? row.discount ?? 0,
+    role: row.role || "broker",
+  };
+}
+
 
 const translations = {
   pl: {
@@ -496,6 +512,9 @@ export default function Home() {
   const [brokerError, setBrokerError] = useState("");
   const [showBrokerLogin, setShowBrokerLogin] = useState(false);
   const [activeBroker, setActiveBroker] = useState(null);
+  const [brokers, setBrokers] = useState(BROKERS);
+  const [brokersLoading, setBrokersLoading] = useState(false);
+  const [brokersSource, setBrokersSource] = useState("local");
 
   const [auction, setAuction] = useState("");
   const [location, setLocation] = useState("");
@@ -515,6 +534,41 @@ export default function Home() {
   const [portUsa, setPortUsa] = useState("Savannah");
   const [portEu, setPortEu] = useState("Rotterdam");
   const [packing, setPacking] = useState("1 z 3");
+
+  useEffect(() => {
+    async function loadBrokersFromSupabase() {
+      try {
+        setBrokersLoading(true);
+
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/brokers?select=*`, {
+          headers: {
+            apikey: SUPABASE_KEY,
+            Authorization: `Bearer ${SUPABASE_KEY}`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`Supabase error ${response.status}`);
+        }
+
+        const rows = await response.json();
+        const normalized = rows.map(normalizeBroker);
+
+        if (normalized.length > 0) {
+          setBrokers(normalized);
+          setBrokersSource("supabase");
+        }
+      } catch (error) {
+        console.error("Supabase brokers load failed. Using local fallback.", error);
+        setBrokers(BROKERS);
+        setBrokersSource("local");
+      } finally {
+        setBrokersLoading(false);
+      }
+    }
+
+    loadBrokersFromSupabase();
+  }, []);
 
   const auctionNames = useMemo(
     () => [...new Set(AUCTIONS.map((item) => item.auction))].sort(),
@@ -626,7 +680,7 @@ export default function Home() {
   const showWashingtonNotice = selectedLocation?.state === "WA";
 
   function handleBrokerLogin() {
-    const broker = BROKERS.find(
+    const broker = brokers.find(
       (item) =>
         item.username.toLowerCase() === brokerUsername.trim().toLowerCase() &&
         item.password === brokerPassword
@@ -746,7 +800,7 @@ export default function Home() {
   );
 
   const isAdmin = activeBroker?.role === "admin" || activeBroker?.package === "Admin";
-  const visibleBrokers = BROKERS.filter((broker) => broker.role !== "admin");
+    const visibleBrokers = brokers.filter((broker) => broker.role !== "admin");
 
   return (
     <main
@@ -930,6 +984,11 @@ export default function Home() {
                 <p className="mt-2 text-sm text-slate-500">
                   Następny etap: podłączymy bazę danych, aby wiadomość mogła pojawić się brokerom w panelu.
                 </p>
+              </div>
+
+              <div className="mt-4 rounded-2xl bg-slate-50 p-3 text-sm text-slate-700">
+                Źródło danych: <b>{brokersSource === "supabase" ? "Supabase" : "lokalny backup ucsData.js"}</b>
+                {brokersLoading && " — ładowanie..."}
               </div>
 
               <h4 className="mt-6 text-xl font-bold text-slate-900">Brokerzy UCS</h4>
