@@ -27,7 +27,7 @@ export const metadata = {
 
     images: [
       {
-        url: "/ucs-social-preview.png",
+        url: "/ucs-social-preview.jpg",
         width: 1200,
         height: 630,
       },
