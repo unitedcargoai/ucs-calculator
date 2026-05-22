@@ -40,7 +40,7 @@ function normalizeBroker(row) {
 const translations = {
   pl: {
     companyCountries: "𝗨𝗦𝗔 • 𝗞𝗮𝗻𝗮𝗱𝗮 • 𝗣𝗼𝗹𝘀𝗸𝗮",
-    calculatorTitle: "Interaktywny Kalkulator Transportu USA → Europa",
+    calculatorTitle: "Inteligentny asystent logistyki UCS",
     retailTab: "Detal",
     wholesaleTab: "Logowanie Brokerzy — Panel Interaktywny",
     soon: "Wkrótce",
@@ -107,17 +107,17 @@ const translations = {
       "Aktualna cena transportu lądowego dla tej trasy wymaga potwierdzenia. Wyślij zapytanie do administratora.",
     whatsapp: "Zapytaj przez WhatsApp",
     oceanMissing: "Brak stawki morskiej dla tej trasy albo wybranej linii.",
-    aiSmall: "UCS AI Assistant",
+    aiSmall: "UCS Broker Tools",
     aiTitle: "Inteligentny asystent logistyki UCS",
     aiText:
-      "Potrzebujesz pomocy z wyborem portu, wyceną, dokumentami salvage title lub routingiem? UCS AI Assistant pomoże dobrać najlepszy transport.",
-    aiButton: "Wkrótce: Live AI Chat",
-    smartRouting: "Smart Routing",
-    smartRoutingText: "AI rekomenduje najlepszy port UCS.",
-    titleHelp: "Salvage / Title Help",
-    titleHelpText: "Pomoc dla WA, salvage title i dokumentów eksportowych.",
-    liveSupport: "Live Support",
-    liveSupportText: "Szybki kontakt z UCS przez WhatsApp.",
+      "Publicznie pokazujemy możliwości systemu UCS. Narzędzia specjalistyczne są aktywne tylko dla zalogowanych brokerów UCS.",
+    aiButton: "Śledzenie pojazdu / zdjęcia",
+    smartRouting: "VIN Decoder / HAZMAT",
+    smartRoutingText: "Dekoder VIN i szybka weryfikacja danych pojazdu. Narzędzie może wymagać VPN.",
+    titleHelp: "Sprawdź NY Title Lien Status",
+    titleHelpText: "Weryfikacja statusu NY title / lien. Dostęp brokerski, możliwy wymóg VPN.",
+    liveSupport: "NY Vehicle Title Abstract",
+    liveSupportText: "Pobranie / sprawdzenie abstract rejestracji lub title NY. Dostęp brokerski, możliwy wymóg VPN.",
     website: "Strona WWW",
     community: "Społeczność",
     aiFloatTitle: "UCS AI Assistant",
@@ -135,7 +135,7 @@ const translations = {
   },
   en: {
     companyCountries: "USA • Canada • Poland",
-    calculatorTitle: "RETAIL Calculator — USA → Europe vehicle transport",
+    calculatorTitle: "Intelligent UCS logistics assistant",
     retailTab: "Retail",
     wholesaleTab: "Broker Login — WHOLESALE",
     soon: "Coming soon",
@@ -202,17 +202,17 @@ const translations = {
     whatsapp: "Ask via WhatsApp",
     oceanMissing:
       "No ocean freight rate for this route or selected shipping line.",
-    aiSmall: "UCS AI Assistant",
+    aiSmall: "UCS Broker Tools",
     aiTitle: "Intelligent UCS logistics assistant",
     aiText:
-      "Need help choosing a port, quote, salvage title documents or routing? UCS AI Assistant helps select the best transport option.",
-    aiButton: "Coming soon: Live AI Chat",
-    smartRouting: "Smart Routing",
-    smartRoutingText: "AI recommends the best UCS port.",
-    titleHelp: "Salvage / Title Help",
-    titleHelpText: "Help with WA, salvage title and export documents.",
-    liveSupport: "Live Support",
-    liveSupportText: "Fast UCS contact via WhatsApp.",
+      "UCS specialist tools are visible publicly, but active only for approved logged-in brokers.",
+    aiButton: "Vehicle tracking / photos",
+    smartRouting: "VIN Decoder / HAZMAT VPN",
+    smartRoutingText: "VIN and HAZMAT check tool. VPN may be required.",
+    titleHelp: "Check NY Title Lien Status VPN",
+    titleHelpText: "NY title / lien verification. Broker access, VPN may be required.",
+    liveSupport: "NY Vehicle Title Abstract VPN",
+    liveSupportText: "NY title or registration abstract tool. Broker access, VPN may be required.",
     website: "Website",
     community: "Community",
     aiFloatTitle: "UCS AI Assistant",
@@ -230,7 +230,7 @@ const translations = {
   },
   ua: {
     companyCountries: "США • Канада • Польща",
-    calculatorTitle: "РОЗДРІБНИЙ калькулятор — доставка авто США → Європа",
+    calculatorTitle: "Інтелектуальний логістичний асистент UCS",
     retailTab: "Роздріб",
     wholesaleTab: "Логін брокера — ОПТ",
     soon: "Скоро",
@@ -291,17 +291,17 @@ const translations = {
     whatsapp: "Запитати через WhatsApp",
     oceanMissing:
       "Немає морської ставки для цього маршруту або вибраної лінії.",
-    aiSmall: "UCS AI Assistant",
+    aiSmall: "UCS Broker Tools",
     aiTitle: "Інтелектуальний логістичний асистент UCS",
     aiText:
-      "Потрібна допомога з вибором порту, оцінкою, salvage title документами або маршрутом? UCS AI Assistant допоможе підібрати найкращий транспорт.",
-    aiButton: "Скоро: Live AI Chat",
-    smartRouting: "Smart Routing",
-    smartRoutingText: "AI рекомендує найкращий порт UCS.",
-    titleHelp: "Salvage / Title Help",
-    titleHelpText: "Допомога з WA, salvage title та експортними документами.",
-    liveSupport: "Live Support",
-    liveSupportText: "Швидкий контакт з UCS через WhatsApp.",
+      "Інструменти UCS видно публічно, але активні лише для авторизованих брокерів.",
+    aiButton: "Відстеження авто / фото",
+    smartRouting: "VIN Decoder / HAZMAT VPN",
+    smartRoutingText: "Перевірка VIN і HAZMAT. Може знадобитися VPN.",
+    titleHelp: "NY Title Lien Status VPN",
+    titleHelpText: "Перевірка NY title / lien. Доступ для брокерів, може знадобитися VPN.",
+    liveSupport: "NY Vehicle Title Abstract VPN",
+    liveSupportText: "NY title або registration abstract. Доступ для брокерів, може знадобитися VPN.",
     website: "Вебсайт",
     community: "Спільнота",
     aiFloatTitle: "UCS AI Assistant",
@@ -319,7 +319,7 @@ const translations = {
   },
   bg: {
     companyCountries: "САЩ • Канада • Полша",
-    calculatorTitle: "Калкулатор ДРЕБНО — транспорт на автомобили САЩ → Европа",
+    calculatorTitle: "Интелигентен логистичен асистент UCS",
     retailTab: "Дребно",
     wholesaleTab: "Вход брокери — ЕДРО",
     soon: "Очаквайте",
@@ -380,17 +380,17 @@ const translations = {
     whatsapp: "Попитайте чрез WhatsApp",
     oceanMissing:
       "Няма морска тарифа за този маршрут или избраната линия.",
-    aiSmall: "UCS AI Assistant",
+    aiSmall: "UCS Broker Tools",
     aiTitle: "Интелигентен логистичен асистент UCS",
     aiText:
-      "Имате нужда от помощ с избор на порт, оферта, salvage title документи или маршрут? UCS AI Assistant помага да се избере най-добрият транспорт.",
-    aiButton: "Очаквайте: Live AI Chat",
-    smartRouting: "Smart Routing",
-    smartRoutingText: "AI препоръчва най-добрия UCS порт.",
-    titleHelp: "Salvage / Title Help",
-    titleHelpText: "Помощ за WA, salvage title и експортни документи.",
-    liveSupport: "Live Support",
-    liveSupportText: "Бърз контакт с UCS чрез WhatsApp.",
+      "Инструментите UCS са видими публично, но активни само за одобрени брокери.",
+    aiButton: "Проследяване / снимки",
+    smartRouting: "VIN Decoder / HAZMAT VPN",
+    smartRoutingText: "Проверка на VIN и HAZMAT. Може да изисква VPN.",
+    titleHelp: "NY Title Lien Status VPN",
+    titleHelpText: "Проверка на NY title / lien. Достъп за брокери, може да изисква VPN.",
+    liveSupport: "NY Vehicle Title Abstract VPN",
+    liveSupportText: "NY title или registration abstract. Достъп за брокери, може да изисква VPN.",
     website: "Уебсайт",
     community: "Общност",
     aiFloatTitle: "UCS AI Assistant",
@@ -408,7 +408,7 @@ const translations = {
   },
   ar: {
     companyCountries: "الولايات المتحدة • كندا • بولندا",
-    calculatorTitle: "حاسبة التجزئة — نقل السيارات من أمريكا إلى أوروبا",
+    calculatorTitle: "مساعد UCS الذكي للخدمات اللوجستية",
     retailTab: "تجزئة",
     wholesaleTab: "دخول الوسطاء — جملة",
     soon: "قريباً",
@@ -468,17 +468,17 @@ const translations = {
       "سعر النقل البري الحالي لهذا المسار يحتاج إلى تأكيد. أرسل طلباً إلى المسؤول.",
     whatsapp: "اسأل عبر WhatsApp",
     oceanMissing: "لا توجد تسعيرة بحرية لهذا المسار أو خط الشحن المختار.",
-    aiSmall: "UCS AI Assistant",
+    aiSmall: "UCS Broker Tools",
     aiTitle: "مساعد UCS الذكي للخدمات اللوجستية",
     aiText:
-      "هل تحتاج مساعدة في اختيار الميناء أو التسعير أو وثائق salvage title أو المسار؟ يساعدك UCS AI Assistant في اختيار أفضل نقل.",
-    aiButton: "قريباً: دردشة AI مباشرة",
-    smartRouting: "Smart Routing",
-    smartRoutingText: "AI يوصي بأفضل ميناء UCS.",
-    titleHelp: "Salvage / Title Help",
-    titleHelpText: "مساعدة في WA ووثائق salvage title والتصدير.",
-    liveSupport: "Live Support",
-    liveSupportText: "تواصل سريع مع UCS عبر WhatsApp.",
+      "أدوات UCS المتخصصة ظاهرة للجميع، لكنها تعمل فقط للوسطاء المعتمدين بعد تسجيل الدخول.",
+    aiButton: "تتبع المركبة / الصور",
+    smartRouting: "VIN Decoder / HAZMAT VPN",
+    smartRoutingText: "فحص VIN و HAZMAT. قد يتطلب VPN.",
+    titleHelp: "NY Title Lien Status VPN",
+    titleHelpText: "فحص NY title / lien. دخول للوسطاء، قد يتطلب VPN.",
+    liveSupport: "NY Vehicle Title Abstract VPN",
+    liveSupportText: "فحص abstract للتسجيل أو title في نيويورك. دخول للوسطاء، قد يتطلب VPN.",
     website: "الموقع",
     community: "المجتمع",
     aiFloatTitle: "UCS AI Assistant",
@@ -628,12 +628,10 @@ export default function Home() {
     ? WHOLESALE_STANDARD_RATES[oceanKey] || 0
     : 0;
 
-  // shippingDiscount = rabat na ocean freight / wysyłkę morską
   const shippingDiscount = Number(
     activeBroker?.shippingDiscount ?? activeBroker?.discount ?? 0
   );
 
-  // inlandDiscount = rabat na transport lądowy
   const brokerInlandDiscount = Number(
     activeBroker?.inlandDiscount ?? 0
   );
@@ -651,7 +649,6 @@ export default function Home() {
   const hazmatFee = mode === "wholesale" && hazmat ? 300 : 0;
   const waBosFee = mode === "wholesale" && waBos ? 350 : 0;
 
-  // DETAL: $0 i kontakt. HURT: pokazujemy ceny brokera.
   const inland = mode === "wholesale" ? wholesaleInland : 0;
   const ocean = mode === "wholesale" ? wholesaleOcean : 0;
   const total = inland + ocean + hazmatFee + waBosFee;
@@ -737,6 +734,16 @@ export default function Home() {
     if (chosen?.recommendedPort) {
       setPortUsa(chosen.recommendedPort);
     }
+  }
+
+  function openBrokerTool(url) {
+    if (!activeBroker) {
+      setShowBrokerLogin(true);
+      alert("Dostęp tylko dla brokerów UCS. Zaloguj się jako broker albo skontaktuj się z UCS, aby aktywować narzędzia.");
+      return;
+    }
+
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   const carfaxWhatsappMessage = encodeURIComponent(
@@ -907,7 +914,7 @@ export default function Home() {
   }, [activeBroker]);
 
   const isAdmin = activeBroker?.role === "admin" || activeBroker?.package === "Admin";
-    const visibleBrokers = brokers.filter((broker) => broker.role !== "admin");
+  const visibleBrokers = brokers.filter((broker) => broker.role !== "admin");
 
   return (
     <main
@@ -930,8 +937,6 @@ export default function Home() {
           <p className="mt-2 text-slate-600"></p>
 
           <div className="mx-auto mt-6 flex max-w-2xl flex-col gap-3 rounded-3xl bg-slate-100 p-3 md:flex-row">
-            
-
             {mode === "wholesale" ? (
               <button
                 onClick={handleBrokerLogout}
@@ -993,7 +998,6 @@ export default function Home() {
                 {t.brokerPackage}: <b>{activeBroker.package}</b>
               </p>
               <p className="mt-1 text-sm">{t.wholesaleInfo}</p>
-
             </div>
           )}
 
@@ -1073,75 +1077,74 @@ export default function Home() {
           </div>
         )}
 
+        {isAdmin && (
+          <div className="mx-auto mt-6 max-w-5xl rounded-3xl border-4 border-emerald-400 bg-white p-6 text-left shadow-2xl">
+            <h3 className="text-2xl font-extrabold text-slate-900">
+              Panel Administratora UCS
+            </h3>
+            <p className="mt-2 text-slate-600">
+              Widzisz listę wszystkich brokerów UCS. To jest panel przygotowany pod przyszłe komunikaty grupowe i zarządzanie brokerami.
+            </p>
 
-          {isAdmin && (
-            <div className="mx-auto mt-6 max-w-5xl rounded-3xl border-4 border-emerald-400 bg-white p-6 text-left shadow-2xl">
-              <h3 className="text-2xl font-extrabold text-slate-900">
-                Panel Administratora UCS
-              </h3>
-              <p className="mt-2 text-slate-600">
-                Widzisz listę wszystkich brokerów UCS. To jest panel przygotowany pod przyszłe komunikaty grupowe i zarządzanie brokerami.
-              </p>
-
-              <div className="mt-5 rounded-2xl bg-emerald-50 p-4">
-                <p className="font-bold text-slate-900">Komunikat do brokerów</p>
-                <textarea
-                  className="mt-3 h-28 w-full rounded-xl border p-3 text-slate-900"
-                  value={adminAnnouncement}
-                  onChange={(e) => setAdminAnnouncement(e.target.value)}
-                  placeholder="Wpisz komunikat / nowość / zapytanie grupowe..."
-                />
-                <button
-                  onClick={handleSendAnnouncement}
-                  disabled={announcementSaving}
-                  className="mt-3 rounded-xl bg-slate-900 px-5 py-3 font-bold text-white disabled:opacity-60"
-                >
-                  {announcementSaving ? "Wysyłanie..." : "Wyślij komunikat do brokerów"}
-                </button>
-                {announcementStatus && (
-                  <p className="mt-2 text-sm font-semibold text-slate-700">
-                    {announcementStatus}
-                  </p>
-                )}
-              </div>
-
-              <div className="mt-4 rounded-2xl bg-slate-50 p-3 text-sm text-slate-700">
-                Źródło danych: <b>{brokersSource === "supabase" ? "Supabase" : "lokalny backup ucsData.js"}</b>
-                {brokersLoading && " — ładowanie..."}
-              </div>
-
-              <h4 className="mt-6 text-xl font-bold text-slate-900">Brokerzy UCS</h4>
-
-              <div className="mt-3 overflow-x-auto">
-                <table className="w-full min-w-[720px] overflow-hidden rounded-2xl border text-sm">
-                  <thead className="bg-slate-900 text-white">
-                    <tr>
-                      <th className="p-3 text-left">✓</th>
-                      <th className="p-3 text-left">Imię i nazwisko</th>
-                      <th className="p-3 text-left">Login</th>
-                      <th className="p-3 text-left">Pakiet</th>
-                      <th className="p-3 text-left">Rabat morski</th>
-                      <th className="p-3 text-left">Rabat lądowy</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {visibleBrokers.map((broker) => (
-                      <tr key={broker.username} className="border-b bg-white">
-                        <td className="p-3">
-                          <input type="checkbox" defaultChecked />
-                        </td>
-                        <td className="p-3 font-semibold text-slate-900">{broker.name}</td>
-                        <td className="p-3 text-slate-700">{broker.username}</td>
-                        <td className="p-3 text-slate-700">{broker.package}</td>
-                        <td className="p-3 text-slate-700">${Number(broker.shippingDiscount ?? broker.discount ?? 0)}</td>
-                        <td className="p-3 text-slate-700">${Number(broker.inlandDiscount ?? 0)}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+            <div className="mt-5 rounded-2xl bg-emerald-50 p-4">
+              <p className="font-bold text-slate-900">Komunikat do brokerów</p>
+              <textarea
+                className="mt-3 h-28 w-full rounded-xl border p-3 text-slate-900"
+                value={adminAnnouncement}
+                onChange={(e) => setAdminAnnouncement(e.target.value)}
+                placeholder="Wpisz komunikat / nowość / zapytanie grupowe..."
+              />
+              <button
+                onClick={handleSendAnnouncement}
+                disabled={announcementSaving}
+                className="mt-3 rounded-xl bg-slate-900 px-5 py-3 font-bold text-white disabled:opacity-60"
+              >
+                {announcementSaving ? "Wysyłanie..." : "Wyślij komunikat do brokerów"}
+              </button>
+              {announcementStatus && (
+                <p className="mt-2 text-sm font-semibold text-slate-700">
+                  {announcementStatus}
+                </p>
+              )}
             </div>
-          )}
+
+            <div className="mt-4 rounded-2xl bg-slate-50 p-3 text-sm text-slate-700">
+              Źródło danych: <b>{brokersSource === "supabase" ? "Supabase" : "lokalny backup ucsData.js"}</b>
+              {brokersLoading && " — ładowanie..."}
+            </div>
+
+            <h4 className="mt-6 text-xl font-bold text-slate-900">Brokerzy UCS</h4>
+
+            <div className="mt-3 overflow-x-auto">
+              <table className="w-full min-w-[720px] overflow-hidden rounded-2xl border text-sm">
+                <thead className="bg-slate-900 text-white">
+                  <tr>
+                    <th className="p-3 text-left">✓</th>
+                    <th className="p-3 text-left">Imię i nazwisko</th>
+                    <th className="p-3 text-left">Login</th>
+                    <th className="p-3 text-left">Pakiet</th>
+                    <th className="p-3 text-left">Rabat morski</th>
+                    <th className="p-3 text-left">Rabat lądowy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {visibleBrokers.map((broker) => (
+                    <tr key={broker.username} className="border-b bg-white">
+                      <td className="p-3">
+                        <input type="checkbox" defaultChecked />
+                      </td>
+                      <td className="p-3 font-semibold text-slate-900">{broker.name}</td>
+                      <td className="p-3 text-slate-700">{broker.username}</td>
+                      <td className="p-3 text-slate-700">{broker.package}</td>
+                      <td className="p-3 text-slate-700">${Number(broker.shippingDiscount ?? broker.discount ?? 0)}</td>
+                      <td className="p-3 text-slate-700">${Number(broker.inlandDiscount ?? 0)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           <select
@@ -1163,8 +1166,11 @@ export default function Home() {
             onChange={(e) => handleLocationChange(e.target.value)}
           >
             <option value="">{t.location}</option>
-            {filteredLocations.map((item) => (
-              <option key={`${item.auction}-${item.location}`} value={item.location}>
+            {filteredLocations.map((item, index) => (
+              <option
+                key={`${item.auction}-${item.location}-${index}`}
+                value={item.location}
+              >
                 {item.location}
               </option>
             ))}
@@ -1316,7 +1322,6 @@ export default function Home() {
           )}
         </div>
 
-
         {mode === "wholesale" && activeBroker && (
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow">
             <h3 className="text-2xl font-bold text-slate-900">
@@ -1399,36 +1404,54 @@ export default function Home() {
               <h3 className="mt-2 text-3xl font-bold">{t.aiTitle}</h3>
 
               <p className="mt-3 max-w-2xl text-slate-200">{t.aiText}</p>
+
+              {!activeBroker && (
+                <p className="mt-3 max-w-2xl rounded-xl bg-amber-400/20 p-3 text-sm font-semibold text-amber-100">
+                  Narzędzia są widoczne publicznie. Aktywne linki otrzymują tylko zalogowani brokerzy UCS.
+                </p>
+              )}
             </div>
 
             <div className="flex flex-col gap-3">
-              <button className="rounded-2xl border border-white/30 bg-white/10 px-6 py-4 text-lg font-semibold text-white">
+              <button
+                onClick={() => openBrokerTool("https://mydata.shipbaltic.com/search-item")}
+                className="rounded-2xl border border-white/30 bg-white/10 px-6 py-4 text-lg font-semibold text-white transition hover:bg-white/20"
+              >
                 {t.aiButton}
               </button>
             </div>
           </div>
 
           <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <div className="rounded-2xl bg-white/10 p-4">
+            <button
+              onClick={() => openBrokerTool("https://vpic.nhtsa.dot.gov/decoder")}
+              className="rounded-2xl bg-white/10 p-4 text-left transition hover:bg-white/20"
+            >
               <p className="font-bold">{t.smartRouting}</p>
               <p className="mt-1 text-sm text-slate-200">
                 {t.smartRoutingText}
               </p>
-            </div>
+            </button>
 
-            <div className="rounded-2xl bg-white/10 p-4">
+            <button
+              onClick={() => openBrokerTool("https://dmv.ny.gov/titles/check-a-title-or-lien-status")}
+              className="rounded-2xl bg-white/10 p-4 text-left transition hover:bg-white/20"
+            >
               <p className="font-bold">{t.titleHelp}</p>
               <p className="mt-1 text-sm text-slate-200">
                 {t.titleHelpText}
               </p>
-            </div>
+            </button>
 
-            <div className="rounded-2xl bg-white/10 p-4">
+            <button
+              onClick={() => openBrokerTool("https://dmv.ny.gov/records/get-a-vehicle-registration-or-title-record-abstract")}
+              className="rounded-2xl bg-white/10 p-4 text-left transition hover:bg-white/20"
+            >
               <p className="font-bold">{t.liveSupport}</p>
               <p className="mt-1 text-sm text-slate-200">
                 {t.liveSupportText}
               </p>
-            </div>
+            </button>
           </div>
         </div>
 
@@ -1467,6 +1490,7 @@ export default function Home() {
           </a>
         </div>
       </section>
+
       {showAnnouncementPopup && latestAnnouncement && activeBroker && activeBroker.role !== "admin" && (
         <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-4">
           <div className="w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl">
@@ -1528,20 +1552,41 @@ export default function Home() {
 
             <div className="border-t p-3">
               <div className="flex gap-2">
-                <input className="min-w-0 flex-1 rounded-xl border p-3 text-sm text-slate-900" value={aiInput} onChange={(e) => setAiInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") handleAiAsk(); }} placeholder={t.aiQuestionPlaceholder} />
-                <button onClick={() => handleAiAsk()} className="rounded-xl bg-slate-900 px-4 py-3 text-sm font-bold text-white">{t.aiSend}</button>
+                <input
+                  className="min-w-0 flex-1 rounded-xl border p-3 text-sm text-slate-900"
+                  value={aiInput}
+                  onChange={(e) => setAiInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") handleAiAsk();
+                  }}
+                  placeholder={t.aiQuestionPlaceholder}
+                />
+                <button
+                  onClick={() => handleAiAsk()}
+                  className="rounded-xl bg-slate-900 px-4 py-3 text-sm font-bold text-white"
+                >
+                  {t.aiSend}
+                </button>
               </div>
-              <a className="mt-3 block rounded-xl bg-green-600 px-4 py-3 text-center text-sm font-bold text-white" href={`https://wa.me/19412505868?text=${aiWhatsappMessage}`} target="_blank">{t.aiWhatsapp}</a>
+              <a
+                className="mt-3 block rounded-xl bg-green-600 px-4 py-3 text-center text-sm font-bold text-white"
+                href={`https://wa.me/19412505868?text=${aiWhatsappMessage}`}
+                target="_blank"
+              >
+                {t.aiWhatsapp}
+              </a>
             </div>
           </div>
         )}
 
-        <button onClick={() => setAiOpen(!aiOpen)} className="flex items-center gap-3 rounded-full bg-slate-900 px-5 py-4 font-bold text-white shadow-2xl">
+        <button
+          onClick={() => setAiOpen(!aiOpen)}
+          className="flex items-center gap-3 rounded-full bg-slate-900 px-5 py-4 font-bold text-white shadow-2xl"
+        >
           <span className="text-2xl">🤖</span>
           <span>{t.aiFloatTitle}</span>
         </button>
       </div>
-
     </main>
   );
 }

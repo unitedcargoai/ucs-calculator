@@ -5160,9 +5160,9 @@ export const INLAND_RATES = {
     "motorcycle": 313.0
   },
   "IAA-Atlanta North-Savannah": {
-    "car": 425.0,
-    "suv": 475.0,
-    "pickup": 625.0,
+    "car": 400.0,
+    "suv": 425.0,
+    "pickup": 525.0,
     "motorcycle": 313.0
   },
   "Copart-GA - ATLANTA SOUTH-Savannah": {
@@ -5634,9 +5634,9 @@ export const INLAND_RATES = {
     "motorcycle": 275.0
   },
   "IAA-Newburgh-Newark": {
-    "car": 300.0,
-    "suv": 350.0,
-    "pickup": 500.0,
+    "car": 250.0,
+    "suv": 275.0,
+    "pickup": 375.0,
     "motorcycle": 250.0
   },
   "IAA-North Hollywood-Los Angeles": {
@@ -6366,9 +6366,9 @@ export const INLAND_RATES = {
     "motorcycle": 350.0
   },
   "Copart-NY - NEWBURGH-Newark": {
-    "car": 300.0,
-    "suv": 350.0,
-    "pickup": 500.0,
+    "car": 250.0,
+    "suv": 275.0,
+    "pickup": 375.0,
     "motorcycle": 250.0
   },
   "Copart-MA - NORTH BOSTON-Newark": {
@@ -6954,9 +6954,9 @@ export const INLAND_RATES = {
     "motorcycle": 238.0
   },
   "Copart-Newburgh Sublot-Newark": {
-    "car": 300.0,
-    "suv": 350.0,
-    "pickup": 500.0,
+    "car": 250.0,
+    "suv": 275.0,
+    "pickup": 375.0,
     "motorcycle": 250.0
   },
   "IAA-Colorado Springs-Chicago": {
@@ -7206,9 +7206,9 @@ export const INLAND_RATES = {
     "motorcycle": 300.0
   },
   "Copart-IL - Chicago North-Chicago": {
-    "car": 550.0,
-    "suv": 600.0,
-    "pickup": 750.0,
+    "car": 250.0,
+    "suv": 270.0,
+    "pickup": 450.0,
     "motorcycle": 375.0
   },
   "Copart-IL - Chicago South-Chicago": {
@@ -8166,9 +8166,9 @@ export const INLAND_RATES = {
     "motorcycle": 325.0
   },
   "IAA-Atlanta West-Savannah": {
-    "car": 450.0,
-    "suv": 500.0,
-    "pickup": 650.0,
+    "car": 350.0,
+    "suv": 425.0,
+    "pickup": 450.0,
     "motorcycle": 325.0
   },
   "Copart-FL - Clewiston-Savannah": {
