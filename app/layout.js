@@ -30,6 +30,7 @@ export const metadata = {
         url: "/ucs-social-preview.jpg",
         width: 1200,
         height: 630,
+        alt: "UCS Calculator",
       },
     ],
 
